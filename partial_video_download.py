@@ -1,5 +1,6 @@
 import boto3
 from typing import List
+from tqdm import tqdm
 
 BUCKET_NAME: str = 'australia-fov'
 PATH_PREFIX: str = 'marvel/'
@@ -28,17 +29,10 @@ class S3PartialDownloader:
         self.s3 = boto3.client('s3', region_name=region_name)
 
     def download_partial(self, key, destination, start_byte=0, end_byte=None):
-        """
-        Download a partial range from a file in S3.
-
-        :param key: The key of the S3 object.
-        :param destination: The path to save the partial download.
-        :param start_byte: The starting byte (inclusive).
-        :param end_byte: The ending byte (exclusive).
-        """
+        print(f"Trying to download from key: {key}")
         byte_range = f"bytes={start_byte}-"
         if end_byte:
-            byte_range += str(end_byte - 1)  # Since the end_byte is exclusive, we reduce by 1
+            byte_range += str(end_byte - 1)
 
         response = self.s3.get_object(
             Bucket=self.bucket_name,
@@ -46,8 +40,17 @@ class S3PartialDownloader:
             Range=byte_range
         )
 
+        file_size = int(response['ContentLength'])
+
+        # Here's the integration with tqdm
         with open(destination, 'wb') as f:
-            f.write(response['Body'].read())
+            with tqdm(total=file_size, unit='B', unit_scale=True, desc=destination) as pbar:
+                for chunk in response['Body'].iter_chunks(
+                        chunk_size=1024):  # You can adjust the chunk_size if necessary
+                    f.write(chunk)
+                    pbar.update(len(chunk))
+
+        print(f"Partial download of {key} completed. Saved to {destination}.")
 
 
 def main():

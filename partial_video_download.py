@@ -4,7 +4,7 @@ import os
 from typing import List
 from tqdm import tqdm
 
-FILE_SIZE_MB: int = 250
+FILE_SIZE_MB: int = 300
 BUCKET_NAME: str = 'australia-fov'
 PATH_PREFIX: str = 'marvel/'
 REGION: str = 'ap-southeast-2'
@@ -44,6 +44,13 @@ class S3PartialDownloader:
         # Establish the S3 client
         self.s3 = boto3.client('s3', region_name=region_name)
 
+    def is_video_already_downloaded(self, key: str) -> bool:
+        """
+        Check if the video file with the given key is already downloaded locally.
+        """
+        local_path = os.path.join(".", key)
+        return os.path.exists(local_path)
+
     def list_video_files(self) -> List[str]:
         video_files_to_download = []
 
@@ -57,13 +64,17 @@ class S3PartialDownloader:
                 video_files = sorted(
                     [content['Key'] for content in response.get('Contents', []) if content['Key'].endswith('.avi')])
 
-                # Append the first video from the list to the download list if available
+                # Append the second video (to get straight into gameplay!) from the list to the download list if available
                 if video_files:
                     video_files_to_download.append(video_files[0])
 
         return video_files_to_download
 
-    def download_partial(self, key, start_byte=0, end_byte=None):
+    def download_partial(self, key, start_byte=0, end_byte=None) -> None:
+        if self.is_video_already_downloaded(key):
+            print(f"Video from key {key} is already saved locally. Skipping download.")
+            return
+
         print(f"Trying to download from key: {key}")
 
         # Ensure the local path structure exists

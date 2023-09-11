@@ -1,8 +1,8 @@
 import boto3
+import botocore
 import os
 from typing import List
 from tqdm import tqdm
-import botocore
 
 BUCKET_NAME: str = 'australia-fov'
 PATH_PREFIX: str = 'marvel/'
@@ -12,12 +12,17 @@ CAMERAS: List[str] = [
     "marvel-fov-2/",
     "marvel-fov-3/",
     "marvel-fov-4/",
-    "marvel-fov-5",
+    "marvel-fov-5/",
     "marvel-fov-6/",
     "marvel-fov-7/",
     "marvel-fov-8/",
 ]
-PATH_POSTFIX: str = '18_08_2023/'
+
+PATH_POSTFIXES: List[str] = [
+    "18_08_2023/",
+    "20_08_2023/",
+    "26_08_2023/"
+]
 
 
 def create_dir(path: str) -> None:
@@ -37,6 +42,25 @@ class S3PartialDownloader:
 
         # Establish the S3 client
         self.s3 = boto3.client('s3', region_name=region_name)
+
+    def list_video_files(self) -> List[str]:
+        video_files_to_download = []
+
+        for camera in CAMERAS:
+            for postfix in PATH_POSTFIXES:
+                # Constructing the path to the desired video
+                camera_path = PATH_PREFIX + camera + postfix
+                response = self.s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=camera_path)
+
+                # Filtering out only the video files and sorting them
+                video_files = sorted(
+                    [content['Key'] for content in response.get('Contents', []) if content['Key'].endswith('.avi')])
+
+                # Append the first video from the list to the download list if available
+                if video_files:
+                    video_files_to_download.append(video_files[0])
+
+        return video_files_to_download
 
     def download_partial(self, key, destination, start_byte=0, end_byte=None):
         print(f"Trying to download from key: {key}")
@@ -77,14 +101,17 @@ class S3PartialDownloader:
                 print(f"An unexpected error occurred: {e}")
 
 
+
+
 def main():
     downloader = S3PartialDownloader(bucket_name=BUCKET_NAME, region_name=REGION)
 
-    # Constructing the path to the desired video
-    camera_path = PATH_PREFIX + CAMERAS[0] + PATH_POSTFIX + "time_10_54_04_date_19_08_2023_.avi"
+    video_files = downloader.list_video_files()
+    for video_file in video_files:
+        print(video_file)
 
-    # Start the download, aiming for the first 50MB
-    downloader.download_partial(camera_path, 'destination_path.mp4', 0, 50 * 1024 * 1024)
+    # Uncomment the line below if you want to start the partial download for a specific video
+    # downloader.download_partial(video_files[0], 'destination_path.mp4', 0, 50 * 1024 * 1024)
 
 
 if __name__ == "__main__":

@@ -12,6 +12,7 @@ CAMERAS: List[str] = [
     "marvel-fov-2/",
     "marvel-fov-3/",
     "marvel-fov-4/",
+    "marvel-fov-5",
     "marvel-fov-6/",
     "marvel-fov-7/",
     "marvel-fov-8/",

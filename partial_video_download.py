@@ -4,24 +4,25 @@ import os
 from typing import List
 from tqdm import tqdm
 
+FILE_SIZE_MB: int = 250
 BUCKET_NAME: str = 'australia-fov'
 PATH_PREFIX: str = 'marvel/'
 REGION: str = 'ap-southeast-2'
 CAMERAS: List[str] = [
     "marvel-fov-1/",
-    "marvel-fov-2/",
-    "marvel-fov-3/",
-    "marvel-fov-4/",
-    "marvel-fov-5/",
-    "marvel-fov-6/",
-    "marvel-fov-7/",
-    "marvel-fov-8/",
+    # "marvel-fov-2/",
+    # "marvel-fov-3/",
+    # "marvel-fov-4/",
+    # "marvel-fov-5/",
+    # "marvel-fov-6/",
+    # "marvel-fov-7/",
+    # "marvel-fov-8/",
 ]
 
 PATH_POSTFIXES: List[str] = [
     "18_08_2023/",
-    "20_08_2023/",
-    "26_08_2023/"
+    # "20_08_2023/",
+    # "26_08_2023/"
 ]
 
 
@@ -62,8 +63,12 @@ class S3PartialDownloader:
 
         return video_files_to_download
 
-    def download_partial(self, key, destination, start_byte=0, end_byte=None):
+    def download_partial(self, key, start_byte=0, end_byte=None):
         print(f"Trying to download from key: {key}")
+
+        # Ensure the local path structure exists
+        local_path = os.path.join(".", key)
+        create_dir(os.path.dirname(local_path))
 
         # Define byte range for partial download
         byte_range = f"bytes={start_byte}-"
@@ -82,15 +87,15 @@ class S3PartialDownloader:
             file_size = int(response['ContentLength'])
 
             # Open the destination file for binary write
-            with open(destination, 'wb') as f:
+            with open(local_path, 'wb') as f:
                 # Set up the tqdm progress bar
-                with tqdm(total=file_size, unit='B', unit_scale=True, desc=destination) as pbar:
+                with tqdm(total=file_size, unit='B', unit_scale=True, desc=local_path) as pbar:
                     # Read the content in chunks and write to destination
                     for chunk in response['Body'].iter_chunks(chunk_size=1024):
                         f.write(chunk)
                         pbar.update(len(chunk))
 
-            print(f"Partial download of {key} completed. Saved to {destination}.")
+            print(f"Partial download of {key} completed. Saved to {local_path}.")
 
         except botocore.exceptions.ClientError as e:
             # Catch the specific error when a key doesn't exist
@@ -108,10 +113,8 @@ def main():
 
     video_files = downloader.list_video_files()
     for video_file in video_files:
-        print(video_file)
-
-    # Uncomment the line below if you want to start the partial download for a specific video
-    # downloader.download_partial(video_files[0], 'destination_path.mp4', 0, 50 * 1024 * 1024)
+        print(f"Preparing to download: {video_file}")
+        downloader.download_partial(video_file, end_byte=FILE_SIZE_MB * 1024 * 1024)
 
 
 if __name__ == "__main__":

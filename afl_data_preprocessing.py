@@ -15,8 +15,9 @@ def extract_frames_from_video(file_path: str) -> None:
     """Given a .avi video file path, extract frames using ffmpeg."""
 
     # Create a directory called "frames"
+    file_name_without_extension = os.path.splitext(os.path.basename(file_path))[0]
     file_dir = os.path.dirname(file_path)
-    frames_dir = create_directory(file_dir, directory_name='frames')
+    frames_dir = create_directory(file_dir, directory_name=f'frames_{file_name_without_extension}')
 
     if png_files_exist(frames_dir):
         print(f'Frames already exist in {frames_dir}')
@@ -88,10 +89,9 @@ def clip_video(video, output_dir: str, clip_length: int) -> None:
         print(f"Finished clipping video {video} from {start_times[i]} to {end_times[i]}")
 
 
-
 def extract_frames_from_all_videos(directory: str, file_ending: str = '.avi') -> None:
     """Given a directory, extract frames from all .avi videos in the directory."""
-    avi_files = find_files_with_ending(directory, file_ending='.avi')
+    avi_files = find_files_with_ending(directory, file_ending=file_ending)
     for avi_file in avi_files:
         extract_frames_from_video(avi_file)
 
@@ -121,8 +121,8 @@ def clip_all_videos_into_sixty_sec_clips(directory: str, file_ending: str = '.av
 
 
 def main():
-    # extract_frames_from_all_videos(AFL_DATA_DIR)
-    clip_all_videos_into_sixty_sec_clips(AFL_DATA_DIR)
+    extract_frames_from_all_videos(AFL_DATA_DIR, file_ending='.mp4')
+    # clip_all_videos_into_sixty_sec_clips(AFL_DATA_DIR)
 
 if __name__ == '__main__':
     main()

@@ -1,54 +1,17 @@
 """
 This script will primarily split the .avi videos into individual frames
 """
+import cv2
 import os
 import subprocess
 
+from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 from typing import List
 
-AFL_DATA_DIR: str = r'/marvel'
+from utils import check_dir, find_files_with_ending, png_files_exist, create_directory, mp4_files_exist
 
-def png_files_exist(directory: str) -> bool:
-    """
-    Check if any .png files exist in the given directory.
+AFL_DATA_DIR: str = r'marvel'
 
-    Args:
-    directory (str): Path to the directory to search in.
-
-    Returns:
-    bool: True if any .png files are found, otherwise False.
-    """
-    for file in os.listdir(directory):
-        if file.endswith('.png'):
-            return True
-    return False
-
-def find_files_with_ending(directory: str, file_ending: str = '.avi') -> List[str]:
-    """
-    Find all files and subfile paths in a directory with the given file ending.
-
-    Args:
-    directory (str): Path to the directory to search in.
-    file_ending (str): Desired file ending, e.g., '.avi', '.mp4', etc.
-
-    Returns:
-    List[str]: List of paths to files with the given ending.
-    """
-    matched_files = []
-
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith(file_ending):
-                matched_files.append(os.path.join(root, file))
-
-    return matched_files
-
-def create_directory(base_path: str, directory_name: str) -> str:
-    """Creates a directory if it doesn't already exist."""
-    dir_path = os.path.join(base_path, directory_name)
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-    return dir_path
 
 def extract_frames_from_video(file_path: str) -> None:
     """Given a .avi video file path, extract frames using ffmpeg."""
@@ -74,11 +37,94 @@ def extract_frames_from_video(file_path: str) -> None:
     subprocess.run(cmd)
 
 
-def main():
-    avi_files = find_files_with_ending(r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel", file_ending='.avi')
+def clip_video(video, output_dir: str, clip_length: int) -> None:
+    """
+    This function clips a video into multiple 60 second long clips.
+    We use FFmpeg directly to ensure lossless clipping.
+    """
+
+    # Check if the output_directory exists, and if not, make it
+    check_dir(output_dir)
+
+    # Load the video and get its length
+    cv2_video = cv2.VideoCapture(video)
+    video_length: int = int(cv2_video.get(cv2.CAP_PROP_FRAME_COUNT))
+    fps: int = int(cv2_video.get(cv2.CAP_PROP_FPS))
+
+    # Get the number of clips we need to make
+    num_clips: int = (video_length // fps) // clip_length
+
+    # Get the remainder
+    remainder: int = video_length % clip_length
+
+    # Get the start and end times for each clip
+    start_times: List[int] = [i * clip_length for i in range(num_clips)]
+
+    # If there is a remainder, add it to the end of the list
+    if remainder > 0:
+        start_times.append(num_clips * clip_length)
+
+    # Get the end times
+    end_times: List[int] = [i + clip_length for i in start_times]
+
+    # Get the output names
+    output_names: List[str] = [output_dir + "\\" + str(i) + ".mp4" for i in range(len(start_times))]
+
+    # Clip the video
+    for i in range(len(start_times)):
+        print(f"Clipping video {video} from {start_times[i]} to {end_times[i]}")
+
+        # Craft the FFmpeg command for lossless clipping
+        cmd = [
+            'ffmpeg',
+            '-i', video,
+            '-ss', str(start_times[i]),
+            '-t', str(clip_length),
+            '-c:v', 'copy',
+            '-an',  # This excludes the audio. If you want to include audio, you can remove this.
+            output_names[i]
+        ]
+
+        subprocess.run(cmd)
+
+        print(f"Finished clipping video {video} from {start_times[i]} to {end_times[i]}")
+
+
+
+def extract_frames_from_all_videos(directory: str, file_ending: str = '.avi') -> None:
+    """Given a directory, extract frames from all .avi videos in the directory."""
+    avi_files = find_files_with_ending(directory, file_ending='.avi')
     for avi_file in avi_files:
         extract_frames_from_video(avi_file)
 
+
+def clip_all_videos_into_sixty_sec_clips(directory: str, file_ending: str = '.avi') -> None:
+    """
+    Given a directory, clip all .avi videos in the directory into 60 second clips.
+    Store the new clipped videos in the same directory as the original full video in a folder of the same name.
+    """
+    # Find all .avi files in the directory
+    avi_files = find_files_with_ending(directory, file_ending=file_ending)
+
+    for avi_file in avi_files:
+        # Create directory to store the clipped videos, name it the same as the original video
+        file_name_without_extension = os.path.splitext(os.path.basename(avi_file))[0]
+        file_dir = os.path.dirname(avi_file)
+        clipped_videos_dir = create_directory(file_dir, directory_name=file_name_without_extension)
+
+        # Check if clipped videos already exist in the directory
+        if mp4_files_exist(clipped_videos_dir):
+            print(f'Clipped videos already exist in {clipped_videos_dir}. Skipping clipping for {avi_file}')
+            continue
+
+        # Clip the video
+        clip_video(avi_file, clipped_videos_dir, 60)
+
+
+
+def main():
+    # extract_frames_from_all_videos(AFL_DATA_DIR)
+    clip_all_videos_into_sixty_sec_clips(AFL_DATA_DIR)
 
 if __name__ == '__main__':
     main()

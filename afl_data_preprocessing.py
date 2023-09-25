@@ -4,8 +4,6 @@ This script will primarily split the .avi videos into individual frames
 import cv2
 import os
 import subprocess
-
-from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 from typing import List
 
 from utils import check_dir, find_files_with_ending, png_files_exist, create_directory, mp4_files_exist

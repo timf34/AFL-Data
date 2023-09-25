@@ -6,7 +6,7 @@ import os
 import subprocess
 from typing import List
 
-from utils import check_dir, find_files_with_ending, png_files_exist, create_directory, mp4_files_exist
+from utils import ensure_directory_exists, find_files_with_ending, png_files_exist, create_directory, mp4_files_exist
 
 AFL_DATA_DIR: str = r'marvel'
 
@@ -43,7 +43,7 @@ def clip_video(video, output_dir: str, clip_length: int) -> None:
     """
 
     # Check if the output_directory exists, and if not, make it
-    check_dir(output_dir)
+    ensure_directory_exists(output_dir)
 
     # Load the video and get its length
     cv2_video = cv2.VideoCapture(video)

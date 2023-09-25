@@ -2,21 +2,34 @@ import os
 
 from typing import List
 
-def mp4_files_exist(directory: str) -> bool:
-    """Check if .mp4 files exist in the given directory."""
-    return any([f for f in os.listdir(directory) if f.endswith('.mp4')])
 
+def ensure_directory_exists(path: str) -> None:
+    """
+    Ensures that the directory at the specified path exists.
 
-def check_dir(path: str) -> None:
+    Args:
+    path (str): Path to the directory.
+
+    Returns:
+    None
+    """
     if not os.path.exists(path):
-        print(f"Creating directory: {path}")
         os.makedirs(path)
 
+
 def create_directory(base_path: str, directory_name: str) -> str:
-    """Creates a directory if it doesn't already exist."""
+    """
+    Creates a directory inside the base_path with the specified name if it doesn't already exist.
+
+    Args:
+    base_path (str): Base path where the directory should be created.
+    directory_name (str): Name of the directory to be created.
+
+    Returns:
+    str: Path to the created directory.
+    """
     dir_path = os.path.join(base_path, directory_name)
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
+    ensure_directory_exists(dir_path)
     return dir_path
 
 def find_files_with_ending(directory: str, file_ending: str = '.avi') -> List[str]:
@@ -39,17 +52,24 @@ def find_files_with_ending(directory: str, file_ending: str = '.avi') -> List[st
 
     return matched_files
 
-def png_files_exist(directory: str) -> bool:
+def files_exist_with_extension(directory: str, extension: str) -> bool:
     """
-    Check if any .png files exist in the given directory.
+    Check if files with the specified extension exist in the given directory.
 
     Args:
     directory (str): Path to the directory to search in.
+    extension (str): File extension to search for.
 
     Returns:
-    bool: True if any .png files are found, otherwise False.
+    bool: True if any files with the given extension are found, otherwise False.
     """
-    for file in os.listdir(directory):
-        if file.endswith('.png'):
-            return True
-    return False
+    return any(f.endswith(extension) for f in os.listdir(directory))
+
+def mp4_files_exist(directory: str) -> bool:
+    """Check if .mp4 files exist in the given directory."""
+    return files_exist_with_extension(directory, '.mp4')
+
+
+def png_files_exist(directory: str) -> bool:
+    """Check if .png files exist in the given directory."""
+    return files_exist_with_extension(directory, '.png')

@@ -13,8 +13,12 @@ def ensure_directory_exists(path: str) -> None:
     Returns:
     None
     """
+
     if not os.path.exists(path):
+        print(f'Creating directory at {path}')
         os.makedirs(path)
+    else:
+        print(f'Directory already exists at {path}')
 
 
 def create_directory(base_path: str, directory_name: str) -> str:

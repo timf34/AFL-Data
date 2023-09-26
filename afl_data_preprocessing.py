@@ -17,7 +17,9 @@ def extract_frames_from_video(file_path: str) -> None:
     # Create a directory called "frames"
     file_name_without_extension = os.path.splitext(os.path.basename(file_path))[0]
     file_dir = os.path.dirname(file_path)
-    frames_dir = create_directory(file_dir, directory_name=f'frames_{file_name_without_extension}')
+
+    parent_video_name = file_path.split('\\')[-2]
+    frames_dir = create_directory(file_dir, directory_name=f'{parent_video_name}{file_name_without_extension}')
 
     if png_files_exist(frames_dir):
         print(f'Frames already exist in {frames_dir}')

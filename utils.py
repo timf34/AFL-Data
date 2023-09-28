@@ -1,6 +1,31 @@
 import os
+import xml.etree.ElementTree as ET
 
-from typing import List
+from typing import List, Dict
+
+
+def process_cvat_annotations(annotations_file: str) -> Dict[int, List[int]]:
+
+    # Check if annotations file exists and is a .xml file
+    if not os.path.exists(annotations_file):
+        raise FileNotFoundError("Annotations file does not exist.")
+    if not annotations_file.endswith(".xml"):
+        raise ValueError("Annotations file must be a .xml file.")
+
+    annotations: Dict[int, List[int, int]] = {}
+
+    tree = ET.parse(annotations_file)
+    root = tree.getroot()
+    for child in root:
+        for subchild in child:
+            if "frame" in subchild.attrib:
+                frame = int(subchild.attrib['frame'])
+                x = int(float(subchild.attrib['points'].split(',')[0]))
+                y = int(float(subchild.attrib['points'].split(',')[1]))
+                annotations[frame] = [x, y]
+
+    # Sort the dictionary by key and return
+    return {k: annotations[k] for k in sorted(annotations)}
 
 
 def ensure_directory_exists(path: str) -> None:

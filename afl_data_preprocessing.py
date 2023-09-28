@@ -30,6 +30,7 @@ def extract_frames_from_video(file_path: str) -> None:
         'ffmpeg',
         '-i', file_path,
         '-vf', 'fps=30/1',
+        '-start_number', '0',
         f'{frames_dir}\\img%05d.png'
     ]
 

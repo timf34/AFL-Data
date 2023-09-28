@@ -1,12 +1,14 @@
 import os
 from typing import List, Dict
 
-from utils import process_cvat_annotations, find_files_with_ending
+from utils import find_files_with_ending
+
+ROOT_DIR: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\20_08_2023\marvel_1_time_04_09_04_date_20_08_2023_"
 
 
 class AFLDataAnalysis:
-    def __init__(self):
-        self.bohs_preprocessed_root_dir: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\20_08_2023\marvel_1_time_04_09_04_date_20_08_2023_"
+    def __init__(self, root_dir: str):
+        self.afl_preprocessed_data: str = root_dir
         self.ball_count: Dict[str, int] = {}
 
     def count_lablled_frames(self) -> None:
@@ -14,7 +16,7 @@ class AFLDataAnalysis:
             Counts the number of labelled frames in the annotations folder.
         """
         # Get a list of the xml files in the annotations folder
-        list_of_xml_files: List[str] = find_files_with_ending(self.bohs_preprocessed_root_dir, ".xml")
+        list_of_xml_files: List[str] = find_files_with_ending(self.afl_preprocessed_data, ".xml")
 
         count = 0
 
@@ -39,7 +41,7 @@ class AFLDataAnalysis:
 
 
 def main():
-    bohs_data_analysis = AFLDataAnalysis()
+    bohs_data_analysis = AFLDataAnalysis(ROOT_DIR)
     bohs_data_analysis.count_lablled_frames()
 
 

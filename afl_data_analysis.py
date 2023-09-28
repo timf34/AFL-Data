@@ -3,7 +3,7 @@ from typing import List, Dict
 
 from utils import find_files_with_ending
 
-ROOT_DIR: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\20_08_2023\marvel_1_time_04_09_04_date_20_08_2023_"
+ROOT_DIR: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel"
 
 
 class AFLDataAnalysis:
@@ -11,7 +11,7 @@ class AFLDataAnalysis:
         self.afl_preprocessed_data: str = root_dir
         self.ball_count: Dict[str, int] = {}
 
-    def count_lablled_frames(self) -> None:
+    def count_labelled_frames(self) -> None:
         """
             Counts the number of labelled frames in the annotations folder.
         """
@@ -42,7 +42,7 @@ class AFLDataAnalysis:
 
 def main():
     bohs_data_analysis = AFLDataAnalysis(ROOT_DIR)
-    bohs_data_analysis.count_lablled_frames()
+    bohs_data_analysis.count_labelled_frames()
 
 
 if __name__ == "__main__":

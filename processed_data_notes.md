@@ -7,7 +7,6 @@ marvel_1_time_04_09_04_date_20_08_2023
 marvel_3_time_04_09_06_date_20_08_2023
 ```
 
-
 ### Data analysis 
 
 - Total number of labelled frames: 1761 

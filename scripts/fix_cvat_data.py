@@ -57,6 +57,18 @@ def shift_image_names(directory: str):
 
 def rename_images(directory: str, file_extension: str = '.png') -> None:
     """Function to rename our images from imgXXXXX.png to frame_XXXXXXX.png to match Bohs naming convention."""
+
+    # Verification Step
+    confirm_dir = input(f"You've entered the directory as: {directory}. Is this correct? (yes/no): ").strip().lower()
+    if confirm_dir != 'yes':
+        print("Operation cancelled.")
+        return
+
+    confirm_ext = input(f"You've entered the file extension as: {file_extension}. Is this correct? (yes/no): ").strip().lower()
+    if confirm_ext != 'yes':
+        print("Operation cancelled.")
+        return
+
     all_png_files = find_files_with_ending(directory, file_extension)
 
     for png_file in all_png_files:

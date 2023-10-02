@@ -31,7 +31,7 @@ def extract_frames_from_video(file_path: str) -> None:
         '-i', file_path,
         '-vf', 'fps=30/1',
         '-start_number', '0',
-        f'{frames_dir}\\img%05d.png'
+        f'{frames_dir}\\frame_%07d.png'
     ]
 
     # Execute the command via subprocess

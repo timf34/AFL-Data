@@ -1,6 +1,8 @@
 """
 Temporary script to shift our images frame number down by one. (i.e. img00001.png -> img00000.png)
 
+Also a temporary script to rename our images from imgXXXXX.png to frame_XXXXXXX.jpg to match Bohs naming convention.
+
 DO NOT RUN THIS SCRIPT MORE THAN ONCE! IT'S NOW BEEN FIXED!
 """
 
@@ -8,10 +10,24 @@ import os
 from typing import List
 from utils import find_files_with_ending
 
-ROOT_DIR: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel"
+ROOT_DIR: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\test-marvel"
 
 
 def shift_image_names(directory: str):
+    confirm = input("Are you sure you want to run `shift_image_names`? (yes/no): ").strip().lower()
+
+    if confirm != "yes":
+        print("Script execution aborted.")
+        return
+
+    print("Again... are you sure you want to run `shift_image_names`?")
+    confirm = input("Type 'yes' to confirm: ").strip().lower()
+
+    if confirm != "yes":
+        print("Script execution aborted.")
+        return
+
+
     # Get all the PNG files
     all_png_files = find_files_with_ending(directory, '.png')
 
@@ -39,6 +55,28 @@ def shift_image_names(directory: str):
             print(f"Renamed {file_path} -> {new_path}")
 
 
+def rename_images(directory: str, file_extension: str = '.png') -> None:
+    """Function to rename our images from imgXXXXX.png to frame_XXXXXXX.png to match Bohs naming convention."""
+    all_png_files = find_files_with_ending(directory, file_extension)
+
+    for png_file in all_png_files:
+        basename = os.path.basename(png_file)
+        filename, _ = os.path.splitext(basename)
+
+        # Assuming original filenames are in the format imgXXXXX.png
+        if filename.startswith('img'):
+            frame_number = filename[3:]  # Strip 'img' prefix
+            frame_number = frame_number.zfill(7)  # Pad with zeros to reach 7 digits
+
+            # Create new filename and its full path
+            new_filename = f'frame_{frame_number}{file_extension}'
+            new_path = os.path.join(os.path.dirname(png_file), new_filename)
+
+            # Rename the file
+            os.rename(png_file, new_path)
+
+
 if __name__ == "__main__":
     # shift_image_names(ROOT_DIR)
+    rename_images(ROOT_DIR)
     print("Careful there cowboy")

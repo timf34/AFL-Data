@@ -79,6 +79,8 @@ def find_files_with_ending(directory: str, file_ending: str = '.avi') -> List[st
             if file.endswith(file_ending):
                 matched_files.append(os.path.join(root, file))
 
+    print(f"Found {len(matched_files)} files with ending {file_ending} in {directory}")
+
     return matched_files
 
 def files_exist_with_extension(directory: str, extension: str) -> bool:

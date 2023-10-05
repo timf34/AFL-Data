@@ -10,6 +10,9 @@ import os
 from typing import Dict, List
 from utils import find_files_with_ending
 
+
+FILE_RECORD_NAME: str = "dataset_partitioning_record.txt"
+
 def list_files_in_folders(root_folder: str, sub_folders: List[str], file_ending: str) -> Dict[str, List[str]]:
     """Returns a dictionary with folder names as keys and list of files in each folder as values"""
     all_files = {}
@@ -56,4 +59,4 @@ if __name__ == "__main__":
     all_files = list_files_in_folders(root_folder, sub_folders, file_ending)
     check_for_duplicates(all_files)
     check_corresponding_folders_exist(all_files, root_folder)
-    write_files_to_text(all_files, "files_list.txt")
+    write_files_to_text(all_files, FILE_RECORD_NAME)

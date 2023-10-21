@@ -10,11 +10,12 @@ Steps:
 
 import os
 import sys
-from config import AFLLaptopConfig
-from data.cvat_dataset import create_dataset_from_config
 
 # Add BallNet's path to the system path
 sys.path.append(r'C:\Users\timf3\PycharmProjects\BallNet')
+
+from config import AFLLaptopConfig
+from data.cvat_dataset import create_dataset_from_config
 
 # Set the root directory for the AFL data
 ROOT_DIR: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel"

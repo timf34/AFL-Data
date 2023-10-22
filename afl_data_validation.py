@@ -4,6 +4,8 @@ We are splitting our train/ val/ test set very simply by putting each into a giv
 This script writes which files are in which folder (i.e. train/ val/ test) to a text file.
 
 It also ensures that there are no duplicates.
+
+TODO: Make it check that each image path exists!
 """
 
 import os

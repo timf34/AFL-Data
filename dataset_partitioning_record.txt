@@ -11,12 +11,20 @@ marvel/afl-preprocessed\train\annotations\marvel_3_time_04_09_06_date_20_08_2023
 marvel/afl-preprocessed\train\annotations\marvel_3_time_04_09_06_date_20_08_2023_3.xml
 marvel/afl-preprocessed\train\annotations\marvel_3_time_04_09_06_date_20_08_2023_5.xml
 marvel/afl-preprocessed\train\annotations\marvel_3_time_04_09_06_date_20_08_2023_7.xml
+marvel/afl-preprocessed\train\annotations\marvel_8_time_09_09_04_date_27_08_2023_0.xml
+marvel/afl-preprocessed\train\annotations\marvel_8_time_09_09_04_date_27_08_2023_2.xml
+marvel/afl-preprocessed\train\annotations\marvel_8_time_09_09_04_date_27_08_2023_3.xml
+marvel/afl-preprocessed\train\annotations\marvel_8_time_09_09_04_date_27_08_2023_4.xml
+marvel/afl-preprocessed\train\annotations\marvel_8_time_09_09_04_date_27_08_2023_5.xml
+marvel/afl-preprocessed\train\annotations\marvel_8_time_09_09_04_date_27_08_2023_7.xml
 
 Files in val:
 marvel/afl-preprocessed\val\annotations\marvel_1_time_04_09_04_date_20_08_2023_2.xml
 marvel/afl-preprocessed\val\annotations\marvel_3_time_04_09_06_date_20_08_2023_4.xml
+marvel/afl-preprocessed\val\annotations\marvel_8_time_09_09_04_date_27_08_2023_1.xml
 
 Files in test:
 marvel/afl-preprocessed\test\annotations\marvel_1_time_04_09_04_date_20_08_2023_1.xml
 marvel/afl-preprocessed\test\annotations\marvel_3_time_04_09_06_date_20_08_2023_6.xml
+marvel/afl-preprocessed\test\annotations\marvel_8_time_09_09_04_date_27_08_2023_6.xml
 

@@ -104,3 +104,16 @@ def mp4_files_exist(directory: str) -> bool:
 def png_files_exist(directory: str) -> bool:
     """Check if .png files exist in the given directory."""
     return files_exist_with_extension(directory, '.png')
+
+
+def get_file_size_in_bytes(file_path: str) -> int:
+    """
+    Get the size of a file in bytes.
+
+    Parameters:
+    - file_path: Path to the file.
+
+    Returns:
+    - Size of the file in bytes.
+    """
+    return os.path.getsize(file_path)

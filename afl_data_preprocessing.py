@@ -40,6 +40,41 @@ def extract_frames_from_video(file_path: str) -> None:
     subprocess.run(cmd)
 
 
+def extract_frames_from_video_cv2(file_path: str, fps: int = 30) -> None:
+    """Given a video file path, extract frames using OpenCV (imageio is too slow for this)."""
+
+    # Create a directory called "frames"
+    file_name_without_extension = os.path.splitext(os.path.basename(file_path))[0]
+    file_dir = os.path.dirname(file_path)
+
+    parent_video_name = file_path.split(os.sep)[-2]
+    frames_dir = create_directory(file_dir, directory_name=f'{parent_video_name}{file_name_without_extension}')
+
+    if png_files_exist(frames_dir):
+        print(f'Frames already exist in {frames_dir}')
+        return
+
+    # Use OpenCV to read the video and save frames
+    cap = cv2.VideoCapture(file_path)
+    video_fps = int(cap.get(cv2.CAP_PROP_FPS))
+
+    # We'll only save every nth frame to match the desired FPS (fps parameter)
+    n = int(video_fps / fps)
+
+    frame_num = 0
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        if frame_num % n == 0:
+            frame_file_path = os.path.join(frames_dir, f"frame_{frame_num // n:07d}.png")
+            cv2.imwrite(frame_file_path, frame)
+        frame_num += 1
+
+    cap.release()
+    print(f"Frames extracted to {frames_dir}")
+
+
 def clip_video(video, output_dir: str, clip_length: int) -> None:
     """
     This function clips a video into multiple 60 second long clips.
@@ -168,10 +203,13 @@ def clip_all_videos_into_sixty_sec_clips(directory: str, file_ending: str = '.av
 def main():
     # extract_frames_from_all_videos(AFL_DATA_DIR, file_ending='.mp4')
     # clip_all_videos_into_sixty_sec_clips(AFL_DATA_DIR)
-    clip_video_imageio(
-        video_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\marvel_6_time_10_24_03_date_19_08_2023_.avi",
-        output_dir=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped",
-        clip_length=60
+    # clip_video_imageio(
+    #     video_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\marvel_6_time_10_24_03_date_19_08_2023_.avi",
+    #     output_dir=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped",
+    #     clip_length=60
+    # )
+    extract_frames_from_video(
+        file_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped\clip_0.mp4"
     )
 
 

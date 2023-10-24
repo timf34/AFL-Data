@@ -150,7 +150,7 @@ def clip_video_opencv(video_path: str, output_dir: str, clip_length: int = 60) -
 
     clip_num = 0
     while True:
-        output_file = os.path.join(output_dir, f"clip_{clip_num}.mp4")
+        output_file = os.path.join(output_dir, f"{clip_num}.mp4")
 
         # Define video writer for output
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')

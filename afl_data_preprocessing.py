@@ -127,46 +127,59 @@ def clip_video(video, output_dir: str, clip_length: int) -> None:
 
         print(f"Finished clipping video {video} from {start_times[i]} to {end_times[i]}")
 
-
-def clip_video_imageio(video_path: str, output_dir: str, clip_length: int = 60) -> None:
+def clip_video_opencv(video_path: str, output_dir: str, clip_length: int = 60) -> None:
     """
-        Clip a video into multiple segments of the given length using imageio.
+    Clip a video into multiple segments of the given length using OpenCV.
 
-        Parameters:
-        - video_path: Path to the video file.
-        - output_dir: Directory to store the clipped videos.
-        - clip_length: Duration of each clip in seconds (default is 60 seconds).
-        """
-    reader = imageio.get_reader(video_path)
-    fps = reader.get_meta_data()['fps']
+    Parameters:
+    - video_path: Path to the video file.
+    - output_dir: Directory to store the clipped videos.
+    - clip_length: Duration of each clip in seconds (default is 60 seconds).
+    """
+
+    # Open the video using OpenCV
+    cap = cv2.VideoCapture(video_path)
+    fps = int(cap.get(cv2.CAP_PROP_FPS))
+    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
     # Calculate the number of frames needed for the specified clip length
-    frames_per_clip = int(clip_length * fps)
+    frames_per_clip = clip_length * fps
 
     # Create the output directory if it doesn't exist
     ensure_directory_exists(output_dir)
 
-    num_frames = len(reader)
+    clip_num = 0
+    while True:
+        output_file = os.path.join(output_dir, f"clip_{clip_num}.mp4")
 
-    for start_frame in range(0, num_frames, frames_per_clip):
-        end_frame = min(start_frame + frames_per_clip, num_frames)
+        # Define video writer for output
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        out = cv2.VideoWriter(output_file, fourcc, fps, (int(cap.get(3)), int(cap.get(4))))
 
-        # Define the output file name
-        output_file = os.path.join(output_dir, f"clip_{start_frame // frames_per_clip}.mp4")
+        # Extract frames and write to new video
+        for _ in range(frames_per_clip):
+            ret, frame = cap.read()
+            if not ret:
+                break
+            out.write(frame)
 
-        # Check if this clip is too short (ignores the remainder)
-        if end_frame - start_frame < clip_length * 0.5 * fps:
+        # Release the current writer
+        out.release()
+
+        # If there were fewer frames left than half the desired clip length, we stop
+        if ret and (total_frames - clip_num * frames_per_clip) < (0.5 * clip_length * fps):
+            os.remove(output_file)
             break
 
-        print(f"Clipping video {video_path} from frame {start_frame} to {end_frame}")
+        clip_num += 1
 
-        # Write the segment to a new file
-        writer = imageio.get_writer(output_file, fps=fps, macro_block_size=1)
-        for frame in range(start_frame, end_frame):
-            writer.append_data(reader.get_data(frame))
-        writer.close()
+        # If we've reached the end of the video
+        if not ret:
+            break
 
-        print(f"Finished clipping video segment {output_file}")
+    # Release video capture
+    cap.release()
+
 
 
 def extract_frames_from_all_videos(directory: str, file_ending: str = '.avi') -> None:

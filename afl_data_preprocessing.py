@@ -30,7 +30,7 @@ def extract_frames_from_video(file_path: str) -> None:
     cmd = [
         'ffmpeg',
         '-i', file_path,
-        '-vf', 'fps=30/marvel_3_time_04_09_06_date_20_08_2023_0',
+        '-vf', 'fps=30/1',
         '-start_number', '0',
         f'{frames_dir}\\frame_%07d.png'
     ]

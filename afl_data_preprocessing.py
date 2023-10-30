@@ -148,7 +148,7 @@ def clip_video_opencv(video_path: str, output_dir: str, clip_length: int = 60) -
     # Create the output directory if it doesn't exist
     ensure_directory_exists(output_dir)
 
-    file_name = os.path.basename(video_path)
+    file_name = os.path.splitext(os.path.basename(video_path))[0]
 
     clip_num = 0
     while True:

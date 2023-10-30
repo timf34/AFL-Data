@@ -152,7 +152,7 @@ def clip_video_opencv(video_path: str, output_dir: str, clip_length: int = 60) -
     file_name = os.path.splitext(os.path.basename(video_path))[0]
 
     # Get the marvel caemra number
-    camera_number = camera_number = [string[-1] for string in os.path.split(video_path) if 'marvel-fov' in string][0]
+    camera_number = [string[-1] for string in os.path.split(video_path) if 'marvel-fov' in string][0]
 
     clip_num = 0
     while True:

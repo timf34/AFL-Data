@@ -83,6 +83,21 @@ def find_files_with_ending(directory: str, file_ending: str = '.avi') -> List[st
 
     return matched_files
 
+
+def count_files_with_extension(directory: str, extension: str) -> int:
+    """
+    Count the files with the specified extension in the given directory.
+
+    Args:
+    directory (str): Path to the directory to search in.
+    extension (str): File extension to search for.
+
+    Returns:
+    int: Number of files with the given extension found.
+    """
+    return sum(f.endswith(extension) for f in os.listdir(directory))
+
+
 def files_exist_with_extension(directory: str, extension: str) -> bool:
     """
     Check if files with the specified extension exist in the given directory.
@@ -95,6 +110,7 @@ def files_exist_with_extension(directory: str, extension: str) -> bool:
     bool: True if any files with the given extension are found, otherwise False.
     """
     return any(f.endswith(extension) for f in os.listdir(directory))
+
 
 def mp4_files_exist(directory: str) -> bool:
     """Check if .mp4 files exist in the given directory."""

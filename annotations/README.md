@@ -1,0 +1,2 @@
+To make things easy in sagemaker, rather than downloading all the .xml files from S3, just copy paste them into this 
+and don't worry about what's in train/ val, etc. as we'll be matching by file name. 

@@ -148,11 +148,15 @@ def clip_video_opencv(video_path: str, output_dir: str, clip_length: int = 60) -
     # Create the output directory if it doesn't exist
     ensure_directory_exists(output_dir)
 
+    # Get the video file name without the extension
     file_name = os.path.splitext(os.path.basename(video_path))[0]
+
+    # Get the marvel caemra number
+    camera_number = camera_number = [string[-1] for string in os.path.split(video_path) if 'marvel-fov' in string][0]
 
     clip_num = 0
     while True:
-        output_file = os.path.join(output_dir, f"{file_name}{clip_num}.mp4")
+        output_file = os.path.join(output_dir, f"marvel_{camera_number}_{file_name}{clip_num}.mp4")
 
         # Define video writer for output
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')

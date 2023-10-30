@@ -5,8 +5,8 @@ from typing import List, Dict
 
 # Folder path
 XML_FILE: str = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\afl-preprocessed\train\annotations\marvel_1_time_04_09_04_date_20_08_2023_0.xml"
-FOLDER: str = "../test-marvel/1"
-VIDEO_PATH: str = "../test-marvel/1.mp4"
+FOLDER: str = "../test-marvel/marvel_3_time_04_09_06_date_20_08_2023_0"
+VIDEO_PATH: str = "../test-marvel/marvel_3_time_04_09_06_date_20_08_2023_0.mp4"
 
 
 def extract_frames_from_video_cv2(file_path: str, fps: int = 30) -> None:
@@ -55,8 +55,6 @@ def main():
     frame_nums: List[int] = get_frames_containing_ball(XML_FILE)
     file_names: List[str] = [get_frame_name_from_frame_number(frame_num) for frame_num in frame_nums]
 
-
-    print(file_names)
 
     # List all the files with extension png in the folder
     files: List[str] = [f for f in os.listdir(FOLDER) if os.path.isfile(os.path.join(FOLDER, f)) and f.endswith('.png')]

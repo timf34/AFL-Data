@@ -140,7 +140,7 @@ def get_frames_containing_ball(xml_file_path: str) -> List[int]:
     Parse an XML file containing ground truth annotations to identify frames which contain the ball.
 
     This function specifically handles two XML structures:
-    1. XML structure with "frame" attributes typically found from videos uploaded to CVAT.
+    marvel_3_time_04_09_06_date_20_08_2023_0. XML structure with "frame" attributes typically found from videos uploaded to CVAT.
     2. XML structure with "frame" attributes found from folders of images uploaded to CVAT.
 
     Args:

@@ -2,7 +2,7 @@
 This script removes image files from the `afl-preprocessed` directory that are not part of the datasets.
 
 Steps:
-1. Load the CVAT dataset object with the populated image list.
+marvel_3_time_04_09_06_date_20_08_2023_0. Load the CVAT dataset object with the populated image list.
 2. Create a master list of all images that are part of the datasets.
 3. List all images present in the `afl-preprocessed` directory.
 4. Remove images from the directory that are not in the master list.
@@ -37,7 +37,7 @@ datasets = {
     for mode in training_modes
 }
 
-# 1. Create a master list of all images from the datasets
+# marvel_3_time_04_09_06_date_20_08_2023_0. Create a master list of all images from the datasets
 all_images_in_datasets = set()
 for mode in training_modes:
     for img_data in datasets[mode].image_list:

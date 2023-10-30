@@ -31,6 +31,11 @@ def upload_folder_to_s3(folder_path: str, bucket: str, prefix: str) -> None:
     else:
         print(f"Uploading {folder_path} to {bucket}{prefix}")
 
+    # Ensure prefix ends with a "/"
+    if not prefix.endswith('/'):
+        print("Adding '/' to prefix")
+        prefix += '/'
+
     folder_name = os.path.basename(folder_path)
 
     for root, dirs, files in os.walk(folder_path):
@@ -44,6 +49,8 @@ def upload_folder_to_s3(folder_path: str, bucket: str, prefix: str) -> None:
                     print(f"Uploaded {filename} to {bucket}/{s3_path}")
                 except NoCredentialsError:
                     print("Credentials not available")
+                except Exception as e:
+                    print(f"Error uploading {filename}. Error: {e}")
 
 
 def main():

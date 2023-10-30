@@ -6,7 +6,6 @@ from botocore.exceptions import NoCredentialsError
 AUS_AFL_BUCKET: str = "australia-fov"
 DUB_AFL_BUCKET: str = "dublin-afl-preprocessed"
 ANNOTATIONS_FOLDER: str = "annotations"
-
 S3_PREFIX: str = "train/unpacked_png/"  # Ensure it ends with "/"
 
 # Ensure that each video path exists on s3
@@ -40,7 +39,7 @@ def upload_folder_to_s3(folder_path: str, bucket: str, prefix: str) -> None:
 
     for root, dirs, files in os.walk(folder_path):
         for filename in files:
-            if filename.endswith('.txt'):
+            if filename.endswith('.png'):
                 local_path = os.path.join(root, filename)
                 s3_path = prefix + folder_name + "/" + filename
 
@@ -59,3 +58,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+    #print the current direcrory

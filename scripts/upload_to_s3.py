@@ -31,11 +31,13 @@ def upload_folder_to_s3(folder_path: str, bucket: str, prefix: str) -> None:
     else:
         print(f"Uploading {folder_path} to {bucket}{prefix}")
 
+    folder_name = os.path.basename(folder_path)
+
     for root, dirs, files in os.walk(folder_path):
         for filename in files:
-            if filename.endswith('.png'):
+            if filename.endswith('.txt'):
                 local_path = os.path.join(root, filename)
-                s3_path = prefix + filename
+                s3_path = prefix + folder_name + "/" + filename
 
                 try:
                     s3.upload_file(local_path, bucket, s3_path)
@@ -45,7 +47,7 @@ def upload_folder_to_s3(folder_path: str, bucket: str, prefix: str) -> None:
 
 
 def main():
-    upload_folder_to_s3("yolo_bitches", DUB_AFL_BUCKET, S3_PREFIX)
+    upload_folder_to_s3(r"C:\Users\timf3\PycharmProjects\AFL-Data\scripts\yolo", DUB_AFL_BUCKET, S3_PREFIX)
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ from typing import List
 
 from utils import ensure_directory_exists, find_files_with_ending, png_files_exist, create_directory, mp4_files_exist
 
-AFL_DATA_DIR: str = r'marvel/marvel-fov-6'
+AFL_DATA_DIR: str = r'marvel/marvel-fov-7'
 
 
 def extract_frames_from_video(file_path: str) -> None:
@@ -38,41 +38,6 @@ def extract_frames_from_video(file_path: str) -> None:
     # Execute the command via subprocess
     print(cmd)
     subprocess.run(cmd)
-
-
-def extract_frames_from_video_cv2(file_path: str, fps: int = 30) -> None:
-    """Given a video file path, extract frames using OpenCV (imageio is too slow for this)."""
-
-    # Create a directory called "frames"
-    file_name_without_extension = os.path.splitext(os.path.basename(file_path))[0]
-    file_dir = os.path.dirname(file_path)
-
-    parent_video_name = file_path.split(os.sep)[-2]
-    frames_dir = create_directory(file_dir, directory_name=f'{parent_video_name}{file_name_without_extension}')
-
-    if png_files_exist(frames_dir):
-        print(f'Frames already exist in {frames_dir}')
-        return
-
-    # Use OpenCV to read the video and save frames
-    cap = cv2.VideoCapture(file_path)
-    video_fps = int(cap.get(cv2.CAP_PROP_FPS))
-
-    # We'll only save every nth frame to match the desired FPS (fps parameter)
-    n = int(video_fps / fps)
-
-    frame_num = 0
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
-        if frame_num % n == 0:
-            frame_file_path = os.path.join(frames_dir, f"frame_{frame_num // n:07d}.png")
-            cv2.imwrite(frame_file_path, frame)
-        frame_num += 1
-
-    cap.release()
-    print(f"Frames extracted to {frames_dir}")
 
 
 def clip_video(video, output_dir: str, clip_length: int) -> None:
@@ -127,66 +92,6 @@ def clip_video(video, output_dir: str, clip_length: int) -> None:
 
         print(f"Finished clipping video {video} from {start_times[i]} to {end_times[i]}")
 
-def clip_video_opencv(video_path: str, output_dir: str, clip_length: int = 60) -> None:
-    """
-    Clip a video into multiple segments of the given length using OpenCV.
-
-    Parameters:
-    - video_path: Path to the video file.
-    - output_dir: Directory to store the clipped videos.
-    - clip_length: Duration of each clip in seconds (default is 60 seconds).
-    """
-
-    # Open the video using OpenCV
-    cap = cv2.VideoCapture(video_path)
-    fps = int(cap.get(cv2.CAP_PROP_FPS))
-    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-
-    # Calculate the number of frames needed for the specified clip length
-    frames_per_clip = clip_length * fps
-
-    # Create the output directory if it doesn't exist
-    ensure_directory_exists(output_dir)
-
-    # Get the video file name without the extension
-    file_name = os.path.splitext(os.path.basename(video_path))[0]
-
-    # Get the marvel caemra number
-    camera_number = [string[-1] for string in os.path.split(video_path) if 'marvel-fov' in string][0]
-
-    clip_num = 0
-    while True:
-        output_file = os.path.join(output_dir, f"marvel_{camera_number}_{file_name}{clip_num}.mp4")
-
-        # Define video writer for output
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-        out = cv2.VideoWriter(output_file, fourcc, fps, (int(cap.get(3)), int(cap.get(4))))
-
-        # Extract frames and write to new video
-        for _ in range(frames_per_clip):
-            ret, frame = cap.read()
-            if not ret:
-                break
-            out.write(frame)
-
-        # Release the current writer
-        out.release()
-
-        # If there were fewer frames left than half the desired clip length, we stop
-        if ret and (total_frames - clip_num * frames_per_clip) < (0.5 * clip_length * fps):
-            os.remove(output_file)
-            break
-
-        clip_num += 1
-
-        # If we've reached the end of the video
-        if not ret:
-            break
-
-    # Release video capture
-    cap.release()
-
-
 
 def extract_frames_from_all_videos(directory: str, file_ending: str = '.avi') -> None:
     """Given a directory, extract frames from all .avi videos in the directory."""
@@ -218,18 +123,17 @@ def clip_all_videos_into_sixty_sec_clips(directory: str, file_ending: str = '.av
         clip_video(avi_file, clipped_videos_dir, 60)
 
 
-
 def main():
     # extract_frames_from_all_videos(AFL_DATA_DIR, file_ending='.mp4')
-    # clip_all_videos_into_sixty_sec_clips(AFL_DATA_DIR)
+    clip_all_videos_into_sixty_sec_clips(AFL_DATA_DIR)
     # clip_video_imageio(
     #     video_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\marvel_6_time_10_24_03_date_19_08_2023_.avi",
     #     output_dir=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped",
     #     clip_length=60
     # )
-    extract_frames_from_video(
-        file_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped\clip_0.mp4"
-    )
+    # extract_frames_from_video(
+    #     file_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped\clip_0.mp4"
+    # )
 
 
 if __name__ == '__main__':

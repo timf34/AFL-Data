@@ -1,0 +1,3743 @@
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>16</id>
+      <size>1674</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker />
+      <created>2023-09-28 17:58:17.386802+00:00</created>
+      <updated>2023-09-28 18:22:36.577561+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>1673</stop_frame>
+      <frame_filter />
+      <segments>
+        <segment>
+          <id>16</id>
+          <start>0</start>
+          <stop>1673</stop>
+          <url>http://localhost:8080/api/jobs/16</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>timf34</username>
+        <email>farrelti@tcd.ie</email>
+      </owner>
+      <assignee />
+      <labels>
+        <label>
+          <name>ball</name>
+          <color>#ff007c</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2023-09-28 18:22:50.626450+00:00</dumped>
+  </meta>
+  <image id="0" width="1920" height="1080">
+  </image>
+  <image id="1" width="1920" height="1080">
+  </image>
+  <image id="2" width="1920" height="1080">
+  </image>
+  <image id="3" width="1920" height="1080">
+  </image>
+  <image id="4" width="1920" height="1080">
+  </image>
+  <image id="5" width="1920" height="1080">
+  </image>
+  <image id="6" width="1920" height="1080">
+  </image>
+  <image id="7" width="1920" height="1080">
+  </image>
+  <image id="8" width="1920" height="1080">
+  </image>
+  <image id="9" width="1920" height="1080">
+  </image>
+  <image id="10" width="1920" height="1080">
+  </image>
+  <image id="11" width="1920" height="1080">
+  </image>
+  <image id="12" width="1920" height="1080">
+  </image>
+  <image id="13" width="1920" height="1080">
+  </image>
+  <image id="14" width="1920" height="1080">
+  </image>
+  <image id="15" width="1920" height="1080">
+  </image>
+  <image id="16" width="1920" height="1080">
+  </image>
+  <image id="17" width="1920" height="1080">
+  </image>
+  <image id="18" width="1920" height="1080">
+  </image>
+  <image id="19" width="1920" height="1080">
+  </image>
+  <image id="20" width="1920" height="1080">
+  </image>
+  <image id="21" width="1920" height="1080">
+  </image>
+  <image id="22" width="1920" height="1080">
+  </image>
+  <image id="23" width="1920" height="1080">
+  </image>
+  <image id="24" width="1920" height="1080">
+  </image>
+  <image id="25" width="1920" height="1080">
+  </image>
+  <image id="26" width="1920" height="1080">
+  </image>
+  <image id="27" width="1920" height="1080">
+  </image>
+  <image id="28" width="1920" height="1080">
+  </image>
+  <image id="29" width="1920" height="1080">
+  </image>
+  <image id="30" width="1920" height="1080">
+  </image>
+  <image id="31" width="1920" height="1080">
+  </image>
+  <image id="32" width="1920" height="1080">
+  </image>
+  <image id="33" width="1920" height="1080">
+  </image>
+  <image id="34" width="1920" height="1080">
+  </image>
+  <image id="35" width="1920" height="1080">
+  </image>
+  <image id="36" width="1920" height="1080">
+  </image>
+  <image id="37" width="1920" height="1080">
+  </image>
+  <image id="38" width="1920" height="1080">
+  </image>
+  <image id="39" width="1920" height="1080">
+  </image>
+  <image id="40" width="1920" height="1080">
+  </image>
+  <image id="41" width="1920" height="1080">
+  </image>
+  <image id="42" width="1920" height="1080">
+  </image>
+  <image id="43" width="1920" height="1080">
+  </image>
+  <image id="44" width="1920" height="1080">
+  </image>
+  <image id="45" width="1920" height="1080">
+  </image>
+  <image id="46" width="1920" height="1080">
+  </image>
+  <image id="47" width="1920" height="1080">
+  </image>
+  <image id="48" width="1920" height="1080">
+  </image>
+  <image id="49" width="1920" height="1080">
+  </image>
+  <image id="50" width="1920" height="1080">
+  </image>
+  <image id="51" width="1920" height="1080">
+  </image>
+  <image id="52" width="1920" height="1080">
+  </image>
+  <image id="53" width="1920" height="1080">
+  </image>
+  <image id="54" width="1920" height="1080">
+  </image>
+  <image id="55" width="1920" height="1080">
+  </image>
+  <image id="56" width="1920" height="1080">
+  </image>
+  <image id="57" width="1920" height="1080">
+  </image>
+  <image id="58" width="1920" height="1080">
+  </image>
+  <image id="59" width="1920" height="1080">
+  </image>
+  <image id="60" width="1920" height="1080">
+  </image>
+  <image id="61" width="1920" height="1080">
+  </image>
+  <image id="62" width="1920" height="1080">
+  </image>
+  <image id="63" width="1920" height="1080">
+  </image>
+  <image id="64" width="1920" height="1080">
+  </image>
+  <image id="65" width="1920" height="1080">
+  </image>
+  <image id="66" width="1920" height="1080">
+  </image>
+  <image id="67" width="1920" height="1080">
+  </image>
+  <image id="68" width="1920" height="1080">
+  </image>
+  <image id="69" width="1920" height="1080">
+  </image>
+  <image id="70" width="1920" height="1080">
+  </image>
+  <image id="71" width="1920" height="1080">
+  </image>
+  <image id="72" width="1920" height="1080">
+  </image>
+  <image id="73" width="1920" height="1080">
+  </image>
+  <image id="74" width="1920" height="1080">
+  </image>
+  <image id="75" width="1920" height="1080">
+  </image>
+  <image id="76" width="1920" height="1080">
+  </image>
+  <image id="77" width="1920" height="1080">
+  </image>
+  <image id="78" width="1920" height="1080">
+  </image>
+  <image id="79" width="1920" height="1080">
+  </image>
+  <image id="80" width="1920" height="1080">
+  </image>
+  <image id="81" width="1920" height="1080">
+  </image>
+  <image id="82" width="1920" height="1080">
+  </image>
+  <image id="83" width="1920" height="1080">
+  </image>
+  <image id="84" width="1920" height="1080">
+  </image>
+  <image id="85" width="1920" height="1080">
+  </image>
+  <image id="86" width="1920" height="1080">
+  </image>
+  <image id="87" width="1920" height="1080">
+  </image>
+  <image id="88" width="1920" height="1080">
+  </image>
+  <image id="89" width="1920" height="1080">
+  </image>
+  <image id="90" width="1920" height="1080">
+  </image>
+  <image id="91" width="1920" height="1080">
+  </image>
+  <image id="92" width="1920" height="1080">
+  </image>
+  <image id="93" width="1920" height="1080">
+  </image>
+  <image id="94" width="1920" height="1080">
+  </image>
+  <image id="95" width="1920" height="1080">
+  </image>
+  <image id="96" width="1920" height="1080">
+  </image>
+  <image id="97" width="1920" height="1080">
+  </image>
+  <image id="98" width="1920" height="1080">
+  </image>
+  <image id="99" width="1920" height="1080">
+  </image>
+  <image id="100" width="1920" height="1080">
+  </image>
+  <image id="101" width="1920" height="1080">
+  </image>
+  <image id="102" width="1920" height="1080">
+  </image>
+  <image id="103" width="1920" height="1080">
+  </image>
+  <image id="104" width="1920" height="1080">
+  </image>
+  <image id="105" width="1920" height="1080">
+  </image>
+  <image id="106" width="1920" height="1080">
+  </image>
+  <image id="107" width="1920" height="1080">
+  </image>
+  <image id="108" width="1920" height="1080">
+  </image>
+  <image id="109" width="1920" height="1080">
+  </image>
+  <image id="110" width="1920" height="1080">
+  </image>
+  <image id="111" width="1920" height="1080">
+  </image>
+  <image id="112" width="1920" height="1080">
+  </image>
+  <image id="113" width="1920" height="1080">
+  </image>
+  <image id="114" width="1920" height="1080">
+  </image>
+  <image id="115" width="1920" height="1080">
+  </image>
+  <image id="116" width="1920" height="1080">
+  </image>
+  <image id="117" width="1920" height="1080">
+  </image>
+  <image id="118" width="1920" height="1080">
+  </image>
+  <image id="119" width="1920" height="1080">
+  </image>
+  <image id="120" width="1920" height="1080">
+  </image>
+  <image id="121" width="1920" height="1080">
+  </image>
+  <image id="122" width="1920" height="1080">
+  </image>
+  <image id="123" width="1920" height="1080">
+  </image>
+  <image id="124" width="1920" height="1080">
+  </image>
+  <image id="125" width="1920" height="1080">
+  </image>
+  <image id="126" width="1920" height="1080">
+  </image>
+  <image id="127" width="1920" height="1080">
+  </image>
+  <image id="128" width="1920" height="1080">
+  </image>
+  <image id="129" width="1920" height="1080">
+  </image>
+  <image id="130" width="1920" height="1080">
+  </image>
+  <image id="131" width="1920" height="1080">
+  </image>
+  <image id="132" width="1920" height="1080">
+  </image>
+  <image id="133" width="1920" height="1080">
+  </image>
+  <image id="134" width="1920" height="1080">
+  </image>
+  <image id="135" width="1920" height="1080">
+  </image>
+  <image id="136" width="1920" height="1080">
+  </image>
+  <image id="137" width="1920" height="1080">
+  </image>
+  <image id="138" width="1920" height="1080">
+  </image>
+  <image id="139" width="1920" height="1080">
+  </image>
+  <image id="140" width="1920" height="1080">
+  </image>
+  <image id="141" width="1920" height="1080">
+  </image>
+  <image id="142" width="1920" height="1080">
+  </image>
+  <image id="143" width="1920" height="1080">
+  </image>
+  <image id="144" width="1920" height="1080">
+  </image>
+  <image id="145" width="1920" height="1080">
+  </image>
+  <image id="146" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1909.30,367.90" z_order="0">
+    </points>
+  </image>
+  <image id="147" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1880.10,406.60" z_order="0">
+    </points>
+  </image>
+  <image id="148" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1849.30,449.60" z_order="0">
+    </points>
+  </image>
+  <image id="149" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1813.30,501.80" z_order="0">
+    </points>
+  </image>
+  <image id="150" width="1920" height="1080">
+  </image>
+  <image id="151" width="1920" height="1080">
+  </image>
+  <image id="152" width="1920" height="1080">
+  </image>
+  <image id="153" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1755.62,632.28" z_order="0">
+    </points>
+  </image>
+  <image id="154" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1749.80,664.50" z_order="0">
+    </points>
+  </image>
+  <image id="155" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1742.10,706.20" z_order="0">
+    </points>
+  </image>
+  <image id="156" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1732.20,749.80" z_order="0">
+    </points>
+  </image>
+  <image id="157" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1719.50,803.50" z_order="0">
+    </points>
+  </image>
+  <image id="158" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1707.90,854.90" z_order="0">
+    </points>
+  </image>
+  <image id="159" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1692.30,910.20" z_order="0">
+    </points>
+  </image>
+  <image id="160" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1679.40,963.40" z_order="0">
+    </points>
+  </image>
+  <image id="161" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1681.00,976.30" z_order="0">
+    </points>
+  </image>
+  <image id="162" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1681.80,997.40" z_order="0">
+    </points>
+  </image>
+  <image id="163" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1683.10,1020.70" z_order="0">
+    </points>
+  </image>
+  <image id="164" width="1920" height="1080">
+  </image>
+  <image id="165" width="1920" height="1080">
+  </image>
+  <image id="166" width="1920" height="1080">
+  </image>
+  <image id="167" width="1920" height="1080">
+  </image>
+  <image id="168" width="1920" height="1080">
+  </image>
+  <image id="169" width="1920" height="1080">
+  </image>
+  <image id="170" width="1920" height="1080">
+  </image>
+  <image id="171" width="1920" height="1080">
+  </image>
+  <image id="172" width="1920" height="1080">
+  </image>
+  <image id="173" width="1920" height="1080">
+  </image>
+  <image id="174" width="1920" height="1080">
+  </image>
+  <image id="175" width="1920" height="1080">
+  </image>
+  <image id="176" width="1920" height="1080">
+  </image>
+  <image id="177" width="1920" height="1080">
+  </image>
+  <image id="178" width="1920" height="1080">
+  </image>
+  <image id="179" width="1920" height="1080">
+  </image>
+  <image id="180" width="1920" height="1080">
+  </image>
+  <image id="181" width="1920" height="1080">
+  </image>
+  <image id="182" width="1920" height="1080">
+  </image>
+  <image id="183" width="1920" height="1080">
+  </image>
+  <image id="184" width="1920" height="1080">
+  </image>
+  <image id="185" width="1920" height="1080">
+  </image>
+  <image id="186" width="1920" height="1080">
+  </image>
+  <image id="187" width="1920" height="1080">
+  </image>
+  <image id="188" width="1920" height="1080">
+  </image>
+  <image id="189" width="1920" height="1080">
+  </image>
+  <image id="190" width="1920" height="1080">
+  </image>
+  <image id="191" width="1920" height="1080">
+  </image>
+  <image id="192" width="1920" height="1080">
+  </image>
+  <image id="193" width="1920" height="1080">
+  </image>
+  <image id="194" width="1920" height="1080">
+  </image>
+  <image id="195" width="1920" height="1080">
+  </image>
+  <image id="196" width="1920" height="1080">
+  </image>
+  <image id="197" width="1920" height="1080">
+  </image>
+  <image id="198" width="1920" height="1080">
+  </image>
+  <image id="199" width="1920" height="1080">
+  </image>
+  <image id="200" width="1920" height="1080">
+  </image>
+  <image id="201" width="1920" height="1080">
+  </image>
+  <image id="202" width="1920" height="1080">
+  </image>
+  <image id="203" width="1920" height="1080">
+  </image>
+  <image id="204" width="1920" height="1080">
+  </image>
+  <image id="205" width="1920" height="1080">
+  </image>
+  <image id="206" width="1920" height="1080">
+  </image>
+  <image id="207" width="1920" height="1080">
+  </image>
+  <image id="208" width="1920" height="1080">
+  </image>
+  <image id="209" width="1920" height="1080">
+  </image>
+  <image id="210" width="1920" height="1080">
+  </image>
+  <image id="211" width="1920" height="1080">
+  </image>
+  <image id="212" width="1920" height="1080">
+  </image>
+  <image id="213" width="1920" height="1080">
+  </image>
+  <image id="214" width="1920" height="1080">
+  </image>
+  <image id="215" width="1920" height="1080">
+  </image>
+  <image id="216" width="1920" height="1080">
+  </image>
+  <image id="217" width="1920" height="1080">
+  </image>
+  <image id="218" width="1920" height="1080">
+  </image>
+  <image id="219" width="1920" height="1080">
+  </image>
+  <image id="220" width="1920" height="1080">
+  </image>
+  <image id="221" width="1920" height="1080">
+  </image>
+  <image id="222" width="1920" height="1080">
+  </image>
+  <image id="223" width="1920" height="1080">
+  </image>
+  <image id="224" width="1920" height="1080">
+  </image>
+  <image id="225" width="1920" height="1080">
+  </image>
+  <image id="226" width="1920" height="1080">
+  </image>
+  <image id="227" width="1920" height="1080">
+  </image>
+  <image id="228" width="1920" height="1080">
+  </image>
+  <image id="229" width="1920" height="1080">
+  </image>
+  <image id="230" width="1920" height="1080">
+  </image>
+  <image id="231" width="1920" height="1080">
+  </image>
+  <image id="232" width="1920" height="1080">
+  </image>
+  <image id="233" width="1920" height="1080">
+  </image>
+  <image id="234" width="1920" height="1080">
+  </image>
+  <image id="235" width="1920" height="1080">
+  </image>
+  <image id="236" width="1920" height="1080">
+  </image>
+  <image id="237" width="1920" height="1080">
+  </image>
+  <image id="238" width="1920" height="1080">
+  </image>
+  <image id="239" width="1920" height="1080">
+  </image>
+  <image id="240" width="1920" height="1080">
+  </image>
+  <image id="241" width="1920" height="1080">
+  </image>
+  <image id="242" width="1920" height="1080">
+  </image>
+  <image id="243" width="1920" height="1080">
+  </image>
+  <image id="244" width="1920" height="1080">
+  </image>
+  <image id="245" width="1920" height="1080">
+  </image>
+  <image id="246" width="1920" height="1080">
+  </image>
+  <image id="247" width="1920" height="1080">
+  </image>
+  <image id="248" width="1920" height="1080">
+  </image>
+  <image id="249" width="1920" height="1080">
+  </image>
+  <image id="250" width="1920" height="1080">
+  </image>
+  <image id="251" width="1920" height="1080">
+  </image>
+  <image id="252" width="1920" height="1080">
+  </image>
+  <image id="253" width="1920" height="1080">
+  </image>
+  <image id="254" width="1920" height="1080">
+  </image>
+  <image id="255" width="1920" height="1080">
+  </image>
+  <image id="256" width="1920" height="1080">
+  </image>
+  <image id="257" width="1920" height="1080">
+  </image>
+  <image id="258" width="1920" height="1080">
+  </image>
+  <image id="259" width="1920" height="1080">
+  </image>
+  <image id="260" width="1920" height="1080">
+  </image>
+  <image id="261" width="1920" height="1080">
+  </image>
+  <image id="262" width="1920" height="1080">
+  </image>
+  <image id="263" width="1920" height="1080">
+  </image>
+  <image id="264" width="1920" height="1080">
+  </image>
+  <image id="265" width="1920" height="1080">
+  </image>
+  <image id="266" width="1920" height="1080">
+  </image>
+  <image id="267" width="1920" height="1080">
+  </image>
+  <image id="268" width="1920" height="1080">
+  </image>
+  <image id="269" width="1920" height="1080">
+  </image>
+  <image id="270" width="1920" height="1080">
+  </image>
+  <image id="271" width="1920" height="1080">
+  </image>
+  <image id="272" width="1920" height="1080">
+  </image>
+  <image id="273" width="1920" height="1080">
+  </image>
+  <image id="274" width="1920" height="1080">
+  </image>
+  <image id="275" width="1920" height="1080">
+  </image>
+  <image id="276" width="1920" height="1080">
+  </image>
+  <image id="277" width="1920" height="1080">
+  </image>
+  <image id="278" width="1920" height="1080">
+  </image>
+  <image id="279" width="1920" height="1080">
+  </image>
+  <image id="280" width="1920" height="1080">
+  </image>
+  <image id="281" width="1920" height="1080">
+  </image>
+  <image id="282" width="1920" height="1080">
+  </image>
+  <image id="283" width="1920" height="1080">
+  </image>
+  <image id="284" width="1920" height="1080">
+  </image>
+  <image id="285" width="1920" height="1080">
+  </image>
+  <image id="286" width="1920" height="1080">
+  </image>
+  <image id="287" width="1920" height="1080">
+  </image>
+  <image id="288" width="1920" height="1080">
+  </image>
+  <image id="289" width="1920" height="1080">
+  </image>
+  <image id="290" width="1920" height="1080">
+  </image>
+  <image id="291" width="1920" height="1080">
+  </image>
+  <image id="292" width="1920" height="1080">
+  </image>
+  <image id="293" width="1920" height="1080">
+  </image>
+  <image id="294" width="1920" height="1080">
+  </image>
+  <image id="295" width="1920" height="1080">
+  </image>
+  <image id="296" width="1920" height="1080">
+  </image>
+  <image id="297" width="1920" height="1080">
+  </image>
+  <image id="298" width="1920" height="1080">
+  </image>
+  <image id="299" width="1920" height="1080">
+  </image>
+  <image id="300" width="1920" height="1080">
+  </image>
+  <image id="301" width="1920" height="1080">
+  </image>
+  <image id="302" width="1920" height="1080">
+  </image>
+  <image id="303" width="1920" height="1080">
+  </image>
+  <image id="304" width="1920" height="1080">
+  </image>
+  <image id="305" width="1920" height="1080">
+  </image>
+  <image id="306" width="1920" height="1080">
+  </image>
+  <image id="307" width="1920" height="1080">
+  </image>
+  <image id="308" width="1920" height="1080">
+  </image>
+  <image id="309" width="1920" height="1080">
+  </image>
+  <image id="310" width="1920" height="1080">
+  </image>
+  <image id="311" width="1920" height="1080">
+  </image>
+  <image id="312" width="1920" height="1080">
+  </image>
+  <image id="313" width="1920" height="1080">
+  </image>
+  <image id="314" width="1920" height="1080">
+  </image>
+  <image id="315" width="1920" height="1080">
+  </image>
+  <image id="316" width="1920" height="1080">
+  </image>
+  <image id="317" width="1920" height="1080">
+  </image>
+  <image id="318" width="1920" height="1080">
+  </image>
+  <image id="319" width="1920" height="1080">
+  </image>
+  <image id="320" width="1920" height="1080">
+  </image>
+  <image id="321" width="1920" height="1080">
+  </image>
+  <image id="322" width="1920" height="1080">
+  </image>
+  <image id="323" width="1920" height="1080">
+  </image>
+  <image id="324" width="1920" height="1080">
+  </image>
+  <image id="325" width="1920" height="1080">
+  </image>
+  <image id="326" width="1920" height="1080">
+  </image>
+  <image id="327" width="1920" height="1080">
+  </image>
+  <image id="328" width="1920" height="1080">
+  </image>
+  <image id="329" width="1920" height="1080">
+  </image>
+  <image id="330" width="1920" height="1080">
+  </image>
+  <image id="331" width="1920" height="1080">
+  </image>
+  <image id="332" width="1920" height="1080">
+  </image>
+  <image id="333" width="1920" height="1080">
+  </image>
+  <image id="334" width="1920" height="1080">
+  </image>
+  <image id="335" width="1920" height="1080">
+  </image>
+  <image id="336" width="1920" height="1080">
+  </image>
+  <image id="337" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1624.71,971.34" z_order="0">
+    </points>
+  </image>
+  <image id="338" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1618.90,876.90" z_order="0">
+    </points>
+  </image>
+  <image id="339" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1611.50,801.00" z_order="0">
+    </points>
+  </image>
+  <image id="340" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1600.20,718.80" z_order="0">
+    </points>
+  </image>
+  <image id="341" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1590.80,655.20" z_order="0">
+    </points>
+  </image>
+  <image id="342" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1580.60,591.00" z_order="0">
+    </points>
+  </image>
+  <image id="343" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1569.80,540.30" z_order="0">
+    </points>
+  </image>
+  <image id="344" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1558.00,491.90" z_order="0">
+    </points>
+  </image>
+  <image id="345" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1547.40,457.60" z_order="0">
+    </points>
+  </image>
+  <image id="346" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1537.90,429.20" z_order="0">
+    </points>
+  </image>
+  <image id="347" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1527.50,404.50" z_order="0">
+    </points>
+  </image>
+  <image id="348" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1518.60,388.10" z_order="0">
+    </points>
+  </image>
+  <image id="349" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1509.90,377.30" z_order="0">
+    </points>
+  </image>
+  <image id="350" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1503.10,373.10" z_order="0">
+    </points>
+  </image>
+  <image id="351" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1495.20,373.30" z_order="0">
+    </points>
+  </image>
+  <image id="352" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1489.20,377.50" z_order="0">
+    </points>
+  </image>
+  <image id="353" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1483.20,387.50" z_order="0">
+    </points>
+  </image>
+  <image id="354" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1479.00,399.10" z_order="0">
+    </points>
+  </image>
+  <image id="355" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1474.90,416.80" z_order="0">
+    </points>
+  </image>
+  <image id="356" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1471.40,434.50" z_order="0">
+    </points>
+  </image>
+  <image id="357" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1469.10,454.60" z_order="0">
+    </points>
+  </image>
+  <image id="358" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1466.00,479.10" z_order="0">
+    </points>
+  </image>
+  <image id="359" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1463.90,489.50" z_order="0">
+    </points>
+  </image>
+  <image id="360" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1463.90,487.80" z_order="0">
+    </points>
+  </image>
+  <image id="361" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1463.10,489.90" z_order="0">
+    </points>
+  </image>
+  <image id="362" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1462.50,496.10" z_order="0">
+    </points>
+  </image>
+  <image id="363" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1462.50,505.20" z_order="0">
+    </points>
+  </image>
+  <image id="364" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1460.60,517.60" z_order="0">
+    </points>
+  </image>
+  <image id="365" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1459.60,503.40" z_order="0">
+    </points>
+  </image>
+  <image id="366" width="1920" height="1080">
+  </image>
+  <image id="367" width="1920" height="1080">
+  </image>
+  <image id="368" width="1920" height="1080">
+  </image>
+  <image id="369" width="1920" height="1080">
+  </image>
+  <image id="370" width="1920" height="1080">
+  </image>
+  <image id="371" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1519.38,497.42" z_order="0">
+    </points>
+  </image>
+  <image id="372" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1532.90,507.80" z_order="0">
+    </points>
+  </image>
+  <image id="373" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1548.10,521.60" z_order="0">
+    </points>
+  </image>
+  <image id="374" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1557.10,521.80" z_order="0">
+    </points>
+  </image>
+  <image id="375" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1568.40,524.10" z_order="0">
+    </points>
+  </image>
+  <image id="376" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1579.20,530.50" z_order="0">
+    </points>
+  </image>
+  <image id="377" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1588.90,535.00" z_order="0">
+    </points>
+  </image>
+  <image id="378" width="1920" height="1080">
+  </image>
+  <image id="379" width="1920" height="1080">
+  </image>
+  <image id="380" width="1920" height="1080">
+  </image>
+  <image id="381" width="1920" height="1080">
+  </image>
+  <image id="382" width="1920" height="1080">
+  </image>
+  <image id="383" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1573.13,492.36" z_order="0">
+    </points>
+  </image>
+  <image id="384" width="1920" height="1080">
+  </image>
+  <image id="385" width="1920" height="1080">
+  </image>
+  <image id="386" width="1920" height="1080">
+  </image>
+  <image id="387" width="1920" height="1080">
+  </image>
+  <image id="388" width="1920" height="1080">
+  </image>
+  <image id="389" width="1920" height="1080">
+  </image>
+  <image id="390" width="1920" height="1080">
+  </image>
+  <image id="391" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1485.80,385.40" z_order="0">
+    </points>
+  </image>
+  <image id="392" width="1920" height="1080">
+  </image>
+  <image id="393" width="1920" height="1080">
+  </image>
+  <image id="394" width="1920" height="1080">
+  </image>
+  <image id="395" width="1920" height="1080">
+  </image>
+  <image id="396" width="1920" height="1080">
+  </image>
+  <image id="397" width="1920" height="1080">
+  </image>
+  <image id="398" width="1920" height="1080">
+  </image>
+  <image id="399" width="1920" height="1080">
+  </image>
+  <image id="400" width="1920" height="1080">
+  </image>
+  <image id="401" width="1920" height="1080">
+  </image>
+  <image id="402" width="1920" height="1080">
+  </image>
+  <image id="403" width="1920" height="1080">
+  </image>
+  <image id="404" width="1920" height="1080">
+  </image>
+  <image id="405" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1462.69,227.77" z_order="0">
+    </points>
+  </image>
+  <image id="406" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1447.00,192.60" z_order="0">
+    </points>
+  </image>
+  <image id="407" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1433.90,165.90" z_order="0">
+    </points>
+  </image>
+  <image id="408" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1419.70,140.40" z_order="0">
+    </points>
+  </image>
+  <image id="409" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1408.20,121.70" z_order="0">
+    </points>
+  </image>
+  <image id="410" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1397.20,107.40" z_order="0">
+    </points>
+  </image>
+  <image id="411" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1385.70,92.30" z_order="0">
+    </points>
+  </image>
+  <image id="412" width="1920" height="1080">
+  </image>
+  <image id="413" width="1920" height="1080">
+  </image>
+  <image id="414" width="1920" height="1080">
+  </image>
+  <image id="415" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1352.79,67.38" z_order="0">
+    </points>
+  </image>
+  <image id="416" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1346.20,66.70" z_order="0">
+    </points>
+  </image>
+  <image id="417" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1339.10,68.10" z_order="0">
+    </points>
+  </image>
+  <image id="418" width="1920" height="1080">
+  </image>
+  <image id="419" width="1920" height="1080">
+  </image>
+  <image id="420" width="1920" height="1080">
+  </image>
+  <image id="421" width="1920" height="1080">
+  </image>
+  <image id="422" width="1920" height="1080">
+  </image>
+  <image id="423" width="1920" height="1080">
+  </image>
+  <image id="424" width="1920" height="1080">
+  </image>
+  <image id="425" width="1920" height="1080">
+  </image>
+  <image id="426" width="1920" height="1080">
+  </image>
+  <image id="427" width="1920" height="1080">
+  </image>
+  <image id="428" width="1920" height="1080">
+  </image>
+  <image id="429" width="1920" height="1080">
+  </image>
+  <image id="430" width="1920" height="1080">
+  </image>
+  <image id="431" width="1920" height="1080">
+  </image>
+  <image id="432" width="1920" height="1080">
+  </image>
+  <image id="433" width="1920" height="1080">
+  </image>
+  <image id="434" width="1920" height="1080">
+  </image>
+  <image id="435" width="1920" height="1080">
+  </image>
+  <image id="436" width="1920" height="1080">
+  </image>
+  <image id="437" width="1920" height="1080">
+  </image>
+  <image id="438" width="1920" height="1080">
+  </image>
+  <image id="439" width="1920" height="1080">
+  </image>
+  <image id="440" width="1920" height="1080">
+  </image>
+  <image id="441" width="1920" height="1080">
+  </image>
+  <image id="442" width="1920" height="1080">
+  </image>
+  <image id="443" width="1920" height="1080">
+  </image>
+  <image id="444" width="1920" height="1080">
+  </image>
+  <image id="445" width="1920" height="1080">
+  </image>
+  <image id="446" width="1920" height="1080">
+  </image>
+  <image id="447" width="1920" height="1080">
+  </image>
+  <image id="448" width="1920" height="1080">
+  </image>
+  <image id="449" width="1920" height="1080">
+  </image>
+  <image id="450" width="1920" height="1080">
+  </image>
+  <image id="451" width="1920" height="1080">
+  </image>
+  <image id="452" width="1920" height="1080">
+  </image>
+  <image id="453" width="1920" height="1080">
+  </image>
+  <image id="454" width="1920" height="1080">
+  </image>
+  <image id="455" width="1920" height="1080">
+  </image>
+  <image id="456" width="1920" height="1080">
+  </image>
+  <image id="457" width="1920" height="1080">
+  </image>
+  <image id="458" width="1920" height="1080">
+  </image>
+  <image id="459" width="1920" height="1080">
+  </image>
+  <image id="460" width="1920" height="1080">
+  </image>
+  <image id="461" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1234.22,43.63" z_order="0">
+    </points>
+  </image>
+  <image id="462" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1251.90,35.30" z_order="0">
+    </points>
+  </image>
+  <image id="463" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1268.50,29.20" z_order="0">
+    </points>
+  </image>
+  <image id="464" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1286.10,24.80" z_order="0">
+    </points>
+  </image>
+  <image id="465" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1302.10,22.90" z_order="0">
+    </points>
+  </image>
+  <image id="466" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1319.80,21.10" z_order="0">
+    </points>
+  </image>
+  <image id="467" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1336.50,22.00" z_order="0">
+    </points>
+  </image>
+  <image id="468" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1352.90,24.70" z_order="0">
+    </points>
+  </image>
+  <image id="469" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1371.50,28.60" z_order="0">
+    </points>
+  </image>
+  <image id="470" width="1920" height="1080">
+  </image>
+  <image id="471" width="1920" height="1080">
+  </image>
+  <image id="472" width="1920" height="1080">
+  </image>
+  <image id="473" width="1920" height="1080">
+  </image>
+  <image id="474" width="1920" height="1080">
+  </image>
+  <image id="475" width="1920" height="1080">
+  </image>
+  <image id="476" width="1920" height="1080">
+  </image>
+  <image id="477" width="1920" height="1080">
+  </image>
+  <image id="478" width="1920" height="1080">
+  </image>
+  <image id="479" width="1920" height="1080">
+  </image>
+  <image id="480" width="1920" height="1080">
+  </image>
+  <image id="481" width="1920" height="1080">
+  </image>
+  <image id="482" width="1920" height="1080">
+  </image>
+  <image id="483" width="1920" height="1080">
+  </image>
+  <image id="484" width="1920" height="1080">
+  </image>
+  <image id="485" width="1920" height="1080">
+  </image>
+  <image id="486" width="1920" height="1080">
+  </image>
+  <image id="487" width="1920" height="1080">
+  </image>
+  <image id="488" width="1920" height="1080">
+  </image>
+  <image id="489" width="1920" height="1080">
+  </image>
+  <image id="490" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1456.44,67.60" z_order="0">
+    </points>
+  </image>
+  <image id="491" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1442.40,61.30" z_order="0">
+    </points>
+  </image>
+  <image id="492" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1429.60,58.20" z_order="0">
+    </points>
+  </image>
+  <image id="493" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1414.10,55.20" z_order="0">
+    </points>
+  </image>
+  <image id="494" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1400.70,56.50" z_order="0">
+    </points>
+  </image>
+  <image id="495" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1385.80,58.60" z_order="0">
+    </points>
+  </image>
+  <image id="496" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1367.80,64.30" z_order="0">
+    </points>
+  </image>
+  <image id="497" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1353.00,72.00" z_order="0">
+    </points>
+  </image>
+  <image id="498" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1333.70,83.40" z_order="0">
+    </points>
+  </image>
+  <image id="499" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1317.80,95.00" z_order="0">
+    </points>
+  </image>
+  <image id="500" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1298.60,113.10" z_order="0">
+    </points>
+  </image>
+  <image id="501" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1281.70,132.20" z_order="0">
+    </points>
+  </image>
+  <image id="502" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1262.30,156.60" z_order="0">
+    </points>
+  </image>
+  <image id="503" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1245.10,181.10" z_order="0">
+    </points>
+  </image>
+  <image id="504" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1227.90,208.60" z_order="0">
+    </points>
+  </image>
+  <image id="505" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1208.80,243.60" z_order="0">
+    </points>
+  </image>
+  <image id="506" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1192.40,276.10" z_order="0">
+    </points>
+  </image>
+  <image id="507" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1174.90,318.10" z_order="0">
+    </points>
+  </image>
+  <image id="508" width="1920" height="1080">
+  </image>
+  <image id="509" width="1920" height="1080">
+  </image>
+  <image id="510" width="1920" height="1080">
+  </image>
+  <image id="511" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1115.70,425.10" z_order="0">
+    </points>
+  </image>
+  <image id="512" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1101.50,445.30" z_order="0">
+    </points>
+  </image>
+  <image id="513" width="1920" height="1080">
+  </image>
+  <image id="514" width="1920" height="1080">
+  </image>
+  <image id="515" width="1920" height="1080">
+  </image>
+  <image id="516" width="1920" height="1080">
+  </image>
+  <image id="517" width="1920" height="1080">
+  </image>
+  <image id="518" width="1920" height="1080">
+  </image>
+  <image id="519" width="1920" height="1080">
+  </image>
+  <image id="520" width="1920" height="1080">
+  </image>
+  <image id="521" width="1920" height="1080">
+  </image>
+  <image id="522" width="1920" height="1080">
+  </image>
+  <image id="523" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1048.20,478.50" z_order="0">
+    </points>
+  </image>
+  <image id="524" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1061.50,468.80" z_order="0">
+    </points>
+  </image>
+  <image id="525" width="1920" height="1080">
+  </image>
+  <image id="526" width="1920" height="1080">
+  </image>
+  <image id="527" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1109.86,454.32" z_order="0">
+    </points>
+  </image>
+  <image id="528" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1126.20,457.10" z_order="0">
+    </points>
+  </image>
+  <image id="529" width="1920" height="1080">
+  </image>
+  <image id="530" width="1920" height="1080">
+  </image>
+  <image id="531" width="1920" height="1080">
+  </image>
+  <image id="532" width="1920" height="1080">
+  </image>
+  <image id="533" width="1920" height="1080">
+  </image>
+  <image id="534" width="1920" height="1080">
+  </image>
+  <image id="535" width="1920" height="1080">
+  </image>
+  <image id="536" width="1920" height="1080">
+  </image>
+  <image id="537" width="1920" height="1080">
+  </image>
+  <image id="538" width="1920" height="1080">
+  </image>
+  <image id="539" width="1920" height="1080">
+  </image>
+  <image id="540" width="1920" height="1080">
+  </image>
+  <image id="541" width="1920" height="1080">
+  </image>
+  <image id="542" width="1920" height="1080">
+  </image>
+  <image id="543" width="1920" height="1080">
+  </image>
+  <image id="544" width="1920" height="1080">
+  </image>
+  <image id="545" width="1920" height="1080">
+  </image>
+  <image id="546" width="1920" height="1080">
+  </image>
+  <image id="547" width="1920" height="1080">
+  </image>
+  <image id="548" width="1920" height="1080">
+  </image>
+  <image id="549" width="1920" height="1080">
+  </image>
+  <image id="550" width="1920" height="1080">
+  </image>
+  <image id="551" width="1920" height="1080">
+  </image>
+  <image id="552" width="1920" height="1080">
+  </image>
+  <image id="553" width="1920" height="1080">
+  </image>
+  <image id="554" width="1920" height="1080">
+  </image>
+  <image id="555" width="1920" height="1080">
+  </image>
+  <image id="556" width="1920" height="1080">
+  </image>
+  <image id="557" width="1920" height="1080">
+  </image>
+  <image id="558" width="1920" height="1080">
+  </image>
+  <image id="559" width="1920" height="1080">
+  </image>
+  <image id="560" width="1920" height="1080">
+  </image>
+  <image id="561" width="1920" height="1080">
+  </image>
+  <image id="562" width="1920" height="1080">
+  </image>
+  <image id="563" width="1920" height="1080">
+  </image>
+  <image id="564" width="1920" height="1080">
+  </image>
+  <image id="565" width="1920" height="1080">
+  </image>
+  <image id="566" width="1920" height="1080">
+  </image>
+  <image id="567" width="1920" height="1080">
+  </image>
+  <image id="568" width="1920" height="1080">
+  </image>
+  <image id="569" width="1920" height="1080">
+  </image>
+  <image id="570" width="1920" height="1080">
+  </image>
+  <image id="571" width="1920" height="1080">
+  </image>
+  <image id="572" width="1920" height="1080">
+  </image>
+  <image id="573" width="1920" height="1080">
+  </image>
+  <image id="574" width="1920" height="1080">
+  </image>
+  <image id="575" width="1920" height="1080">
+  </image>
+  <image id="576" width="1920" height="1080">
+  </image>
+  <image id="577" width="1920" height="1080">
+  </image>
+  <image id="578" width="1920" height="1080">
+  </image>
+  <image id="579" width="1920" height="1080">
+  </image>
+  <image id="580" width="1920" height="1080">
+  </image>
+  <image id="581" width="1920" height="1080">
+  </image>
+  <image id="582" width="1920" height="1080">
+  </image>
+  <image id="583" width="1920" height="1080">
+  </image>
+  <image id="584" width="1920" height="1080">
+  </image>
+  <image id="585" width="1920" height="1080">
+  </image>
+  <image id="586" width="1920" height="1080">
+  </image>
+  <image id="587" width="1920" height="1080">
+  </image>
+  <image id="588" width="1920" height="1080">
+  </image>
+  <image id="589" width="1920" height="1080">
+  </image>
+  <image id="590" width="1920" height="1080">
+  </image>
+  <image id="591" width="1920" height="1080">
+  </image>
+  <image id="592" width="1920" height="1080">
+  </image>
+  <image id="593" width="1920" height="1080">
+  </image>
+  <image id="594" width="1920" height="1080">
+  </image>
+  <image id="595" width="1920" height="1080">
+  </image>
+  <image id="596" width="1920" height="1080">
+  </image>
+  <image id="597" width="1920" height="1080">
+  </image>
+  <image id="598" width="1920" height="1080">
+  </image>
+  <image id="599" width="1920" height="1080">
+  </image>
+  <image id="600" width="1920" height="1080">
+  </image>
+  <image id="601" width="1920" height="1080">
+  </image>
+  <image id="602" width="1920" height="1080">
+  </image>
+  <image id="603" width="1920" height="1080">
+  </image>
+  <image id="604" width="1920" height="1080">
+  </image>
+  <image id="605" width="1920" height="1080">
+  </image>
+  <image id="606" width="1920" height="1080">
+  </image>
+  <image id="607" width="1920" height="1080">
+  </image>
+  <image id="608" width="1920" height="1080">
+  </image>
+  <image id="609" width="1920" height="1080">
+  </image>
+  <image id="610" width="1920" height="1080">
+  </image>
+  <image id="611" width="1920" height="1080">
+  </image>
+  <image id="612" width="1920" height="1080">
+  </image>
+  <image id="613" width="1920" height="1080">
+  </image>
+  <image id="614" width="1920" height="1080">
+  </image>
+  <image id="615" width="1920" height="1080">
+  </image>
+  <image id="616" width="1920" height="1080">
+  </image>
+  <image id="617" width="1920" height="1080">
+  </image>
+  <image id="618" width="1920" height="1080">
+  </image>
+  <image id="619" width="1920" height="1080">
+  </image>
+  <image id="620" width="1920" height="1080">
+  </image>
+  <image id="621" width="1920" height="1080">
+  </image>
+  <image id="622" width="1920" height="1080">
+  </image>
+  <image id="623" width="1920" height="1080">
+  </image>
+  <image id="624" width="1920" height="1080">
+  </image>
+  <image id="625" width="1920" height="1080">
+  </image>
+  <image id="626" width="1920" height="1080">
+  </image>
+  <image id="627" width="1920" height="1080">
+  </image>
+  <image id="628" width="1920" height="1080">
+  </image>
+  <image id="629" width="1920" height="1080">
+  </image>
+  <image id="630" width="1920" height="1080">
+  </image>
+  <image id="631" width="1920" height="1080">
+  </image>
+  <image id="632" width="1920" height="1080">
+  </image>
+  <image id="633" width="1920" height="1080">
+  </image>
+  <image id="634" width="1920" height="1080">
+  </image>
+  <image id="635" width="1920" height="1080">
+  </image>
+  <image id="636" width="1920" height="1080">
+  </image>
+  <image id="637" width="1920" height="1080">
+  </image>
+  <image id="638" width="1920" height="1080">
+  </image>
+  <image id="639" width="1920" height="1080">
+  </image>
+  <image id="640" width="1920" height="1080">
+  </image>
+  <image id="641" width="1920" height="1080">
+  </image>
+  <image id="642" width="1920" height="1080">
+  </image>
+  <image id="643" width="1920" height="1080">
+  </image>
+  <image id="644" width="1920" height="1080">
+  </image>
+  <image id="645" width="1920" height="1080">
+  </image>
+  <image id="646" width="1920" height="1080">
+  </image>
+  <image id="647" width="1920" height="1080">
+  </image>
+  <image id="648" width="1920" height="1080">
+  </image>
+  <image id="649" width="1920" height="1080">
+  </image>
+  <image id="650" width="1920" height="1080">
+  </image>
+  <image id="651" width="1920" height="1080">
+  </image>
+  <image id="652" width="1920" height="1080">
+  </image>
+  <image id="653" width="1920" height="1080">
+  </image>
+  <image id="654" width="1920" height="1080">
+  </image>
+  <image id="655" width="1920" height="1080">
+  </image>
+  <image id="656" width="1920" height="1080">
+  </image>
+  <image id="657" width="1920" height="1080">
+  </image>
+  <image id="658" width="1920" height="1080">
+  </image>
+  <image id="659" width="1920" height="1080">
+  </image>
+  <image id="660" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1166.56,661.28" z_order="0">
+    </points>
+  </image>
+  <image id="661" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1208.70,661.20" z_order="0">
+    </points>
+  </image>
+  <image id="662" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1276.40,650.00" z_order="0">
+    </points>
+  </image>
+  <image id="663" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1355.00,638.70" z_order="0">
+    </points>
+  </image>
+  <image id="664" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1426.90,632.80" z_order="0">
+    </points>
+  </image>
+  <image id="665" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1497.30,628.00" z_order="0">
+    </points>
+  </image>
+  <image id="666" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1575.60,626.00" z_order="0">
+    </points>
+  </image>
+  <image id="667" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1643.50,628.30" z_order="0">
+    </points>
+  </image>
+  <image id="668" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1719.80,632.80" z_order="0">
+    </points>
+  </image>
+  <image id="669" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1784.20,641.50" z_order="0">
+    </points>
+  </image>
+  <image id="670" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1853.50,653.30" z_order="0">
+    </points>
+  </image>
+  <image id="671" width="1920" height="1080">
+  </image>
+  <image id="672" width="1920" height="1080">
+  </image>
+  <image id="673" width="1920" height="1080">
+  </image>
+  <image id="674" width="1920" height="1080">
+  </image>
+  <image id="675" width="1920" height="1080">
+  </image>
+  <image id="676" width="1920" height="1080">
+  </image>
+  <image id="677" width="1920" height="1080">
+  </image>
+  <image id="678" width="1920" height="1080">
+  </image>
+  <image id="679" width="1920" height="1080">
+  </image>
+  <image id="680" width="1920" height="1080">
+  </image>
+  <image id="681" width="1920" height="1080">
+  </image>
+  <image id="682" width="1920" height="1080">
+  </image>
+  <image id="683" width="1920" height="1080">
+  </image>
+  <image id="684" width="1920" height="1080">
+  </image>
+  <image id="685" width="1920" height="1080">
+  </image>
+  <image id="686" width="1920" height="1080">
+  </image>
+  <image id="687" width="1920" height="1080">
+  </image>
+  <image id="688" width="1920" height="1080">
+  </image>
+  <image id="689" width="1920" height="1080">
+  </image>
+  <image id="690" width="1920" height="1080">
+  </image>
+  <image id="691" width="1920" height="1080">
+  </image>
+  <image id="692" width="1920" height="1080">
+  </image>
+  <image id="693" width="1920" height="1080">
+  </image>
+  <image id="694" width="1920" height="1080">
+  </image>
+  <image id="695" width="1920" height="1080">
+  </image>
+  <image id="696" width="1920" height="1080">
+  </image>
+  <image id="697" width="1920" height="1080">
+  </image>
+  <image id="698" width="1920" height="1080">
+  </image>
+  <image id="699" width="1920" height="1080">
+  </image>
+  <image id="700" width="1920" height="1080">
+  </image>
+  <image id="701" width="1920" height="1080">
+  </image>
+  <image id="702" width="1920" height="1080">
+  </image>
+  <image id="703" width="1920" height="1080">
+  </image>
+  <image id="704" width="1920" height="1080">
+  </image>
+  <image id="705" width="1920" height="1080">
+  </image>
+  <image id="706" width="1920" height="1080">
+  </image>
+  <image id="707" width="1920" height="1080">
+  </image>
+  <image id="708" width="1920" height="1080">
+  </image>
+  <image id="709" width="1920" height="1080">
+  </image>
+  <image id="710" width="1920" height="1080">
+  </image>
+  <image id="711" width="1920" height="1080">
+  </image>
+  <image id="712" width="1920" height="1080">
+  </image>
+  <image id="713" width="1920" height="1080">
+  </image>
+  <image id="714" width="1920" height="1080">
+  </image>
+  <image id="715" width="1920" height="1080">
+  </image>
+  <image id="716" width="1920" height="1080">
+  </image>
+  <image id="717" width="1920" height="1080">
+  </image>
+  <image id="718" width="1920" height="1080">
+  </image>
+  <image id="719" width="1920" height="1080">
+  </image>
+  <image id="720" width="1920" height="1080">
+  </image>
+  <image id="721" width="1920" height="1080">
+  </image>
+  <image id="722" width="1920" height="1080">
+  </image>
+  <image id="723" width="1920" height="1080">
+  </image>
+  <image id="724" width="1920" height="1080">
+  </image>
+  <image id="725" width="1920" height="1080">
+  </image>
+  <image id="726" width="1920" height="1080">
+  </image>
+  <image id="727" width="1920" height="1080">
+  </image>
+  <image id="728" width="1920" height="1080">
+  </image>
+  <image id="729" width="1920" height="1080">
+  </image>
+  <image id="730" width="1920" height="1080">
+  </image>
+  <image id="731" width="1920" height="1080">
+  </image>
+  <image id="732" width="1920" height="1080">
+  </image>
+  <image id="733" width="1920" height="1080">
+  </image>
+  <image id="734" width="1920" height="1080">
+  </image>
+  <image id="735" width="1920" height="1080">
+  </image>
+  <image id="736" width="1920" height="1080">
+  </image>
+  <image id="737" width="1920" height="1080">
+  </image>
+  <image id="738" width="1920" height="1080">
+  </image>
+  <image id="739" width="1920" height="1080">
+  </image>
+  <image id="740" width="1920" height="1080">
+  </image>
+  <image id="741" width="1920" height="1080">
+  </image>
+  <image id="742" width="1920" height="1080">
+  </image>
+  <image id="743" width="1920" height="1080">
+  </image>
+  <image id="744" width="1920" height="1080">
+  </image>
+  <image id="745" width="1920" height="1080">
+  </image>
+  <image id="746" width="1920" height="1080">
+  </image>
+  <image id="747" width="1920" height="1080">
+  </image>
+  <image id="748" width="1920" height="1080">
+  </image>
+  <image id="749" width="1920" height="1080">
+  </image>
+  <image id="750" width="1920" height="1080">
+  </image>
+  <image id="751" width="1920" height="1080">
+  </image>
+  <image id="752" width="1920" height="1080">
+  </image>
+  <image id="753" width="1920" height="1080">
+  </image>
+  <image id="754" width="1920" height="1080">
+  </image>
+  <image id="755" width="1920" height="1080">
+  </image>
+  <image id="756" width="1920" height="1080">
+  </image>
+  <image id="757" width="1920" height="1080">
+  </image>
+  <image id="758" width="1920" height="1080">
+  </image>
+  <image id="759" width="1920" height="1080">
+  </image>
+  <image id="760" width="1920" height="1080">
+  </image>
+  <image id="761" width="1920" height="1080">
+  </image>
+  <image id="762" width="1920" height="1080">
+  </image>
+  <image id="763" width="1920" height="1080">
+  </image>
+  <image id="764" width="1920" height="1080">
+  </image>
+  <image id="765" width="1920" height="1080">
+  </image>
+  <image id="766" width="1920" height="1080">
+  </image>
+  <image id="767" width="1920" height="1080">
+  </image>
+  <image id="768" width="1920" height="1080">
+  </image>
+  <image id="769" width="1920" height="1080">
+  </image>
+  <image id="770" width="1920" height="1080">
+  </image>
+  <image id="771" width="1920" height="1080">
+  </image>
+  <image id="772" width="1920" height="1080">
+  </image>
+  <image id="773" width="1920" height="1080">
+  </image>
+  <image id="774" width="1920" height="1080">
+  </image>
+  <image id="775" width="1920" height="1080">
+  </image>
+  <image id="776" width="1920" height="1080">
+  </image>
+  <image id="777" width="1920" height="1080">
+  </image>
+  <image id="778" width="1920" height="1080">
+  </image>
+  <image id="779" width="1920" height="1080">
+  </image>
+  <image id="780" width="1920" height="1080">
+  </image>
+  <image id="781" width="1920" height="1080">
+  </image>
+  <image id="782" width="1920" height="1080">
+  </image>
+  <image id="783" width="1920" height="1080">
+  </image>
+  <image id="784" width="1920" height="1080">
+  </image>
+  <image id="785" width="1920" height="1080">
+  </image>
+  <image id="786" width="1920" height="1080">
+  </image>
+  <image id="787" width="1920" height="1080">
+  </image>
+  <image id="788" width="1920" height="1080">
+  </image>
+  <image id="789" width="1920" height="1080">
+  </image>
+  <image id="790" width="1920" height="1080">
+  </image>
+  <image id="791" width="1920" height="1080">
+  </image>
+  <image id="792" width="1920" height="1080">
+  </image>
+  <image id="793" width="1920" height="1080">
+  </image>
+  <image id="794" width="1920" height="1080">
+  </image>
+  <image id="795" width="1920" height="1080">
+  </image>
+  <image id="796" width="1920" height="1080">
+  </image>
+  <image id="797" width="1920" height="1080">
+  </image>
+  <image id="798" width="1920" height="1080">
+  </image>
+  <image id="799" width="1920" height="1080">
+  </image>
+  <image id="800" width="1920" height="1080">
+  </image>
+  <image id="801" width="1920" height="1080">
+  </image>
+  <image id="802" width="1920" height="1080">
+  </image>
+  <image id="803" width="1920" height="1080">
+  </image>
+  <image id="804" width="1920" height="1080">
+  </image>
+  <image id="805" width="1920" height="1080">
+  </image>
+  <image id="806" width="1920" height="1080">
+  </image>
+  <image id="807" width="1920" height="1080">
+  </image>
+  <image id="808" width="1920" height="1080">
+  </image>
+  <image id="809" width="1920" height="1080">
+  </image>
+  <image id="810" width="1920" height="1080">
+  </image>
+  <image id="811" width="1920" height="1080">
+  </image>
+  <image id="812" width="1920" height="1080">
+  </image>
+  <image id="813" width="1920" height="1080">
+  </image>
+  <image id="814" width="1920" height="1080">
+  </image>
+  <image id="815" width="1920" height="1080">
+  </image>
+  <image id="816" width="1920" height="1080">
+  </image>
+  <image id="817" width="1920" height="1080">
+  </image>
+  <image id="818" width="1920" height="1080">
+  </image>
+  <image id="819" width="1920" height="1080">
+  </image>
+  <image id="820" width="1920" height="1080">
+  </image>
+  <image id="821" width="1920" height="1080">
+  </image>
+  <image id="822" width="1920" height="1080">
+  </image>
+  <image id="823" width="1920" height="1080">
+  </image>
+  <image id="824" width="1920" height="1080">
+  </image>
+  <image id="825" width="1920" height="1080">
+  </image>
+  <image id="826" width="1920" height="1080">
+  </image>
+  <image id="827" width="1920" height="1080">
+  </image>
+  <image id="828" width="1920" height="1080">
+  </image>
+  <image id="829" width="1920" height="1080">
+  </image>
+  <image id="830" width="1920" height="1080">
+  </image>
+  <image id="831" width="1920" height="1080">
+  </image>
+  <image id="832" width="1920" height="1080">
+  </image>
+  <image id="833" width="1920" height="1080">
+  </image>
+  <image id="834" width="1920" height="1080">
+  </image>
+  <image id="835" width="1920" height="1080">
+  </image>
+  <image id="836" width="1920" height="1080">
+  </image>
+  <image id="837" width="1920" height="1080">
+  </image>
+  <image id="838" width="1920" height="1080">
+  </image>
+  <image id="839" width="1920" height="1080">
+  </image>
+  <image id="840" width="1920" height="1080">
+  </image>
+  <image id="841" width="1920" height="1080">
+  </image>
+  <image id="842" width="1920" height="1080">
+  </image>
+  <image id="843" width="1920" height="1080">
+  </image>
+  <image id="844" width="1920" height="1080">
+  </image>
+  <image id="845" width="1920" height="1080">
+  </image>
+  <image id="846" width="1920" height="1080">
+  </image>
+  <image id="847" width="1920" height="1080">
+  </image>
+  <image id="848" width="1920" height="1080">
+  </image>
+  <image id="849" width="1920" height="1080">
+  </image>
+  <image id="850" width="1920" height="1080">
+  </image>
+  <image id="851" width="1920" height="1080">
+  </image>
+  <image id="852" width="1920" height="1080">
+  </image>
+  <image id="853" width="1920" height="1080">
+  </image>
+  <image id="854" width="1920" height="1080">
+  </image>
+  <image id="855" width="1920" height="1080">
+  </image>
+  <image id="856" width="1920" height="1080">
+  </image>
+  <image id="857" width="1920" height="1080">
+  </image>
+  <image id="858" width="1920" height="1080">
+  </image>
+  <image id="859" width="1920" height="1080">
+  </image>
+  <image id="860" width="1920" height="1080">
+  </image>
+  <image id="861" width="1920" height="1080">
+  </image>
+  <image id="862" width="1920" height="1080">
+  </image>
+  <image id="863" width="1920" height="1080">
+  </image>
+  <image id="864" width="1920" height="1080">
+  </image>
+  <image id="865" width="1920" height="1080">
+  </image>
+  <image id="866" width="1920" height="1080">
+  </image>
+  <image id="867" width="1920" height="1080">
+  </image>
+  <image id="868" width="1920" height="1080">
+  </image>
+  <image id="869" width="1920" height="1080">
+  </image>
+  <image id="870" width="1920" height="1080">
+  </image>
+  <image id="871" width="1920" height="1080">
+  </image>
+  <image id="872" width="1920" height="1080">
+  </image>
+  <image id="873" width="1920" height="1080">
+  </image>
+  <image id="874" width="1920" height="1080">
+  </image>
+  <image id="875" width="1920" height="1080">
+  </image>
+  <image id="876" width="1920" height="1080">
+  </image>
+  <image id="877" width="1920" height="1080">
+  </image>
+  <image id="878" width="1920" height="1080">
+  </image>
+  <image id="879" width="1920" height="1080">
+  </image>
+  <image id="880" width="1920" height="1080">
+  </image>
+  <image id="881" width="1920" height="1080">
+  </image>
+  <image id="882" width="1920" height="1080">
+  </image>
+  <image id="883" width="1920" height="1080">
+  </image>
+  <image id="884" width="1920" height="1080">
+  </image>
+  <image id="885" width="1920" height="1080">
+  </image>
+  <image id="886" width="1920" height="1080">
+  </image>
+  <image id="887" width="1920" height="1080">
+  </image>
+  <image id="888" width="1920" height="1080">
+  </image>
+  <image id="889" width="1920" height="1080">
+  </image>
+  <image id="890" width="1920" height="1080">
+  </image>
+  <image id="891" width="1920" height="1080">
+  </image>
+  <image id="892" width="1920" height="1080">
+  </image>
+  <image id="893" width="1920" height="1080">
+  </image>
+  <image id="894" width="1920" height="1080">
+  </image>
+  <image id="895" width="1920" height="1080">
+  </image>
+  <image id="896" width="1920" height="1080">
+  </image>
+  <image id="897" width="1920" height="1080">
+  </image>
+  <image id="898" width="1920" height="1080">
+  </image>
+  <image id="899" width="1920" height="1080">
+  </image>
+  <image id="900" width="1920" height="1080">
+  </image>
+  <image id="901" width="1920" height="1080">
+  </image>
+  <image id="902" width="1920" height="1080">
+  </image>
+  <image id="903" width="1920" height="1080">
+  </image>
+  <image id="904" width="1920" height="1080">
+  </image>
+  <image id="905" width="1920" height="1080">
+  </image>
+  <image id="906" width="1920" height="1080">
+  </image>
+  <image id="907" width="1920" height="1080">
+  </image>
+  <image id="908" width="1920" height="1080">
+  </image>
+  <image id="909" width="1920" height="1080">
+  </image>
+  <image id="910" width="1920" height="1080">
+  </image>
+  <image id="911" width="1920" height="1080">
+  </image>
+  <image id="912" width="1920" height="1080">
+  </image>
+  <image id="913" width="1920" height="1080">
+  </image>
+  <image id="914" width="1920" height="1080">
+  </image>
+  <image id="915" width="1920" height="1080">
+  </image>
+  <image id="916" width="1920" height="1080">
+  </image>
+  <image id="917" width="1920" height="1080">
+  </image>
+  <image id="918" width="1920" height="1080">
+  </image>
+  <image id="919" width="1920" height="1080">
+  </image>
+  <image id="920" width="1920" height="1080">
+  </image>
+  <image id="921" width="1920" height="1080">
+  </image>
+  <image id="922" width="1920" height="1080">
+  </image>
+  <image id="923" width="1920" height="1080">
+  </image>
+  <image id="924" width="1920" height="1080">
+  </image>
+  <image id="925" width="1920" height="1080">
+  </image>
+  <image id="926" width="1920" height="1080">
+  </image>
+  <image id="927" width="1920" height="1080">
+  </image>
+  <image id="928" width="1920" height="1080">
+  </image>
+  <image id="929" width="1920" height="1080">
+  </image>
+  <image id="930" width="1920" height="1080">
+  </image>
+  <image id="931" width="1920" height="1080">
+  </image>
+  <image id="932" width="1920" height="1080">
+  </image>
+  <image id="933" width="1920" height="1080">
+  </image>
+  <image id="934" width="1920" height="1080">
+  </image>
+  <image id="935" width="1920" height="1080">
+  </image>
+  <image id="936" width="1920" height="1080">
+  </image>
+  <image id="937" width="1920" height="1080">
+  </image>
+  <image id="938" width="1920" height="1080">
+  </image>
+  <image id="939" width="1920" height="1080">
+  </image>
+  <image id="940" width="1920" height="1080">
+  </image>
+  <image id="941" width="1920" height="1080">
+  </image>
+  <image id="942" width="1920" height="1080">
+  </image>
+  <image id="943" width="1920" height="1080">
+  </image>
+  <image id="944" width="1920" height="1080">
+  </image>
+  <image id="945" width="1920" height="1080">
+  </image>
+  <image id="946" width="1920" height="1080">
+  </image>
+  <image id="947" width="1920" height="1080">
+  </image>
+  <image id="948" width="1920" height="1080">
+  </image>
+  <image id="949" width="1920" height="1080">
+  </image>
+  <image id="950" width="1920" height="1080">
+  </image>
+  <image id="951" width="1920" height="1080">
+  </image>
+  <image id="952" width="1920" height="1080">
+  </image>
+  <image id="953" width="1920" height="1080">
+  </image>
+  <image id="954" width="1920" height="1080">
+  </image>
+  <image id="955" width="1920" height="1080">
+  </image>
+  <image id="956" width="1920" height="1080">
+  </image>
+  <image id="957" width="1920" height="1080">
+  </image>
+  <image id="958" width="1920" height="1080">
+  </image>
+  <image id="959" width="1920" height="1080">
+  </image>
+  <image id="960" width="1920" height="1080">
+  </image>
+  <image id="961" width="1920" height="1080">
+  </image>
+  <image id="962" width="1920" height="1080">
+  </image>
+  <image id="963" width="1920" height="1080">
+  </image>
+  <image id="964" width="1920" height="1080">
+  </image>
+  <image id="965" width="1920" height="1080">
+  </image>
+  <image id="966" width="1920" height="1080">
+  </image>
+  <image id="967" width="1920" height="1080">
+  </image>
+  <image id="968" width="1920" height="1080">
+  </image>
+  <image id="969" width="1920" height="1080">
+  </image>
+  <image id="970" width="1920" height="1080">
+  </image>
+  <image id="971" width="1920" height="1080">
+  </image>
+  <image id="972" width="1920" height="1080">
+  </image>
+  <image id="973" width="1920" height="1080">
+  </image>
+  <image id="974" width="1920" height="1080">
+  </image>
+  <image id="975" width="1920" height="1080">
+  </image>
+  <image id="976" width="1920" height="1080">
+  </image>
+  <image id="977" width="1920" height="1080">
+  </image>
+  <image id="978" width="1920" height="1080">
+  </image>
+  <image id="979" width="1920" height="1080">
+  </image>
+  <image id="980" width="1920" height="1080">
+  </image>
+  <image id="981" width="1920" height="1080">
+  </image>
+  <image id="982" width="1920" height="1080">
+  </image>
+  <image id="983" width="1920" height="1080">
+  </image>
+  <image id="984" width="1920" height="1080">
+  </image>
+  <image id="985" width="1920" height="1080">
+  </image>
+  <image id="986" width="1920" height="1080">
+  </image>
+  <image id="987" width="1920" height="1080">
+  </image>
+  <image id="988" width="1920" height="1080">
+  </image>
+  <image id="989" width="1920" height="1080">
+  </image>
+  <image id="990" width="1920" height="1080">
+  </image>
+  <image id="991" width="1920" height="1080">
+  </image>
+  <image id="992" width="1920" height="1080">
+  </image>
+  <image id="993" width="1920" height="1080">
+  </image>
+  <image id="994" width="1920" height="1080">
+  </image>
+  <image id="995" width="1920" height="1080">
+  </image>
+  <image id="996" width="1920" height="1080">
+  </image>
+  <image id="997" width="1920" height="1080">
+  </image>
+  <image id="998" width="1920" height="1080">
+  </image>
+  <image id="999" width="1920" height="1080">
+  </image>
+  <image id="1000" width="1920" height="1080">
+  </image>
+  <image id="1001" width="1920" height="1080">
+  </image>
+  <image id="1002" width="1920" height="1080">
+  </image>
+  <image id="1003" width="1920" height="1080">
+  </image>
+  <image id="1004" width="1920" height="1080">
+  </image>
+  <image id="1005" width="1920" height="1080">
+  </image>
+  <image id="1006" width="1920" height="1080">
+  </image>
+  <image id="1007" width="1920" height="1080">
+  </image>
+  <image id="1008" width="1920" height="1080">
+  </image>
+  <image id="1009" width="1920" height="1080">
+  </image>
+  <image id="1010" width="1920" height="1080">
+  </image>
+  <image id="1011" width="1920" height="1080">
+  </image>
+  <image id="1012" width="1920" height="1080">
+  </image>
+  <image id="1013" width="1920" height="1080">
+  </image>
+  <image id="1014" width="1920" height="1080">
+  </image>
+  <image id="1015" width="1920" height="1080">
+  </image>
+  <image id="1016" width="1920" height="1080">
+  </image>
+  <image id="1017" width="1920" height="1080">
+  </image>
+  <image id="1018" width="1920" height="1080">
+  </image>
+  <image id="1019" width="1920" height="1080">
+  </image>
+  <image id="1020" width="1920" height="1080">
+  </image>
+  <image id="1021" width="1920" height="1080">
+  </image>
+  <image id="1022" width="1920" height="1080">
+  </image>
+  <image id="1023" width="1920" height="1080">
+  </image>
+  <image id="1024" width="1920" height="1080">
+  </image>
+  <image id="1025" width="1920" height="1080">
+  </image>
+  <image id="1026" width="1920" height="1080">
+  </image>
+  <image id="1027" width="1920" height="1080">
+  </image>
+  <image id="1028" width="1920" height="1080">
+  </image>
+  <image id="1029" width="1920" height="1080">
+  </image>
+  <image id="1030" width="1920" height="1080">
+  </image>
+  <image id="1031" width="1920" height="1080">
+  </image>
+  <image id="1032" width="1920" height="1080">
+  </image>
+  <image id="1033" width="1920" height="1080">
+  </image>
+  <image id="1034" width="1920" height="1080">
+  </image>
+  <image id="1035" width="1920" height="1080">
+  </image>
+  <image id="1036" width="1920" height="1080">
+  </image>
+  <image id="1037" width="1920" height="1080">
+  </image>
+  <image id="1038" width="1920" height="1080">
+  </image>
+  <image id="1039" width="1920" height="1080">
+  </image>
+  <image id="1040" width="1920" height="1080">
+  </image>
+  <image id="1041" width="1920" height="1080">
+  </image>
+  <image id="1042" width="1920" height="1080">
+  </image>
+  <image id="1043" width="1920" height="1080">
+  </image>
+  <image id="1044" width="1920" height="1080">
+  </image>
+  <image id="1045" width="1920" height="1080">
+  </image>
+  <image id="1046" width="1920" height="1080">
+  </image>
+  <image id="1047" width="1920" height="1080">
+  </image>
+  <image id="1048" width="1920" height="1080">
+  </image>
+  <image id="1049" width="1920" height="1080">
+  </image>
+  <image id="1050" width="1920" height="1080">
+  </image>
+  <image id="1051" width="1920" height="1080">
+  </image>
+  <image id="1052" width="1920" height="1080">
+  </image>
+  <image id="1053" width="1920" height="1080">
+  </image>
+  <image id="1054" width="1920" height="1080">
+  </image>
+  <image id="1055" width="1920" height="1080">
+  </image>
+  <image id="1056" width="1920" height="1080">
+  </image>
+  <image id="1057" width="1920" height="1080">
+  </image>
+  <image id="1058" width="1920" height="1080">
+  </image>
+  <image id="1059" width="1920" height="1080">
+  </image>
+  <image id="1060" width="1920" height="1080">
+  </image>
+  <image id="1061" width="1920" height="1080">
+  </image>
+  <image id="1062" width="1920" height="1080">
+  </image>
+  <image id="1063" width="1920" height="1080">
+  </image>
+  <image id="1064" width="1920" height="1080">
+  </image>
+  <image id="1065" width="1920" height="1080">
+  </image>
+  <image id="1066" width="1920" height="1080">
+  </image>
+  <image id="1067" width="1920" height="1080">
+  </image>
+  <image id="1068" width="1920" height="1080">
+  </image>
+  <image id="1069" width="1920" height="1080">
+  </image>
+  <image id="1070" width="1920" height="1080">
+  </image>
+  <image id="1071" width="1920" height="1080">
+  </image>
+  <image id="1072" width="1920" height="1080">
+  </image>
+  <image id="1073" width="1920" height="1080">
+  </image>
+  <image id="1074" width="1920" height="1080">
+  </image>
+  <image id="1075" width="1920" height="1080">
+  </image>
+  <image id="1076" width="1920" height="1080">
+  </image>
+  <image id="1077" width="1920" height="1080">
+  </image>
+  <image id="1078" width="1920" height="1080">
+  </image>
+  <image id="1079" width="1920" height="1080">
+  </image>
+  <image id="1080" width="1920" height="1080">
+  </image>
+  <image id="1081" width="1920" height="1080">
+  </image>
+  <image id="1082" width="1920" height="1080">
+  </image>
+  <image id="1083" width="1920" height="1080">
+  </image>
+  <image id="1084" width="1920" height="1080">
+  </image>
+  <image id="1085" width="1920" height="1080">
+  </image>
+  <image id="1086" width="1920" height="1080">
+  </image>
+  <image id="1087" width="1920" height="1080">
+  </image>
+  <image id="1088" width="1920" height="1080">
+  </image>
+  <image id="1089" width="1920" height="1080">
+  </image>
+  <image id="1090" width="1920" height="1080">
+  </image>
+  <image id="1091" width="1920" height="1080">
+  </image>
+  <image id="1092" width="1920" height="1080">
+  </image>
+  <image id="1093" width="1920" height="1080">
+  </image>
+  <image id="1094" width="1920" height="1080">
+  </image>
+  <image id="1095" width="1920" height="1080">
+  </image>
+  <image id="1096" width="1920" height="1080">
+  </image>
+  <image id="1097" width="1920" height="1080">
+  </image>
+  <image id="1098" width="1920" height="1080">
+  </image>
+  <image id="1099" width="1920" height="1080">
+  </image>
+  <image id="1100" width="1920" height="1080">
+  </image>
+  <image id="1101" width="1920" height="1080">
+  </image>
+  <image id="1102" width="1920" height="1080">
+  </image>
+  <image id="1103" width="1920" height="1080">
+  </image>
+  <image id="1104" width="1920" height="1080">
+  </image>
+  <image id="1105" width="1920" height="1080">
+  </image>
+  <image id="1106" width="1920" height="1080">
+  </image>
+  <image id="1107" width="1920" height="1080">
+  </image>
+  <image id="1108" width="1920" height="1080">
+  </image>
+  <image id="1109" width="1920" height="1080">
+  </image>
+  <image id="1110" width="1920" height="1080">
+  </image>
+  <image id="1111" width="1920" height="1080">
+  </image>
+  <image id="1112" width="1920" height="1080">
+  </image>
+  <image id="1113" width="1920" height="1080">
+  </image>
+  <image id="1114" width="1920" height="1080">
+  </image>
+  <image id="1115" width="1920" height="1080">
+  </image>
+  <image id="1116" width="1920" height="1080">
+  </image>
+  <image id="1117" width="1920" height="1080">
+  </image>
+  <image id="1118" width="1920" height="1080">
+  </image>
+  <image id="1119" width="1920" height="1080">
+  </image>
+  <image id="1120" width="1920" height="1080">
+  </image>
+  <image id="1121" width="1920" height="1080">
+  </image>
+  <image id="1122" width="1920" height="1080">
+  </image>
+  <image id="1123" width="1920" height="1080">
+  </image>
+  <image id="1124" width="1920" height="1080">
+  </image>
+  <image id="1125" width="1920" height="1080">
+  </image>
+  <image id="1126" width="1920" height="1080">
+  </image>
+  <image id="1127" width="1920" height="1080">
+  </image>
+  <image id="1128" width="1920" height="1080">
+  </image>
+  <image id="1129" width="1920" height="1080">
+  </image>
+  <image id="1130" width="1920" height="1080">
+  </image>
+  <image id="1131" width="1920" height="1080">
+  </image>
+  <image id="1132" width="1920" height="1080">
+  </image>
+  <image id="1133" width="1920" height="1080">
+  </image>
+  <image id="1134" width="1920" height="1080">
+  </image>
+  <image id="1135" width="1920" height="1080">
+  </image>
+  <image id="1136" width="1920" height="1080">
+  </image>
+  <image id="1137" width="1920" height="1080">
+  </image>
+  <image id="1138" width="1920" height="1080">
+  </image>
+  <image id="1139" width="1920" height="1080">
+  </image>
+  <image id="1140" width="1920" height="1080">
+  </image>
+  <image id="1141" width="1920" height="1080">
+  </image>
+  <image id="1142" width="1920" height="1080">
+  </image>
+  <image id="1143" width="1920" height="1080">
+  </image>
+  <image id="1144" width="1920" height="1080">
+  </image>
+  <image id="1145" width="1920" height="1080">
+  </image>
+  <image id="1146" width="1920" height="1080">
+  </image>
+  <image id="1147" width="1920" height="1080">
+  </image>
+  <image id="1148" width="1920" height="1080">
+  </image>
+  <image id="1149" width="1920" height="1080">
+  </image>
+  <image id="1150" width="1920" height="1080">
+  </image>
+  <image id="1151" width="1920" height="1080">
+  </image>
+  <image id="1152" width="1920" height="1080">
+  </image>
+  <image id="1153" width="1920" height="1080">
+  </image>
+  <image id="1154" width="1920" height="1080">
+  </image>
+  <image id="1155" width="1920" height="1080">
+  </image>
+  <image id="1156" width="1920" height="1080">
+  </image>
+  <image id="1157" width="1920" height="1080">
+  </image>
+  <image id="1158" width="1920" height="1080">
+  </image>
+  <image id="1159" width="1920" height="1080">
+  </image>
+  <image id="1160" width="1920" height="1080">
+  </image>
+  <image id="1161" width="1920" height="1080">
+  </image>
+  <image id="1162" width="1920" height="1080">
+  </image>
+  <image id="1163" width="1920" height="1080">
+  </image>
+  <image id="1164" width="1920" height="1080">
+  </image>
+  <image id="1165" width="1920" height="1080">
+  </image>
+  <image id="1166" width="1920" height="1080">
+  </image>
+  <image id="1167" width="1920" height="1080">
+  </image>
+  <image id="1168" width="1920" height="1080">
+  </image>
+  <image id="1169" width="1920" height="1080">
+  </image>
+  <image id="1170" width="1920" height="1080">
+  </image>
+  <image id="1171" width="1920" height="1080">
+  </image>
+  <image id="1172" width="1920" height="1080">
+  </image>
+  <image id="1173" width="1920" height="1080">
+  </image>
+  <image id="1174" width="1920" height="1080">
+  </image>
+  <image id="1175" width="1920" height="1080">
+  </image>
+  <image id="1176" width="1920" height="1080">
+  </image>
+  <image id="1177" width="1920" height="1080">
+  </image>
+  <image id="1178" width="1920" height="1080">
+  </image>
+  <image id="1179" width="1920" height="1080">
+  </image>
+  <image id="1180" width="1920" height="1080">
+  </image>
+  <image id="1181" width="1920" height="1080">
+  </image>
+  <image id="1182" width="1920" height="1080">
+  </image>
+  <image id="1183" width="1920" height="1080">
+  </image>
+  <image id="1184" width="1920" height="1080">
+  </image>
+  <image id="1185" width="1920" height="1080">
+  </image>
+  <image id="1186" width="1920" height="1080">
+  </image>
+  <image id="1187" width="1920" height="1080">
+  </image>
+  <image id="1188" width="1920" height="1080">
+  </image>
+  <image id="1189" width="1920" height="1080">
+  </image>
+  <image id="1190" width="1920" height="1080">
+  </image>
+  <image id="1191" width="1920" height="1080">
+  </image>
+  <image id="1192" width="1920" height="1080">
+  </image>
+  <image id="1193" width="1920" height="1080">
+  </image>
+  <image id="1194" width="1920" height="1080">
+  </image>
+  <image id="1195" width="1920" height="1080">
+  </image>
+  <image id="1196" width="1920" height="1080">
+  </image>
+  <image id="1197" width="1920" height="1080">
+  </image>
+  <image id="1198" width="1920" height="1080">
+  </image>
+  <image id="1199" width="1920" height="1080">
+  </image>
+  <image id="1200" width="1920" height="1080">
+  </image>
+  <image id="1201" width="1920" height="1080">
+  </image>
+  <image id="1202" width="1920" height="1080">
+  </image>
+  <image id="1203" width="1920" height="1080">
+  </image>
+  <image id="1204" width="1920" height="1080">
+  </image>
+  <image id="1205" width="1920" height="1080">
+  </image>
+  <image id="1206" width="1920" height="1080">
+  </image>
+  <image id="1207" width="1920" height="1080">
+  </image>
+  <image id="1208" width="1920" height="1080">
+  </image>
+  <image id="1209" width="1920" height="1080">
+  </image>
+  <image id="1210" width="1920" height="1080">
+  </image>
+  <image id="1211" width="1920" height="1080">
+  </image>
+  <image id="1212" width="1920" height="1080">
+  </image>
+  <image id="1213" width="1920" height="1080">
+  </image>
+  <image id="1214" width="1920" height="1080">
+  </image>
+  <image id="1215" width="1920" height="1080">
+  </image>
+  <image id="1216" width="1920" height="1080">
+  </image>
+  <image id="1217" width="1920" height="1080">
+  </image>
+  <image id="1218" width="1920" height="1080">
+  </image>
+  <image id="1219" width="1920" height="1080">
+  </image>
+  <image id="1220" width="1920" height="1080">
+  </image>
+  <image id="1221" width="1920" height="1080">
+  </image>
+  <image id="1222" width="1920" height="1080">
+  </image>
+  <image id="1223" width="1920" height="1080">
+  </image>
+  <image id="1224" width="1920" height="1080">
+  </image>
+  <image id="1225" width="1920" height="1080">
+  </image>
+  <image id="1226" width="1920" height="1080">
+  </image>
+  <image id="1227" width="1920" height="1080">
+  </image>
+  <image id="1228" width="1920" height="1080">
+  </image>
+  <image id="1229" width="1920" height="1080">
+  </image>
+  <image id="1230" width="1920" height="1080">
+  </image>
+  <image id="1231" width="1920" height="1080">
+  </image>
+  <image id="1232" width="1920" height="1080">
+  </image>
+  <image id="1233" width="1920" height="1080">
+  </image>
+  <image id="1234" width="1920" height="1080">
+  </image>
+  <image id="1235" width="1920" height="1080">
+  </image>
+  <image id="1236" width="1920" height="1080">
+  </image>
+  <image id="1237" width="1920" height="1080">
+  </image>
+  <image id="1238" width="1920" height="1080">
+  </image>
+  <image id="1239" width="1920" height="1080">
+  </image>
+  <image id="1240" width="1920" height="1080">
+  </image>
+  <image id="1241" width="1920" height="1080">
+  </image>
+  <image id="1242" width="1920" height="1080">
+  </image>
+  <image id="1243" width="1920" height="1080">
+  </image>
+  <image id="1244" width="1920" height="1080">
+  </image>
+  <image id="1245" width="1920" height="1080">
+  </image>
+  <image id="1246" width="1920" height="1080">
+  </image>
+  <image id="1247" width="1920" height="1080">
+  </image>
+  <image id="1248" width="1920" height="1080">
+  </image>
+  <image id="1249" width="1920" height="1080">
+  </image>
+  <image id="1250" width="1920" height="1080">
+  </image>
+  <image id="1251" width="1920" height="1080">
+  </image>
+  <image id="1252" width="1920" height="1080">
+  </image>
+  <image id="1253" width="1920" height="1080">
+  </image>
+  <image id="1254" width="1920" height="1080">
+  </image>
+  <image id="1255" width="1920" height="1080">
+  </image>
+  <image id="1256" width="1920" height="1080">
+  </image>
+  <image id="1257" width="1920" height="1080">
+  </image>
+  <image id="1258" width="1920" height="1080">
+  </image>
+  <image id="1259" width="1920" height="1080">
+  </image>
+  <image id="1260" width="1920" height="1080">
+  </image>
+  <image id="1261" width="1920" height="1080">
+  </image>
+  <image id="1262" width="1920" height="1080">
+  </image>
+  <image id="1263" width="1920" height="1080">
+  </image>
+  <image id="1264" width="1920" height="1080">
+  </image>
+  <image id="1265" width="1920" height="1080">
+  </image>
+  <image id="1266" width="1920" height="1080">
+  </image>
+  <image id="1267" width="1920" height="1080">
+  </image>
+  <image id="1268" width="1920" height="1080">
+  </image>
+  <image id="1269" width="1920" height="1080">
+  </image>
+  <image id="1270" width="1920" height="1080">
+  </image>
+  <image id="1271" width="1920" height="1080">
+  </image>
+  <image id="1272" width="1920" height="1080">
+  </image>
+  <image id="1273" width="1920" height="1080">
+  </image>
+  <image id="1274" width="1920" height="1080">
+  </image>
+  <image id="1275" width="1920" height="1080">
+  </image>
+  <image id="1276" width="1920" height="1080">
+  </image>
+  <image id="1277" width="1920" height="1080">
+  </image>
+  <image id="1278" width="1920" height="1080">
+  </image>
+  <image id="1279" width="1920" height="1080">
+  </image>
+  <image id="1280" width="1920" height="1080">
+  </image>
+  <image id="1281" width="1920" height="1080">
+  </image>
+  <image id="1282" width="1920" height="1080">
+  </image>
+  <image id="1283" width="1920" height="1080">
+  </image>
+  <image id="1284" width="1920" height="1080">
+  </image>
+  <image id="1285" width="1920" height="1080">
+  </image>
+  <image id="1286" width="1920" height="1080">
+  </image>
+  <image id="1287" width="1920" height="1080">
+  </image>
+  <image id="1288" width="1920" height="1080">
+  </image>
+  <image id="1289" width="1920" height="1080">
+  </image>
+  <image id="1290" width="1920" height="1080">
+  </image>
+  <image id="1291" width="1920" height="1080">
+  </image>
+  <image id="1292" width="1920" height="1080">
+  </image>
+  <image id="1293" width="1920" height="1080">
+  </image>
+  <image id="1294" width="1920" height="1080">
+  </image>
+  <image id="1295" width="1920" height="1080">
+  </image>
+  <image id="1296" width="1920" height="1080">
+  </image>
+  <image id="1297" width="1920" height="1080">
+  </image>
+  <image id="1298" width="1920" height="1080">
+  </image>
+  <image id="1299" width="1920" height="1080">
+  </image>
+  <image id="1300" width="1920" height="1080">
+  </image>
+  <image id="1301" width="1920" height="1080">
+  </image>
+  <image id="1302" width="1920" height="1080">
+  </image>
+  <image id="1303" width="1920" height="1080">
+  </image>
+  <image id="1304" width="1920" height="1080">
+  </image>
+  <image id="1305" width="1920" height="1080">
+  </image>
+  <image id="1306" width="1920" height="1080">
+  </image>
+  <image id="1307" width="1920" height="1080">
+  </image>
+  <image id="1308" width="1920" height="1080">
+  </image>
+  <image id="1309" width="1920" height="1080">
+  </image>
+  <image id="1310" width="1920" height="1080">
+  </image>
+  <image id="1311" width="1920" height="1080">
+  </image>
+  <image id="1312" width="1920" height="1080">
+  </image>
+  <image id="1313" width="1920" height="1080">
+  </image>
+  <image id="1314" width="1920" height="1080">
+  </image>
+  <image id="1315" width="1920" height="1080">
+  </image>
+  <image id="1316" width="1920" height="1080">
+  </image>
+  <image id="1317" width="1920" height="1080">
+  </image>
+  <image id="1318" width="1920" height="1080">
+  </image>
+  <image id="1319" width="1920" height="1080">
+  </image>
+  <image id="1320" width="1920" height="1080">
+  </image>
+  <image id="1321" width="1920" height="1080">
+  </image>
+  <image id="1322" width="1920" height="1080">
+  </image>
+  <image id="1323" width="1920" height="1080">
+  </image>
+  <image id="1324" width="1920" height="1080">
+  </image>
+  <image id="1325" width="1920" height="1080">
+  </image>
+  <image id="1326" width="1920" height="1080">
+  </image>
+  <image id="1327" width="1920" height="1080">
+  </image>
+  <image id="1328" width="1920" height="1080">
+  </image>
+  <image id="1329" width="1920" height="1080">
+  </image>
+  <image id="1330" width="1920" height="1080">
+  </image>
+  <image id="1331" width="1920" height="1080">
+  </image>
+  <image id="1332" width="1920" height="1080">
+  </image>
+  <image id="1333" width="1920" height="1080">
+  </image>
+  <image id="1334" width="1920" height="1080">
+  </image>
+  <image id="1335" width="1920" height="1080">
+  </image>
+  <image id="1336" width="1920" height="1080">
+  </image>
+  <image id="1337" width="1920" height="1080">
+  </image>
+  <image id="1338" width="1920" height="1080">
+  </image>
+  <image id="1339" width="1920" height="1080">
+  </image>
+  <image id="1340" width="1920" height="1080">
+  </image>
+  <image id="1341" width="1920" height="1080">
+  </image>
+  <image id="1342" width="1920" height="1080">
+  </image>
+  <image id="1343" width="1920" height="1080">
+  </image>
+  <image id="1344" width="1920" height="1080">
+  </image>
+  <image id="1345" width="1920" height="1080">
+  </image>
+  <image id="1346" width="1920" height="1080">
+  </image>
+  <image id="1347" width="1920" height="1080">
+  </image>
+  <image id="1348" width="1920" height="1080">
+  </image>
+  <image id="1349" width="1920" height="1080">
+  </image>
+  <image id="1350" width="1920" height="1080">
+  </image>
+  <image id="1351" width="1920" height="1080">
+  </image>
+  <image id="1352" width="1920" height="1080">
+  </image>
+  <image id="1353" width="1920" height="1080">
+  </image>
+  <image id="1354" width="1920" height="1080">
+  </image>
+  <image id="1355" width="1920" height="1080">
+  </image>
+  <image id="1356" width="1920" height="1080">
+  </image>
+  <image id="1357" width="1920" height="1080">
+  </image>
+  <image id="1358" width="1920" height="1080">
+  </image>
+  <image id="1359" width="1920" height="1080">
+  </image>
+  <image id="1360" width="1920" height="1080">
+  </image>
+  <image id="1361" width="1920" height="1080">
+  </image>
+  <image id="1362" width="1920" height="1080">
+  </image>
+  <image id="1363" width="1920" height="1080">
+  </image>
+  <image id="1364" width="1920" height="1080">
+  </image>
+  <image id="1365" width="1920" height="1080">
+  </image>
+  <image id="1366" width="1920" height="1080">
+  </image>
+  <image id="1367" width="1920" height="1080">
+  </image>
+  <image id="1368" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1848.02,535.51" z_order="0">
+    </points>
+  </image>
+  <image id="1369" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1835.70,546.60" z_order="0">
+    </points>
+  </image>
+  <image id="1370" width="1920" height="1080">
+  </image>
+  <image id="1371" width="1920" height="1080">
+  </image>
+  <image id="1372" width="1920" height="1080">
+  </image>
+  <image id="1373" width="1920" height="1080">
+  </image>
+  <image id="1374" width="1920" height="1080">
+  </image>
+  <image id="1375" width="1920" height="1080">
+  </image>
+  <image id="1376" width="1920" height="1080">
+  </image>
+  <image id="1377" width="1920" height="1080">
+  </image>
+  <image id="1378" width="1920" height="1080">
+  </image>
+  <image id="1379" width="1920" height="1080">
+  </image>
+  <image id="1380" width="1920" height="1080">
+  </image>
+  <image id="1381" width="1920" height="1080">
+  </image>
+  <image id="1382" width="1920" height="1080">
+  </image>
+  <image id="1383" width="1920" height="1080">
+  </image>
+  <image id="1384" width="1920" height="1080">
+  </image>
+  <image id="1385" width="1920" height="1080">
+  </image>
+  <image id="1386" width="1920" height="1080">
+  </image>
+  <image id="1387" width="1920" height="1080">
+  </image>
+  <image id="1388" width="1920" height="1080">
+  </image>
+  <image id="1389" width="1920" height="1080">
+  </image>
+  <image id="1390" width="1920" height="1080">
+  </image>
+  <image id="1391" width="1920" height="1080">
+  </image>
+  <image id="1392" width="1920" height="1080">
+  </image>
+  <image id="1393" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1864.60,587.32" z_order="0">
+    </points>
+  </image>
+  <image id="1394" width="1920" height="1080">
+  </image>
+  <image id="1395" width="1920" height="1080">
+  </image>
+  <image id="1396" width="1920" height="1080">
+  </image>
+  <image id="1397" width="1920" height="1080">
+  </image>
+  <image id="1398" width="1920" height="1080">
+  </image>
+  <image id="1399" width="1920" height="1080">
+  </image>
+  <image id="1400" width="1920" height="1080">
+  </image>
+  <image id="1401" width="1920" height="1080">
+  </image>
+  <image id="1402" width="1920" height="1080">
+  </image>
+  <image id="1403" width="1920" height="1080">
+  </image>
+  <image id="1404" width="1920" height="1080">
+  </image>
+  <image id="1405" width="1920" height="1080">
+  </image>
+  <image id="1406" width="1920" height="1080">
+  </image>
+  <image id="1407" width="1920" height="1080">
+  </image>
+  <image id="1408" width="1920" height="1080">
+  </image>
+  <image id="1409" width="1920" height="1080">
+  </image>
+  <image id="1410" width="1920" height="1080">
+  </image>
+  <image id="1411" width="1920" height="1080">
+  </image>
+  <image id="1412" width="1920" height="1080">
+  </image>
+  <image id="1413" width="1920" height="1080">
+  </image>
+  <image id="1414" width="1920" height="1080">
+  </image>
+  <image id="1415" width="1920" height="1080">
+  </image>
+  <image id="1416" width="1920" height="1080">
+  </image>
+  <image id="1417" width="1920" height="1080">
+  </image>
+  <image id="1418" width="1920" height="1080">
+  </image>
+  <image id="1419" width="1920" height="1080">
+  </image>
+  <image id="1420" width="1920" height="1080">
+  </image>
+  <image id="1421" width="1920" height="1080">
+  </image>
+  <image id="1422" width="1920" height="1080">
+  </image>
+  <image id="1423" width="1920" height="1080">
+  </image>
+  <image id="1424" width="1920" height="1080">
+  </image>
+  <image id="1425" width="1920" height="1080">
+  </image>
+  <image id="1426" width="1920" height="1080">
+  </image>
+  <image id="1427" width="1920" height="1080">
+  </image>
+  <image id="1428" width="1920" height="1080">
+  </image>
+  <image id="1429" width="1920" height="1080">
+  </image>
+  <image id="1430" width="1920" height="1080">
+  </image>
+  <image id="1431" width="1920" height="1080">
+  </image>
+  <image id="1432" width="1920" height="1080">
+  </image>
+  <image id="1433" width="1920" height="1080">
+  </image>
+  <image id="1434" width="1920" height="1080">
+  </image>
+  <image id="1435" width="1920" height="1080">
+  </image>
+  <image id="1436" width="1920" height="1080">
+  </image>
+  <image id="1437" width="1920" height="1080">
+  </image>
+  <image id="1438" width="1920" height="1080">
+  </image>
+  <image id="1439" width="1920" height="1080">
+  </image>
+  <image id="1440" width="1920" height="1080">
+  </image>
+  <image id="1441" width="1920" height="1080">
+  </image>
+  <image id="1442" width="1920" height="1080">
+  </image>
+  <image id="1443" width="1920" height="1080">
+  </image>
+  <image id="1444" width="1920" height="1080">
+  </image>
+  <image id="1445" width="1920" height="1080">
+  </image>
+  <image id="1446" width="1920" height="1080">
+  </image>
+  <image id="1447" width="1920" height="1080">
+  </image>
+  <image id="1448" width="1920" height="1080">
+  </image>
+  <image id="1449" width="1920" height="1080">
+  </image>
+  <image id="1450" width="1920" height="1080">
+  </image>
+  <image id="1451" width="1920" height="1080">
+  </image>
+  <image id="1452" width="1920" height="1080">
+  </image>
+  <image id="1453" width="1920" height="1080">
+  </image>
+  <image id="1454" width="1920" height="1080">
+  </image>
+  <image id="1455" width="1920" height="1080">
+  </image>
+  <image id="1456" width="1920" height="1080">
+  </image>
+  <image id="1457" width="1920" height="1080">
+  </image>
+  <image id="1458" width="1920" height="1080">
+  </image>
+  <image id="1459" width="1920" height="1080">
+  </image>
+  <image id="1460" width="1920" height="1080">
+  </image>
+  <image id="1461" width="1920" height="1080">
+  </image>
+  <image id="1462" width="1920" height="1080">
+  </image>
+  <image id="1463" width="1920" height="1080">
+  </image>
+  <image id="1464" width="1920" height="1080">
+  </image>
+  <image id="1465" width="1920" height="1080">
+  </image>
+  <image id="1466" width="1920" height="1080">
+  </image>
+  <image id="1467" width="1920" height="1080">
+  </image>
+  <image id="1468" width="1920" height="1080">
+  </image>
+  <image id="1469" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1822.49,11.36" z_order="0">
+    </points>
+  </image>
+  <image id="1470" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1794.70,13.10" z_order="0">
+    </points>
+  </image>
+  <image id="1471" width="1920" height="1080">
+  </image>
+  <image id="1472" width="1920" height="1080">
+  </image>
+  <image id="1473" width="1920" height="1080">
+  </image>
+  <image id="1474" width="1920" height="1080">
+  </image>
+  <image id="1475" width="1920" height="1080">
+  </image>
+  <image id="1476" width="1920" height="1080">
+  </image>
+  <image id="1477" width="1920" height="1080">
+  </image>
+  <image id="1478" width="1920" height="1080">
+  </image>
+  <image id="1479" width="1920" height="1080">
+  </image>
+  <image id="1480" width="1920" height="1080">
+  </image>
+  <image id="1481" width="1920" height="1080">
+  </image>
+  <image id="1482" width="1920" height="1080">
+  </image>
+  <image id="1483" width="1920" height="1080">
+  </image>
+  <image id="1484" width="1920" height="1080">
+  </image>
+  <image id="1485" width="1920" height="1080">
+  </image>
+  <image id="1486" width="1920" height="1080">
+  </image>
+  <image id="1487" width="1920" height="1080">
+  </image>
+  <image id="1488" width="1920" height="1080">
+  </image>
+  <image id="1489" width="1920" height="1080">
+  </image>
+  <image id="1490" width="1920" height="1080">
+  </image>
+  <image id="1491" width="1920" height="1080">
+  </image>
+  <image id="1492" width="1920" height="1080">
+  </image>
+  <image id="1493" width="1920" height="1080">
+  </image>
+  <image id="1494" width="1920" height="1080">
+  </image>
+  <image id="1495" width="1920" height="1080">
+  </image>
+  <image id="1496" width="1920" height="1080">
+  </image>
+  <image id="1497" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1522.60,7.13" z_order="0">
+    </points>
+  </image>
+  <image id="1498" width="1920" height="1080">
+  </image>
+  <image id="1499" width="1920" height="1080">
+  </image>
+  <image id="1500" width="1920" height="1080">
+  </image>
+  <image id="1501" width="1920" height="1080">
+  </image>
+  <image id="1502" width="1920" height="1080">
+  </image>
+  <image id="1503" width="1920" height="1080">
+  </image>
+  <image id="1504" width="1920" height="1080">
+  </image>
+  <image id="1505" width="1920" height="1080">
+  </image>
+  <image id="1506" width="1920" height="1080">
+  </image>
+  <image id="1507" width="1920" height="1080">
+  </image>
+  <image id="1508" width="1920" height="1080">
+  </image>
+  <image id="1509" width="1920" height="1080">
+  </image>
+  <image id="1510" width="1920" height="1080">
+  </image>
+  <image id="1511" width="1920" height="1080">
+  </image>
+  <image id="1512" width="1920" height="1080">
+  </image>
+  <image id="1513" width="1920" height="1080">
+  </image>
+  <image id="1514" width="1920" height="1080">
+  </image>
+  <image id="1515" width="1920" height="1080">
+  </image>
+  <image id="1516" width="1920" height="1080">
+  </image>
+  <image id="1517" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1338.01,58.74" z_order="0">
+    </points>
+  </image>
+  <image id="1518" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1326.10,60.90" z_order="0">
+    </points>
+  </image>
+  <image id="1519" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1315.20,62.50" z_order="0">
+    </points>
+  </image>
+  <image id="1520" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1303.00,67.30" z_order="0">
+    </points>
+  </image>
+  <image id="1521" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1293.00,72.60" z_order="0">
+    </points>
+  </image>
+  <image id="1522" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1281.20,78.40" z_order="0">
+    </points>
+  </image>
+  <image id="1523" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1271.50,85.70" z_order="0">
+    </points>
+  </image>
+  <image id="1524" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1261.00,94.30" z_order="0">
+    </points>
+  </image>
+  <image id="1525" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1248.30,106.50" z_order="0">
+    </points>
+  </image>
+  <image id="1526" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1236.90,118.20" z_order="0">
+    </points>
+  </image>
+  <image id="1527" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1221.80,134.80" z_order="0">
+    </points>
+  </image>
+  <image id="1528" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1209.00,151.00" z_order="0">
+    </points>
+  </image>
+  <image id="1529" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1195.00,169.90" z_order="0">
+    </points>
+  </image>
+  <image id="1530" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1179.30,193.60" z_order="0">
+    </points>
+  </image>
+  <image id="1531" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1164.50,217.80" z_order="0">
+    </points>
+  </image>
+  <image id="1532" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1147.90,247.80" z_order="0">
+    </points>
+  </image>
+  <image id="1533" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1131.90,277.10" z_order="0">
+    </points>
+  </image>
+  <image id="1534" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1114.60,308.50" z_order="0">
+    </points>
+  </image>
+  <image id="1535" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1099.10,335.70" z_order="0">
+    </points>
+  </image>
+  <image id="1536" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1084.50,364.20" z_order="0">
+    </points>
+  </image>
+  <image id="1537" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1069.60,379.70" z_order="0">
+    </points>
+  </image>
+  <image id="1538" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1058.70,378.20" z_order="0">
+    </points>
+  </image>
+  <image id="1539" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1046.40,380.20" z_order="0">
+    </points>
+  </image>
+  <image id="1540" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1036.10,385.10" z_order="0">
+    </points>
+  </image>
+  <image id="1541" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1026.80,393.90" z_order="0">
+    </points>
+  </image>
+  <image id="1542" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1017.60,406.60" z_order="0">
+    </points>
+  </image>
+  <image id="1543" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1009.00,420.90" z_order="0">
+    </points>
+  </image>
+  <image id="1544" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="1001.00,441.80" z_order="0">
+    </points>
+  </image>
+  <image id="1545" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="993.10,454.10" z_order="0">
+    </points>
+  </image>
+  <image id="1546" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="982.70,457.80" z_order="0">
+    </points>
+  </image>
+  <image id="1547" width="1920" height="1080">
+  </image>
+  <image id="1548" width="1920" height="1080">
+  </image>
+  <image id="1549" width="1920" height="1080">
+  </image>
+  <image id="1550" width="1920" height="1080">
+  </image>
+  <image id="1551" width="1920" height="1080">
+  </image>
+  <image id="1552" width="1920" height="1080">
+  </image>
+  <image id="1553" width="1920" height="1080">
+  </image>
+  <image id="1554" width="1920" height="1080">
+  </image>
+  <image id="1555" width="1920" height="1080">
+  </image>
+  <image id="1556" width="1920" height="1080">
+  </image>
+  <image id="1557" width="1920" height="1080">
+  </image>
+  <image id="1558" width="1920" height="1080">
+  </image>
+  <image id="1559" width="1920" height="1080">
+  </image>
+  <image id="1560" width="1920" height="1080">
+  </image>
+  <image id="1561" width="1920" height="1080">
+  </image>
+  <image id="1562" width="1920" height="1080">
+  </image>
+  <image id="1563" width="1920" height="1080">
+  </image>
+  <image id="1564" width="1920" height="1080">
+  </image>
+  <image id="1565" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="974.34,298.76" z_order="0">
+    </points>
+  </image>
+  <image id="1566" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="966.30,272.50" z_order="0">
+    </points>
+  </image>
+  <image id="1567" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="959.20,253.30" z_order="0">
+    </points>
+  </image>
+  <image id="1568" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="953.00,235.70" z_order="0">
+    </points>
+  </image>
+  <image id="1569" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="946.30,223.40" z_order="0">
+    </points>
+  </image>
+  <image id="1570" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="941.90,213.40" z_order="0">
+    </points>
+  </image>
+  <image id="1571" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="936.60,204.80" z_order="0">
+    </points>
+  </image>
+  <image id="1572" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="932.70,200.60" z_order="0">
+    </points>
+  </image>
+  <image id="1573" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="928.90,197.40" z_order="0">
+    </points>
+  </image>
+  <image id="1574" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="925.40,197.60" z_order="0">
+    </points>
+  </image>
+  <image id="1575" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="923.30,199.50" z_order="0">
+    </points>
+  </image>
+  <image id="1576" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="921.30,203.70" z_order="0">
+    </points>
+  </image>
+  <image id="1577" width="1920" height="1080">
+  </image>
+  <image id="1578" width="1920" height="1080">
+  </image>
+  <image id="1579" width="1920" height="1080">
+  </image>
+  <image id="1580" width="1920" height="1080">
+  </image>
+  <image id="1581" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="900.87,175.18" z_order="0">
+    </points>
+  </image>
+  <image id="1582" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="896.40,168.70" z_order="0">
+    </points>
+  </image>
+  <image id="1583" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="886.80,161.10" z_order="0">
+    </points>
+  </image>
+  <image id="1584" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="882.70,161.00" z_order="0">
+    </points>
+  </image>
+  <image id="1585" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="880.10,163.40" z_order="0">
+    </points>
+  </image>
+  <image id="1586" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="877.90,167.40" z_order="0">
+    </points>
+  </image>
+  <image id="1587" width="1920" height="1080">
+  </image>
+  <image id="1588" width="1920" height="1080">
+  </image>
+  <image id="1589" width="1920" height="1080">
+  </image>
+  <image id="1590" width="1920" height="1080">
+  </image>
+  <image id="1591" width="1920" height="1080">
+  </image>
+  <image id="1592" width="1920" height="1080">
+  </image>
+  <image id="1593" width="1920" height="1080">
+  </image>
+  <image id="1594" width="1920" height="1080">
+  </image>
+  <image id="1595" width="1920" height="1080">
+  </image>
+  <image id="1596" width="1920" height="1080">
+  </image>
+  <image id="1597" width="1920" height="1080">
+  </image>
+  <image id="1598" width="1920" height="1080">
+  </image>
+  <image id="1599" width="1920" height="1080">
+  </image>
+  <image id="1600" width="1920" height="1080">
+  </image>
+  <image id="1601" width="1920" height="1080">
+  </image>
+  <image id="1602" width="1920" height="1080">
+  </image>
+  <image id="1603" width="1920" height="1080">
+  </image>
+  <image id="1604" width="1920" height="1080">
+  </image>
+  <image id="1605" width="1920" height="1080">
+  </image>
+  <image id="1606" width="1920" height="1080">
+  </image>
+  <image id="1607" width="1920" height="1080">
+  </image>
+  <image id="1608" width="1920" height="1080">
+  </image>
+  <image id="1609" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="811.65,204.68" z_order="0">
+    </points>
+  </image>
+  <image id="1610" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="826.40,199.50" z_order="0">
+    </points>
+  </image>
+  <image id="1611" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="843.50,196.70" z_order="0">
+    </points>
+  </image>
+  <image id="1612" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="857.40,195.10" z_order="0">
+    </points>
+  </image>
+  <image id="1613" width="1920" height="1080">
+  </image>
+  <image id="1614" width="1920" height="1080">
+  </image>
+  <image id="1615" width="1920" height="1080">
+  </image>
+  <image id="1616" width="1920" height="1080">
+  </image>
+  <image id="1617" width="1920" height="1080">
+  </image>
+  <image id="1618" width="1920" height="1080">
+  </image>
+  <image id="1619" width="1920" height="1080">
+  </image>
+  <image id="1620" width="1920" height="1080">
+  </image>
+  <image id="1621" width="1920" height="1080">
+  </image>
+  <image id="1622" width="1920" height="1080">
+  </image>
+  <image id="1623" width="1920" height="1080">
+  </image>
+  <image id="1624" width="1920" height="1080">
+  </image>
+  <image id="1625" width="1920" height="1080">
+  </image>
+  <image id="1626" width="1920" height="1080">
+  </image>
+  <image id="1627" width="1920" height="1080">
+  </image>
+  <image id="1628" width="1920" height="1080">
+  </image>
+  <image id="1629" width="1920" height="1080">
+  </image>
+  <image id="1630" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="824.46,109.66" z_order="0">
+    </points>
+  </image>
+  <image id="1631" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="815.20,104.70" z_order="0">
+    </points>
+  </image>
+  <image id="1632" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="805.60,101.00" z_order="0">
+    </points>
+  </image>
+  <image id="1633" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="798.20,100.30" z_order="0">
+    </points>
+  </image>
+  <image id="1634" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="789.60,100.90" z_order="0">
+    </points>
+  </image>
+  <image id="1635" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="783.30,102.40" z_order="0">
+    </points>
+  </image>
+  <image id="1636" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="778.10,107.00" z_order="0">
+    </points>
+  </image>
+  <image id="1637" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="772.00,111.50" z_order="0">
+    </points>
+  </image>
+  <image id="1638" width="1920" height="1080">
+  </image>
+  <image id="1639" width="1920" height="1080">
+  </image>
+  <image id="1640" width="1920" height="1080">
+  </image>
+  <image id="1641" width="1920" height="1080">
+  </image>
+  <image id="1642" width="1920" height="1080">
+  </image>
+  <image id="1643" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="782.62,118.46" z_order="0">
+    </points>
+  </image>
+  <image id="1644" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="791.80,109.90" z_order="0">
+    </points>
+  </image>
+  <image id="1645" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="799.20,103.80" z_order="0">
+    </points>
+  </image>
+  <image id="1646" width="1920" height="1080">
+    <points label="ball" source="manual" occluded="0" points="806.90,99.60" z_order="0">
+    </points>
+  </image>
+  <image id="1647" width="1920" height="1080">
+  </image>
+  <image id="1648" width="1920" height="1080">
+  </image>
+  <image id="1649" width="1920" height="1080">
+  </image>
+  <image id="1650" width="1920" height="1080">
+  </image>
+  <image id="1651" width="1920" height="1080">
+  </image>
+  <image id="1652" width="1920" height="1080">
+  </image>
+  <image id="1653" width="1920" height="1080">
+  </image>
+  <image id="1654" width="1920" height="1080">
+  </image>
+  <image id="1655" width="1920" height="1080">
+  </image>
+  <image id="1656" width="1920" height="1080">
+  </image>
+  <image id="1657" width="1920" height="1080">
+  </image>
+  <image id="1658" width="1920" height="1080">
+  </image>
+  <image id="1659" width="1920" height="1080">
+  </image>
+  <image id="1660" width="1920" height="1080">
+  </image>
+  <image id="1661" width="1920" height="1080">
+  </image>
+  <image id="1662" width="1920" height="1080">
+  </image>
+  <image id="1663" width="1920" height="1080">
+  </image>
+  <image id="1664" width="1920" height="1080">
+  </image>
+  <image id="1665" width="1920" height="1080">
+  </image>
+  <image id="1666" width="1920" height="1080">
+  </image>
+  <image id="1667" width="1920" height="1080">
+  </image>
+  <image id="1668" width="1920" height="1080">
+  </image>
+  <image id="1669" width="1920" height="1080">
+  </image>
+  <image id="1670" width="1920" height="1080">
+  </image>
+  <image id="1671" width="1920" height="1080">
+  </image>
+  <image id="1672" width="1920" height="1080">
+  </image>
+  <image id="1673" width="1920" height="1080">
+  </image>
+</annotations>

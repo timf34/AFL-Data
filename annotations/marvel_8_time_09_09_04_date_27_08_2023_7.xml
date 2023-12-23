@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>24</id>
+      <size>1019</size>
+      <mode>interpolation</mode>
+      <overlap>5</overlap>
+      <bugtracker></bugtracker>
+      <created>2023-10-22 18:23:43.912522+00:00</created>
+      <updated>2023-10-22 19:04:12.004941+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>1018</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>24</id>
+          <start>0</start>
+          <stop>1018</stop>
+          <url>http://localhost:8080/api/jobs/24</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>timf34</username>
+        <email>farrelti@tcd.ie</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>ball</name>
+          <color>#ff007c</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2023-10-22 19:04:23.962523+00:00</dumped>
+    <original_size>
+      <width>1920</width>
+      <height>1080</height>
+    </original_size>
+  </meta>
+  <track id="0" label="ball" source="manual">
+    <points frame="3" keyframe="1" outside="0" occluded="0" points="1149.88,11.79" z_order="0">
+    </points>
+    <points frame="4" keyframe="1" outside="0" occluded="0" points="1150.10,25.70" z_order="0">
+    </points>
+    <points frame="5" keyframe="1" outside="0" occluded="0" points="1150.20,41.30" z_order="0">
+    </points>
+    <points frame="6" keyframe="1" outside="0" occluded="0" points="1150.10,56.40" z_order="0">
+    </points>
+    <points frame="7" keyframe="1" outside="0" occluded="0" points="1150.20,76.60" z_order="0">
+    </points>
+    <points frame="8" keyframe="1" outside="0" occluded="0" points="1148.00,77.00" z_order="0">
+    </points>
+    <points frame="9" keyframe="1" outside="0" occluded="0" points="1144.20,73.20" z_order="0">
+    </points>
+    <points frame="10" keyframe="1" outside="0" occluded="0" points="1141.50,71.00" z_order="0">
+    </points>
+    <points frame="11" keyframe="1" outside="1" occluded="0" points="1139.30,70.90" z_order="0">
+    </points>
+  </track>
+  <track id="1" label="ball" source="manual">
+    <points frame="13" keyframe="1" outside="0" occluded="0" points="1141.91,68.60" z_order="0">
+    </points>
+    <points frame="14" keyframe="1" outside="0" occluded="0" points="1146.10,67.60" z_order="0">
+    </points>
+    <points frame="15" keyframe="1" outside="0" occluded="0" points="1151.60,68.80" z_order="0">
+    </points>
+    <points frame="16" keyframe="1" outside="1" occluded="0" points="1156.10,71.20" z_order="0">
+    </points>
+  </track>
+  <track id="2" label="ball" source="manual">
+    <points frame="18" keyframe="1" outside="0" occluded="0" points="1165.70,65.80" z_order="0">
+    </points>
+    <points frame="19" keyframe="1" outside="0" occluded="0" points="1170.50,67.00" z_order="0">
+    </points>
+    <points frame="20" keyframe="1" outside="1" occluded="0" points="1176.50,70.60" z_order="0">
+    </points>
+  </track>
+  <track id="3" label="ball" source="manual">
+    <points frame="34" keyframe="1" outside="0" occluded="0" points="1153.14,133.81" z_order="0">
+    </points>
+    <points frame="35" keyframe="1" outside="0" occluded="0" points="1145.70,131.90" z_order="0">
+    </points>
+    <points frame="36" keyframe="1" outside="0" occluded="0" points="1137.90,131.10" z_order="0">
+    </points>
+    <points frame="37" keyframe="1" outside="0" occluded="0" points="1130.10,131.40" z_order="0">
+    </points>
+    <points frame="38" keyframe="1" outside="0" occluded="0" points="1123.00,133.70" z_order="0">
+    </points>
+    <points frame="39" keyframe="1" outside="0" occluded="0" points="1115.90,138.60" z_order="0">
+    </points>
+    <points frame="40" keyframe="1" outside="0" occluded="0" points="1110.70,145.70" z_order="0">
+    </points>
+    <points frame="41" keyframe="1" outside="0" occluded="0" points="1105.40,154.10" z_order="0">
+    </points>
+    <points frame="42" keyframe="1" outside="0" occluded="0" points="1100.60,166.20" z_order="0">
+    </points>
+    <points frame="43" keyframe="1" outside="0" occluded="0" points="1096.20,180.60" z_order="0">
+    </points>
+    <points frame="44" keyframe="1" outside="0" occluded="0" points="1089.40,220.70" z_order="0">
+    </points>
+    <points frame="45" keyframe="1" outside="0" occluded="0" points="1087.10,246.30" z_order="0">
+    </points>
+    <points frame="46" keyframe="1" outside="0" occluded="0" points="1085.10,270.50" z_order="0">
+    </points>
+    <points frame="47" keyframe="1" outside="0" occluded="0" points="1083.90,302.60" z_order="0">
+    </points>
+    <points frame="48" keyframe="1" outside="0" occluded="0" points="1083.40,338.30" z_order="0">
+    </points>
+    <points frame="49" keyframe="1" outside="0" occluded="0" points="1083.00,373.00" z_order="0">
+    </points>
+    <points frame="50" keyframe="1" outside="0" occluded="0" points="1077.50,403.00" z_order="0">
+    </points>
+    <points frame="51" keyframe="1" outside="0" occluded="0" points="1043.20,413.10" z_order="0">
+    </points>
+    <points frame="52" keyframe="1" outside="0" occluded="0" points="1014.50,427.60" z_order="0">
+    </points>
+    <points frame="53" keyframe="1" outside="0" occluded="0" points="983.50,448.30" z_order="0">
+    </points>
+    <points frame="54" keyframe="1" outside="0" occluded="0" points="956.30,471.90" z_order="0">
+    </points>
+    <points frame="55" keyframe="1" outside="0" occluded="0" points="931.10,499.30" z_order="0">
+    </points>
+    <points frame="56" keyframe="1" outside="0" occluded="0" points="910.70,524.50" z_order="0">
+    </points>
+    <points frame="57" keyframe="1" outside="0" occluded="0" points="891.40,520.80" z_order="0">
+    </points>
+    <points frame="58" keyframe="1" outside="0" occluded="0" points="873.30,517.90" z_order="0">
+    </points>
+    <points frame="59" keyframe="1" outside="1" occluded="0" points="856.90,518.50" z_order="0">
+    </points>
+  </track>
+  <track id="4" label="ball" source="manual">
+    <points frame="73" keyframe="1" outside="0" occluded="0" points="1039.49,627.07" z_order="0">
+    </points>
+    <points frame="74" keyframe="1" outside="0" occluded="0" points="1102.30,606.30" z_order="0">
+    </points>
+    <points frame="75" keyframe="1" outside="0" occluded="0" points="1176.00,582.80" z_order="0">
+    </points>
+    <points frame="76" keyframe="1" outside="0" occluded="0" points="1251.70,562.10" z_order="0">
+    </points>
+    <points frame="77" keyframe="1" outside="0" occluded="0" points="1329.60,542.10" z_order="0">
+    </points>
+    <points frame="78" keyframe="1" outside="0" occluded="0" points="1398.90,528.00" z_order="0">
+    </points>
+    <points frame="79" keyframe="1" outside="0" occluded="0" points="1479.10,514.70" z_order="0">
+    </points>
+    <points frame="80" keyframe="1" outside="0" occluded="0" points="1556.70,506.00" z_order="0">
+    </points>
+    <points frame="81" keyframe="1" outside="0" occluded="0" points="1623.90,502.50" z_order="0">
+    </points>
+    <points frame="82" keyframe="1" outside="0" occluded="0" points="1709.30,500.20" z_order="0">
+    </points>
+    <points frame="83" keyframe="1" outside="0" occluded="0" points="1773.20,503.10" z_order="0">
+    </points>
+    <points frame="84" keyframe="1" outside="0" occluded="0" points="1843.10,511.20" z_order="0">
+    </points>
+    <points frame="85" keyframe="1" outside="1" occluded="0" points="1900.50,520.90" z_order="0">
+    </points>
+  </track>
+  <track id="5" label="ball" source="manual">
+    <points frame="467" keyframe="1" outside="0" occluded="0" points="1908.24,170.28" z_order="0">
+    </points>
+    <points frame="468" keyframe="1" outside="0" occluded="0" points="1900.00,163.20" z_order="0">
+    </points>
+    <points frame="469" keyframe="1" outside="0" occluded="0" points="1892.40,158.20" z_order="0">
+    </points>
+    <points frame="470" keyframe="1" outside="1" occluded="0" points="1884.50,157.20" z_order="0">
+    </points>
+  </track>
+  <track id="6" label="ball" source="manual">
+    <points frame="488" keyframe="1" outside="1" occluded="0" points="1898.15,172.38" z_order="0">
+    </points>
+  </track>
+  <track id="7" label="ball" source="manual">
+    <points frame="996" keyframe="1" outside="0" occluded="0" points="1894.86,282.43" z_order="0">
+    </points>
+    <points frame="997" keyframe="1" outside="0" occluded="0" points="1857.80,264.00" z_order="0">
+    </points>
+    <points frame="998" keyframe="1" outside="0" occluded="0" points="1779.90,235.90" z_order="0">
+    </points>
+    <points frame="999" keyframe="1" outside="0" occluded="0" points="1738.60,227.20" z_order="0">
+    </points>
+    <points frame="1000" keyframe="1" outside="0" occluded="0" points="1696.80,223.20" z_order="0">
+    </points>
+    <points frame="1001" keyframe="1" outside="0" occluded="0" points="1654.00,223.40" z_order="0">
+    </points>
+    <points frame="1002" keyframe="1" outside="0" occluded="0" points="1614.90,228.60" z_order="0">
+    </points>
+    <points frame="1003" keyframe="1" outside="0" occluded="0" points="1567.90,238.80" z_order="0">
+    </points>
+    <points frame="1004" keyframe="1" outside="0" occluded="0" points="1519.60,255.50" z_order="0">
+    </points>
+    <points frame="1005" keyframe="1" outside="0" occluded="0" points="1472.60,277.40" z_order="0">
+    </points>
+    <points frame="1006" keyframe="1" outside="0" occluded="0" points="1428.80,304.00" z_order="0">
+    </points>
+    <points frame="1007" keyframe="1" outside="0" occluded="0" points="1379.80,340.80" z_order="0">
+    </points>
+    <points frame="1008" keyframe="1" outside="0" occluded="0" points="1328.30,384.90" z_order="0">
+    </points>
+    <points frame="1009" keyframe="1" outside="0" occluded="0" points="1277.50,435.20" z_order="0">
+    </points>
+    <points frame="1010" keyframe="1" outside="0" occluded="0" points="1234.50,484.50" z_order="0">
+    </points>
+    <points frame="1011" keyframe="1" outside="0" occluded="0" points="1184.70,547.70" z_order="0">
+    </points>
+    <points frame="1012" keyframe="1" outside="0" occluded="0" points="1134.70,615.40" z_order="0">
+    </points>
+    <points frame="1013" keyframe="1" outside="0" occluded="0" points="1086.40,688.10" z_order="0">
+    </points>
+    <points frame="1014" keyframe="1" outside="0" occluded="0" points="1044.60,752.10" z_order="0">
+    </points>
+    <points frame="1015" keyframe="1" outside="0" occluded="0" points="998.80,829.70" z_order="0">
+    </points>
+    <points frame="1016" keyframe="1" outside="0" occluded="0" points="955.30,907.10" z_order="0">
+    </points>
+    <points frame="1017" keyframe="1" outside="0" occluded="0" points="915.20,984.70" z_order="0">
+    </points>
+    <points frame="1018" keyframe="1" outside="1" occluded="0" points="883.30,1051.40" z_order="0">
+    </points>
+  </track>
+</annotations>

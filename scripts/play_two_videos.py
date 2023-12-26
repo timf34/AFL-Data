@@ -14,6 +14,8 @@ def play_videos(video_path1, video_path2, scale=0.5):
         return
 
     pause = False
+    frame_number1 = 0
+    frame_number2 = 0
 
     while True:
         if not pause:
@@ -29,9 +31,16 @@ def play_videos(video_path1, video_path2, scale=0.5):
             frame1 = cv2.resize(frame1, None, fx=scale, fy=scale)
             frame2 = cv2.resize(frame2, None, fx=scale, fy=scale)
 
+            # Put frame number text
+            cv2.putText(frame1, f'Frame: {frame_number1}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(frame2, f'Frame: {frame_number2}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
             # Display the frames in two separate windows
             cv2.imshow('Video 1', frame1)
             cv2.imshow('Video 2', frame2)
+
+            frame_number1 += 1
+            frame_number2 += 1
 
         # Wait for a key press and decide the action
         key = cv2.waitKey(25) & 0xFF

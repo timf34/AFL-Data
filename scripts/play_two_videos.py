@@ -1,3 +1,7 @@
+"""
+Script used to help with syncing videos for triangulation visualisation.
+"""
+
 import cv2
 
 def play_videos(video_path1, video_path2, scale=0.5):

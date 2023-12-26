@@ -14,6 +14,7 @@ def play_videos(video_path1, video_path2, scale=0.5):
         return
 
     pause = False
+    forward_a_frame = False
     frame_number1 = 0
     frame_number2 = 0
 
@@ -31,23 +32,33 @@ def play_videos(video_path1, video_path2, scale=0.5):
             frame1 = cv2.resize(frame1, None, fx=scale, fy=scale)
             frame2 = cv2.resize(frame2, None, fx=scale, fy=scale)
 
-            # Put frame number text
-            cv2.putText(frame1, f'Frame: {frame_number1}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            cv2.putText(frame2, f'Frame: {frame_number2}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-
-            # Display the frames in two separate windows
-            cv2.imshow('Video 1', frame1)
-            cv2.imshow('Video 2', frame2)
-
+            # Increment frame numbers
             frame_number1 += 1
             frame_number2 += 1
+
+        # Put frame number text
+        cv2.putText(frame1, f'Frame: {frame_number1}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        cv2.putText(frame2, f'Frame: {frame_number2}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+
+        # Display the frames in two separate windows
+        cv2.imshow('Video 1', frame1)
+        cv2.imshow('Video 2', frame2)
 
         # Wait for a key press and decide the action
         key = cv2.waitKey(25) & 0xFF
         if key == ord('q'):
             break
-        elif key == ord(' '):  # Space bar
+        elif key == ord(' ') or forward_a_frame:  # Space bar for pause, or pause if moving forward a frame
             pause = not pause
+            forward_a_frame = False
+        elif key == ord('d') and pause:  # Move forward
+            forward_a_frame = True
+            pause = False  # unpause to get the next frame
+        elif key == ord('a') and pause:  # Move backward
+            frame_number1 = max(0, frame_number1 - 2)
+            frame_number2 = max(0, frame_number2 - 2)
+            cap1.set(cv2.CAP_PROP_POS_FRAMES, frame_number1)
+            cap2.set(cv2.CAP_PROP_POS_FRAMES, frame_number2)
 
     # Release the video capture objects and close windows
     cap1.release()

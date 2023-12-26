@@ -19,7 +19,7 @@ def play_videos(video_path1, video_path2, scale=0.5):
     frame_number2 = 0
 
     while True:
-        if not pause:
+        if not pause or forward_a_frame:
             # Read from both videos
             ret1, frame1 = cap1.read()
             ret2, frame2 = cap2.read()
@@ -59,6 +59,17 @@ def play_videos(video_path1, video_path2, scale=0.5):
             frame_number2 = max(0, frame_number2 - 2)
             cap1.set(cv2.CAP_PROP_POS_FRAMES, frame_number1)
             cap2.set(cv2.CAP_PROP_POS_FRAMES, frame_number2)
+
+            # Read and display the new frame immediately
+            ret1, frame1 = cap1.read()
+            ret2, frame2 = cap2.read()
+            if ret1 and ret2:
+                frame1 = cv2.resize(frame1, None, fx=scale, fy=scale)
+                frame2 = cv2.resize(frame2, None, fx=scale, fy=scale)
+                cv2.putText(frame1, f'Frame: {frame_number1}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.putText(frame2, f'Frame: {frame_number2}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.imshow('Video 1', frame1)
+                cv2.imshow('Video 2', frame2)
 
     # Release the video capture objects and close windows
     cap1.release()

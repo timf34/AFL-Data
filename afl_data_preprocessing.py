@@ -1,7 +1,6 @@
 """
 This script will primarily split the .avi videos into individual frames
 """
-import cv2
 import math
 import os
 import subprocess
@@ -13,13 +12,27 @@ from utils import ensure_directory_exists, find_files_with_ending, png_files_exi
 
 
 VIDEOS_TO_BE_CLIPPED: List[str] = [
-    "marvel\\marvel-fov-3\\26_08_2023\\marvel3_time_09_09_04_date_27_08_2023_clipped.mp4"
+    # "marvel\\marvel-fov-3\\26_08_2023\\marvel3_time_09_09_04_date_27_08_2023_clipped.mp4"
+    # "marvel\\marvel-fov-4\\26_08_23\\marvel4_time_09_09_03_date_27_08_2023_.avi"
+    # "marvel\\marvel-fov-8\\18_08_2023\\marvel8_time_10_24_04_date_19_08_2023_.avi",
+    # "marvel\\marvel-fov-1\\18_08_2023\\marvel1_time_10_24_03_date_19_08_2023_.avi",
+    "marvel\\marvel-fov-2\\18_08_2023\\marvel2_time_10_24_03_date_19_08_2023_.avi",
+    # "marvel\\marvel-fov-3\\18_08_2023\\marvel3_time_10_24_03_date_19_08_2023_.avi"
 ]
-DIRECTORIES_FOR_FRAME_EXTRACTION: [str] = [r'marvel\marvel-fov-3\26_08_2023']
+
+DIRECTORIES_FOR_FRAME_EXTRACTION: [str] = [
+    # r'marvel\marvel-fov-3\26_08_2023\marvel3_time_09_09_04_date_27_08_2023_clipped',
+    # r'marvel\marvel-fov-3\26_08_2023\marvel3_time_09_09_04_date_27_08_2023_',
+    # r'marvel\marvel-fov-4\26_08_23\marvel4_time_09_09_03_date_27_08_2023_'
+]
 
 
 def extract_frames_from_video(file_path: str) -> None:
     """Given a .avi video file path, extract frames using ffmpeg."""
+
+    # Ensure file exists
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File does not exist: {file_path}")
 
     # Create a directory called "frames"
     file_name_without_extension = os.path.splitext(os.path.basename(file_path))[0]
@@ -51,6 +64,9 @@ def clip_video(video_path: str, output_dir: str, clip_duration: int = 60) -> Non
     This function clips a video into multiple 60 second long clips.
     We use FFmpeg directly to ensure lossless clipping.
     """
+    # Ensure video path exists
+    if not os.path.exists(video_path):
+        raise FileNotFoundError(f"File does not exist: {video_path}")
 
     # Check if the output_directory exists, and if not, make it
     ensure_directory_exists(output_dir)
@@ -111,7 +127,7 @@ def clip_all_videos_into_sixty_sec_clips(video_paths: List[str]) -> None:
 
 def main():
     clip_all_videos_into_sixty_sec_clips(VIDEOS_TO_BE_CLIPPED)
-    extract_frames_from_all_videos(DIRECTORIES_FOR_FRAME_EXTRACTION, file_ending='.mp4')
+    # extract_frames_from_all_videos(DIRECTORIES_FOR_FRAME_EXTRACTION, file_ending='.mp4')
 
     # extract_frames_from_video(
     #     file_path=r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\18_08_2023\clipped\clip_0.mp4"

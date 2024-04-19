@@ -4,7 +4,7 @@ Script used to help with syncing videos for triangulation visualisation.
 
 import cv2
 
-def play_videos(video_path1, video_path2, scale=0.5):
+def play_videos(video_path1, video_path2, scale=0.5, start_frame1=0, start_frame2=0):
     # Open the first video
     cap1 = cv2.VideoCapture(video_path1)
     if not cap1.isOpened():
@@ -17,10 +17,14 @@ def play_videos(video_path1, video_path2, scale=0.5):
         print("Error opening video file: ", video_path2)
         return
 
+    # Set the initial frame position for each video
+    cap1.set(cv2.CAP_PROP_POS_FRAMES, start_frame1)
+    cap2.set(cv2.CAP_PROP_POS_FRAMES, start_frame2)
+
     pause = False
     forward_a_frame = False
-    frame_number1 = 0
-    frame_number2 = 0
+    frame_number1 = start_frame1
+    frame_number2 = start_frame2
 
     while True:
         if not pause or forward_a_frame:
@@ -59,8 +63,8 @@ def play_videos(video_path1, video_path2, scale=0.5):
             forward_a_frame = True
             pause = False  # unpause to get the next frame
         elif key == ord('a') and pause:  # Move backward
-            frame_number1 = max(0, frame_number1 - 2)
-            frame_number2 = max(0, frame_number2 - 2)
+            frame_number1 = max(0, frame_number1 - 1)
+            frame_number2 = max(0, frame_number2 - 1)
             cap1.set(cv2.CAP_PROP_POS_FRAMES, frame_number1)
             cap2.set(cv2.CAP_PROP_POS_FRAMES, frame_number2)
 
@@ -80,8 +84,7 @@ def play_videos(video_path1, video_path2, scale=0.5):
     cap2.release()
     cv2.destroyAllWindows()
 
-# Replace with your video paths
-video_path1 = r'C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-3\26_08_2023\marvel3_time_09_09_04_date_27_08_2023_\0.mp4'
-video_path2 = r'C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-4\26_08_23\marvel4_time_09_09_03_date_27_08_2023_\0.mp4'
-
-play_videos(video_path1, video_path2, scale=0.5)  # Adjust the scale as needed
+# Replace with your video paths and desired start frames
+video_path1 = r'C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\13_04_2024\marvel2_time_07_34_03_date_13_04_2024_.mkv'
+video_path2 = r'C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\13_04_2024\marvel1_time_07_34_03_date_13_04_2024_.mkv'
+play_videos(video_path1, video_path2, scale=0.5, start_frame1=353, start_frame2=402)  # Adjust the scale and frame offsets as needed

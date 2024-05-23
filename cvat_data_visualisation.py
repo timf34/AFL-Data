@@ -76,8 +76,12 @@ def main():
     # video_path = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-6\19_05_2024\marvel-fov-6_time_04_21_07_date_19_05_2024_\2.mp4"
     # annotations_path = r"C:\Users\timf3\Downloads\drive-download-20240523T024955Z-001\marvel-fov-6_time_04_21_07_date_19_05_2024_2\marvel-fov-6_time_04_21_07_date_19_05_2024_2.xml"
 
-    video_path = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\18_08_2023\marvel2_time_10_24_03_date_19_08_2023_\0.mp4"
-    annotations_path = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\afl-preprocessed\train\annotations\marvel2_time_10_24_03_date_19_08_2023_0.xml"
+    # video_path = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\18_08_2023\marvel2_time_10_24_03_date_19_08_2023_\0.mp4"
+    # annotations_path = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\afl-preprocessed\train\annotations\marvel2_time_10_24_03_date_19_08_2023_0.xml"
+
+    video_path = r"D:\AFL-Data\marvel\marvel-fov-6\18_08_2023\marvel6_time_10_24_03_date_19_08_2023_\1.mp4"
+    annotations_path = r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\afl-preprocessed\train\annotations\marvel_6_time_10_24_03_date_19_08_2023_1.xml"
+
 
     annotator = VideoAnnotator(video_path, annotations_path, resize_factor=0.8)
     annotator.annotate_video()

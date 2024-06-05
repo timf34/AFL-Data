@@ -1,10 +1,13 @@
 """
 Script for removing frames without a ball in them from the AFL dataset **locally**.
+
+Note: this works by using the local `annotations` directory
+
 """
 
 import cv2
 from sagemaker_utils import *
-
+import os
 from typing import List, Dict
 
 # Folder path
@@ -14,6 +17,10 @@ FOLDERS: List[str] = [
     "../marvel/afl-preprocessed/val/unpacked_png",
 ]
 ANNOTATIONS_FOLDER: str = "../annotations"
+
+# Initialize global count variable
+# TODO: what does this measure? I think its just all .png files...?
+count = 0
 
 
 def list_directories(path='.') -> List[str]:
@@ -27,6 +34,8 @@ def list_directories(path='.') -> List[str]:
 
 
 def remove_frames_without_ball(video_name: str, image_folder_path: str, annotations_folder: str) -> None:
+    global count  # Declare the count as global to modify it
+
     xml_file_path = os.path.join(annotations_folder, f"{video_name}.xml")
 
     # Ensure the xml file exists
@@ -39,6 +48,8 @@ def remove_frames_without_ball(video_name: str, image_folder_path: str, annotati
 
     extracted_image_files: List[str] = find_files_with_ending(f"{image_folder_path}/{video_name}", ".png")
 
+    count += len(extracted_image_files)
+
     for file in extracted_image_files:
         file_name = os.path.basename(file)
         if file_name not in file_names:
@@ -50,6 +61,8 @@ def main():
         image_folders = list_directories(path)
         for image_folder_name in image_folders:
             remove_frames_without_ball(image_folder_name, path, ANNOTATIONS_FOLDER)
+
+    print(count)
 
 
 if __name__ == '__main__':

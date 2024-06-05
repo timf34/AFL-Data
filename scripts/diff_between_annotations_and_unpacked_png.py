@@ -4,8 +4,8 @@ directory.
 """
 import os
 
-ANNOTATIONS_DIR: str = "marvel/afl-preprocessed/train/annotations"
-UNPACKED_PNG_DIR: str = "marvel/afl-preprocessed/train/unpacked_png"
+ANNOTATIONS_DIR: str = "../marvel/afl-preprocessed/train/annotations"
+UNPACKED_PNG_DIR: str = "../marvel/afl-preprocessed/train/unpacked_png"
 
 xml_files = [xml_file for xml_file in os.listdir(ANNOTATIONS_DIR) if xml_file.endswith('.xml')]
 xml_files_stripped = {file[:-4] for file in xml_files}

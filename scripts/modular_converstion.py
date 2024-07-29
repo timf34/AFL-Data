@@ -3,10 +3,11 @@ Our videos are generally recorded around 8FPS, however they're saved as though t
 This script uses the JSON files we saved with the timestamps per frame to play the videos at 30FPS but as though
 they're in real time by copying the same frame until its time for the next frame.
 """
-import json
-from datetime import datetime, timedelta
 import cv2
+import json
 import os
+import time
+from datetime import datetime, timedelta
 
 
 def parse_timestamp(ts_string):
@@ -98,6 +99,8 @@ def save_json_data(json_data, output_filename):
 
 
 def process_video(video_path, json_path, create_video=True):
+    start_time = time.time()
+
     json_data = load_json_data(json_path)
     frames_data = extract_frame_data(json_data)
     durations = calculate_durations(frames_data)
@@ -106,7 +109,7 @@ def process_video(video_path, json_path, create_video=True):
     fps = video.get(cv2.CAP_PROP_FPS)
 
     video_name = os.path.splitext(os.path.basename(video_path))[0]
-    output_json_filename = f"y.json"
+    output_json_filename = f"realtime_{video_name}_timestamps.json"
 
     out = None
     if create_video:
@@ -123,18 +126,33 @@ def process_video(video_path, json_path, create_video=True):
 
     save_json_data(new_json_data, output_json_filename)
 
+    end_time = time.time()
+    processing_time = end_time - start_time
+
     print(f"Finished processing {video_name}. Output saved as {output_filename}")
     print(f"New timestamp JSON saved as {output_json_filename}")
     print(f"Processed {total_frames} frames in total.")
+    print(f"Processing time: {processing_time:.2f} seconds")
+    print(f"Average time per frame: {processing_time / total_frames:.4f} seconds")
 
 
 def main():
     video_json_pairs = {
+        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-1_time_10_39_10_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-1_time_02_40_31_date_08_06_2024_1_merged.json',
+        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-2_time_10_39_13_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-2_time_02_41_43_date_08_06_2024_1_merged.json',
+        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-3_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-3_time_02_42_31_date_08_06_2024_1_merged.json',
         r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-5_time_10_39_03_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-5_time_02_42_52_date_08_06_2024_1_merged.json',
+            r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-5_time_02_42_52_date_08_06_2024_1_merged.json',
+        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-6_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-6_time_02_39_00_date_08_06_2024_1_merged.json',
+        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-7_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
     }
 
-    create_video = False  # Set this to False if you don't want to create the video file
+    create_video = True  # Set this to False if you don't want to create the video file
 
     for video_path, json_path in video_json_pairs.items():
         process_video(video_path, json_path, create_video)

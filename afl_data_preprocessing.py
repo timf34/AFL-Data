@@ -26,7 +26,9 @@ VIDEOS_TO_BE_CLIPPED: List[str] = [
     # "marvel\\marvel-fov-6\\19_05_2024\\marvel-fov-6_time_04_21_07_date_19_05_2024_.avi"
     # "marvel\\marvel-fov-7\\19_05_2024\\marvel-fov-7_time_04_42_10_date_19_05_2024_.avi"
     # "marvel\\marvel-fov-6\\21_04_2024\\marvel6_time_09_30_11_date_21_04_2024_.avi"
-    "marvel\\marvel-fov-5\\27_08_2023\\marvel5_time_09_09_04_date_27_08_2023_.avi"
+    # "marvel\\marvel-fov-5\\27_08_2023\\marvel5_time_09_09_04_date_27_08_2023_.avi"
+    # "marvel\\marvel-fov-9\\23_06_2024\\marvel-fov-9_time_04_00_03_date_23_06_2024_.avi",
+    "marvel\\marvel-fov-10\\23_06_2024\\marvel-fov-10_time_04_00_04_date_23_06_2024_.avi"
 ]
 
 VIDEOS_FOR_FRAME_EXTRACTION: List[str] = [
@@ -45,8 +47,12 @@ VIDEOS_FOR_FRAME_EXTRACTION: List[str] = [
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\2.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\3.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\5.mp4",
-    r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\7.mp4",
+    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\7.mp4",
+    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\18_08_2023\marvel2_time_10_24_03_date_19_08_2023_\3.mp4"
+    r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-9\23_06_2024\marvel-fov-9_time_04_00_03_date_23_06_2024_\0.mp4",
+    r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-10\23_06_2024\marvel-fov-10_time_04_00_04_date_23_06_2024_\0.mp4"
 ]
+
 
 DIRECTORIES_FOR_FRAME_EXTRACTION: [str] = [
     # r'marvel\marvel-fov-3\26_08_2023\marvel3_time_09_09_04_date_27_08_2023_clipped',

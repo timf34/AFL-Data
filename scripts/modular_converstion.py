@@ -44,20 +44,26 @@ def process_frames(video, frames_data, durations, fps, out=None):
     new_json_data = {}
     new_frame_number = 1
     current_timestamp = frames_data[0][0]
+    first_timestamp = current_timestamp  # It's interesting that we don't need to perform deep copy here. Why? Ask GPT4 later.
 
     flag = False
     index_of_last_frame_this_second = 0
+    num_seconds = 1
+
+    total_duration_so_far = 0
+    sum = 0
 
     for i, duration in enumerate(durations):
 
         # Iterate again through durations, and count the sum, until its over 1
         if flag == False:
-            sum = 0
             num_repeated_frames_this_second = 0
             for j in range(i, len(durations)):
                 sum += durations[j]
-                if sum > 1:
+                if sum > num_seconds:
                     index_of_last_frame_this_second = j
+                    num_seconds += 1
+                    # sum -= durations[j]
                     break
             flag = True
 
@@ -109,7 +115,7 @@ def process_video(video_path, json_path, create_video=True):
     fps = video.get(cv2.CAP_PROP_FPS)
 
     video_name = os.path.splitext(os.path.basename(video_path))[0]
-    output_json_filename = f"realtime_{video_name}_timestamps.json"
+    output_json_filename = f"z.json"
 
     out = None
     if create_video:

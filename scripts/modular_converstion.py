@@ -1,3 +1,8 @@
+"""
+Our videos are generally recorded around 8FPS, however they're saved as though they're 30FPS.
+This script uses the JSON files we saved with the timestamps per frame to play the videos at 30FPS but as though
+they're in real time by copying the same frame until its time for the next frame.
+"""
 import json
 from datetime import datetime, timedelta
 import cv2
@@ -39,7 +44,23 @@ def process_frames(video, frames_data, durations, fps, out=None):
     new_frame_number = 1
     current_timestamp = frames_data[0][0]
 
+    flag = False
+    index_of_last_frame_this_second = 0
+
     for i, duration in enumerate(durations):
+
+        # Iterate again through durations, and count the sum, until its over 1
+        if flag == False:
+            sum = 0
+            num_repeated_frames_this_second = 0
+            for j in range(i, len(durations)):
+                sum += durations[j]
+                if sum > 1:
+                    index_of_last_frame_this_second = j
+                    break
+            flag = True
+
+
         if out:
             ret, frame = video.read()
             if not ret:
@@ -48,10 +69,18 @@ def process_frames(video, frames_data, durations, fps, out=None):
             text = f"Frame: {new_frame_number} Timestamp: {current_timestamp.strftime('%Y-%m-%d %H:%M:%S,%f')[:-3]}"
             cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
             out.write(frame)
+
         new_json_data[str(new_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
         new_frame_number += 1
 
         repeat_frames = int(duration * fps) - 1
+        num_repeated_frames_this_second += repeat_frames + 1
+
+        if index_of_last_frame_this_second == i:
+            # If num_repeated_frames_this_second is less than 30, add the difference to repeat_frames
+            repeat_frames += 30 - num_repeated_frames_this_second
+            flag = False
+
         for _ in range(repeat_frames):
             if out:
                 out.write(frame)
@@ -77,7 +106,7 @@ def process_video(video_path, json_path, create_video=True):
     fps = video.get(cv2.CAP_PROP_FPS)
 
     video_name = os.path.splitext(os.path.basename(video_path))[0]
-    output_json_filename = f"temp_realtime_{video_name}_timestamps.json"
+    output_json_filename = f"y.json"
 
     out = None
     if create_video:

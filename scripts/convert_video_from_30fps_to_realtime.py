@@ -48,7 +48,7 @@ def create_video_writer(video_path, fps):
     return cv2.VideoWriter(output_filename, fourcc, fps, (width, height)), video, output_filename
 
 
-def find_last_frames_index_this_second(durations: List[float], current_index: int):
+def find_last_frames_index_this_second(durations: List[float], current_index: int) -> int:
     """
     Find the index of the last frame in the current second.
 
@@ -60,6 +60,7 @@ def find_last_frames_index_this_second(durations: List[float], current_index: in
         if total_seconds_elapsed > target_second:
             target_second += 1
             return j
+
 
 def process_frames(video, frames_data, durations, fps, out=None):
     new_json_data = {}

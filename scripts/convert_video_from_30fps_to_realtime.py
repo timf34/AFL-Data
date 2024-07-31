@@ -98,6 +98,7 @@ def process_frames(video, frames_data, durations, fps, out=None):
             repeat_frames += 30 - num_repeated_frames_this_second
             flag = False
 
+
         # Repeat the frame for the duration of the frame
         for _ in range(repeat_frames):
             if out:

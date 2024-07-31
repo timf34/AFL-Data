@@ -104,13 +104,15 @@ def process_frames(video, frames_data, durations, fps, out=None):
 
         # Repeat the frame for the duration of the frame
         for _ in range(repeat_frames):
+            text = f"Frame: {current_frame_number} Timestamp: {current_timestamp.strftime('%Y-%m-%d %H:%M:%S,%f')[:-3]}"
+            updated_frame_timestamp_json[str(current_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
+            current_frame_number += 1
             if out:
                 # This might make the code a bit slower, but is good to add I think
                 frame_with_text = deepcopy(frame)
                 cv2.putText(frame_with_text, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
                 out.write(frame_with_text)
-            updated_frame_timestamp_json[str(current_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
-            current_frame_number += 1
+
 
 
         current_timestamp += timedelta(seconds=duration)
@@ -164,7 +166,7 @@ def process_video(video_path, json_path, create_video=True):
 def process_video_wrapper(args):
     return process_video(*args)
 
-
+# TODO: note the last run with marvel5 didn't write the frames correctly... not sure if I ran with deepcopy
 def main():
     video_json_pairs = {
         r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-1_time_10_39_10_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':

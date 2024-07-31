@@ -13,6 +13,7 @@ import json
 import multiprocessing
 import os
 import time
+from copy import deepcopy
 from datetime import datetime, timedelta
 from typing import List
 
@@ -86,8 +87,9 @@ def process_frames(video, frames_data, durations, fps, out=None):
                 break
 
             text = f"Frame: {current_frame_number} Timestamp: {current_timestamp.strftime('%Y-%m-%d %H:%M:%S,%f')[:-3]}"
-            cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
-            out.write(frame)
+            frame_with_text = deepcopy(frame)
+            cv2.putText(frame_with_text, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
+            out.write(frame_with_text)
 
         updated_frame_timestamp_json[str(current_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
         current_frame_number += 1
@@ -103,7 +105,10 @@ def process_frames(video, frames_data, durations, fps, out=None):
         # Repeat the frame for the duration of the frame
         for _ in range(repeat_frames):
             if out:
-                out.write(frame)
+                # This might make the code a bit slower, but is good to add I think
+                frame_with_text = deepcopy(frame)
+                cv2.putText(frame_with_text, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
+                out.write(frame_with_text)
             updated_frame_timestamp_json[str(current_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
             current_frame_number += 1
 
@@ -129,7 +134,7 @@ def process_video(video_path, json_path, create_video=True):
     fps = video.get(cv2.CAP_PROP_FPS)
 
     video_name = os.path.splitext(os.path.basename(video_path))[0]
-    output_json_filename = f"a.json"
+    output_json_filename = f"realtime_{video_name}.json"
 
     out = None
     if create_video:
@@ -162,33 +167,33 @@ def process_video_wrapper(args):
 
 def main():
     video_json_pairs = {
-        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-1_time_10_39_10_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-1_time_02_40_31_date_08_06_2024_1_merged.json',
-        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-2_time_10_39_13_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-2_time_02_41_43_date_08_06_2024_1_merged.json',
-        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-3_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-3_time_02_42_31_date_08_06_2024_1_merged.json',
-        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-5_time_10_39_03_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-5_time_02_42_52_date_08_06_2024_1_merged.json',
-        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-6_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-6_time_02_39_00_date_08_06_2024_1_merged.json',
-        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-7_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
+        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-1_time_10_39_10_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-1_time_02_40_31_date_08_06_2024_1_merged.json',
+        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-2_time_10_39_13_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-2_time_02_41_43_date_08_06_2024_1_merged.json',
+        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-3_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-3_time_02_42_31_date_08_06_2024_1_merged.json',
+        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-5_time_10_39_03_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-5_time_02_42_52_date_08_06_2024_1_merged.json',
+        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-6_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-6_time_02_39_00_date_08_06_2024_1_merged.json',
+        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-7_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
     }
 
-    create_video = False  # Set this to False if you don't want to create the video file
+    create_video = True  # Set this to False if you don't want to create the video file
 
     # Sequential
-    for video_path, json_path in video_json_pairs.items():
-        process_video(video_path, json_path, create_video)
+    # for video_path, json_path in video_json_pairs.items():
+    #     process_video(video_path, json_path, create_video)
 
     # Parallel
     # Prepare arguments for multiprocessing
-    # args_list = [(video_path, json_path, create_video) for video_path, json_path in video_json_pairs.items()]
-    #
-    # # Use multiprocessing to process videos concurrently
-    # with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-    #     pool.map(process_video_wrapper, args_list)
+    args_list = [(video_path, json_path, create_video) for video_path, json_path in video_json_pairs.items()]
+
+    # Use multiprocessing to process videos concurrently
+    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+        pool.map(process_video_wrapper, args_list)
 
 
     cv2.destroyAllWindows()

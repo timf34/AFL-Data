@@ -5,6 +5,8 @@ they're in real time by copying the same frame until its time for the next frame
 
 Note: In order to maintain 30FPS throughout the whole video, we ensure that all within each second after the very first
 frame (which occurs at 10:39:03,736), we have 30 frames via repeating frames. Importantly, its each second after 3.736.
+
+Note: to quickly check if things are working, we can just produce the .json file and not process the video
 """
 import cv2
 import json
@@ -15,7 +17,7 @@ from datetime import datetime, timedelta
 from typing import List
 
 total_seconds_elapsed = 0  # Global variable to keep track of the number of seconds elapsed since the first frame to maintain 30FPS
-target_second = 1  # The next second we want to reach (word this better)
+target_second = 1  # The next second we want to reach, incremented by 1 each time we create 30 frames for a given second
 
 
 def parse_timestamp(ts_string):
@@ -63,40 +65,32 @@ def find_last_frames_index_this_second(durations: List[float], current_index: in
 
 
 def process_frames(video, frames_data, durations, fps, out=None):
-    new_json_data = {}
-    new_frame_number = 1
+    updated_frame_timestamp_json = {}
+    current_frame_number = 1
     current_timestamp = frames_data[0][0]
-    first_timestamp = current_timestamp  # It's interesting that we don't need to perform deep copy here. Why? Ask GPT4 later.
 
-    flag = False
+    last_frame_this_second_index_found = False
     index_of_last_frame_this_second = 0
-    num_seconds = 1
-
-    total_duration_so_far = 0
-    sum = 0
 
     for i, duration in enumerate(durations):
 
         # Iterate again through durations, and count the sum, until its over 1
-        if flag == False:
+        if last_frame_this_second_index_found == False:
             num_repeated_frames_this_second = 0
             index_of_last_frame_this_second = find_last_frames_index_this_second(durations, i)
-            flag = True
+            last_frame_this_second_index_found = True
 
         if out:
             ret, frame = video.read()
             if not ret:
                 break
 
-            text = f"Frame: {new_frame_number} Timestamp: {current_timestamp.strftime('%Y-%m-%d %H:%M:%S,%f')[:-3]}"
+            text = f"Frame: {current_frame_number} Timestamp: {current_timestamp.strftime('%Y-%m-%d %H:%M:%S,%f')[:-3]}"
             cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
             out.write(frame)
 
-        new_json_data[str(new_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
-
-        if new_frame_number == 55:
-            print("we'll break here")
-
+        updated_frame_timestamp_json[str(current_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
+        current_frame_number += 1
 
         repeat_frames = int(duration * fps) - 1
         num_repeated_frames_this_second += repeat_frames + 1
@@ -104,21 +98,19 @@ def process_frames(video, frames_data, durations, fps, out=None):
         if index_of_last_frame_this_second == i:
             # If num_repeated_frames_this_second is less than 30, add the difference to repeat_frames
             repeat_frames += 30 - num_repeated_frames_this_second
-            flag = False
-
+            last_frame_this_second_index_found = False  # We're moving onto the next second
 
         # Repeat the frame for the duration of the frame
         for _ in range(repeat_frames):
             if out:
                 out.write(frame)
-            new_json_data[str(new_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
-            new_frame_number += 1
+            updated_frame_timestamp_json[str(current_frame_number)] = [current_timestamp.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3], []]
+            current_frame_number += 1
 
-        new_frame_number += 1
 
         current_timestamp += timedelta(seconds=duration)
 
-    return new_json_data, new_frame_number - 1
+    return updated_frame_timestamp_json, current_frame_number - 1
 
 
 def save_json_data(json_data, output_filename):
@@ -146,13 +138,13 @@ def process_video(video_path, json_path, create_video=True):
         output_filename = "Video not created"
 
     print(f"Processing {video_name}...")
-    new_json_data, total_frames = process_frames(video, frames_data, durations, fps, out)
+    updated_frame_timestamp_json, total_frames = process_frames(video, frames_data, durations, fps, out)
 
     if out:
         out.release()
     video.release()
 
-    save_json_data(new_json_data, output_json_filename)
+    save_json_data(updated_frame_timestamp_json, output_json_filename)
 
     end_time = time.time()
     processing_time = end_time - start_time

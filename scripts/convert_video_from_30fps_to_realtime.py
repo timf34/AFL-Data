@@ -12,6 +12,10 @@ import multiprocessing
 import os
 import time
 from datetime import datetime, timedelta
+from typing import List
+
+total_seconds_elapsed = 0  # Global variable to keep track of the number of seconds elapsed since the first frame to maintain 30FPS
+target_second = 1  # The next second we want to reach (word this better)
 
 
 def parse_timestamp(ts_string):
@@ -44,6 +48,19 @@ def create_video_writer(video_path, fps):
     return cv2.VideoWriter(output_filename, fourcc, fps, (width, height)), video, output_filename
 
 
+def find_last_frames_index_this_second(durations: List[float], current_index: int):
+    """
+    Find the index of the last frame in the current second.
+
+    Returns this index.
+    """
+    global total_seconds_elapsed, target_second
+    for j in range(current_index, len(durations)):
+        total_seconds_elapsed += durations[j]
+        if total_seconds_elapsed > target_second:
+            target_second += 1
+            return j
+
 def process_frames(video, frames_data, durations, fps, out=None):
     new_json_data = {}
     new_frame_number = 1
@@ -60,16 +77,9 @@ def process_frames(video, frames_data, durations, fps, out=None):
     for i, duration in enumerate(durations):
 
         # Iterate again through durations, and count the sum, until its over 1
-        # TODO: this is the bug location
         if flag == False:
             num_repeated_frames_this_second = 0
-            for j in range(i, len(durations)):
-                sum += durations[j]
-                if sum > num_seconds:
-                    index_of_last_frame_this_second = j
-                    num_seconds += 1
-                    # sum -= durations[j]
-                    break
+            index_of_last_frame_this_second = find_last_frames_index_this_second(durations, i)
             flag = True
 
         if out:
@@ -90,9 +100,6 @@ def process_frames(video, frames_data, durations, fps, out=None):
         repeat_frames = int(duration * fps) - 1
         num_repeated_frames_this_second += repeat_frames + 1
 
-        # TODO: this is the bug. And this code is horrifically documented and not very clear.
-        #  This is supposed to find the frame index of the last frame in the current second, but I think its one early.
-        #  Make this into a function to make things clearer (or rather the thing above).
         if index_of_last_frame_this_second == i:
             # If num_repeated_frames_this_second is less than 30, add the difference to repeat_frames
             repeat_frames += 30 - num_repeated_frames_this_second
@@ -129,7 +136,7 @@ def process_video(video_path, json_path, create_video=True):
     fps = video.get(cv2.CAP_PROP_FPS)
 
     video_name = os.path.splitext(os.path.basename(video_path))[0]
-    output_json_filename = f"realtime_{video_name}.json"
+    output_json_filename = f"a.json"
 
     out = None
     if create_video:
@@ -176,7 +183,7 @@ def main():
         # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
     }
 
-    create_video = True  # Set this to False if you don't want to create the video file
+    create_video = False  # Set this to False if you don't want to create the video file
 
     # Sequential
     for video_path, json_path in video_json_pairs.items():

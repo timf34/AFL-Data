@@ -128,9 +128,6 @@ def process_frames(video, frames_data, durations, fps, out=None):
 
         current_timestamp += timedelta(seconds=duration)
 
-    total_seconds_elapsed = 0  # Reset the global variable for the next video
-    target_second = 1  # Reset the target second for the next video
-
     return updated_frame_timestamp_json, current_frame_number - 1
 
 
@@ -197,7 +194,7 @@ def main():
         r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
     }
 
-    create_video = False  # Set this to False if you don't want to create the video file
+    create_video = True  # Set this to False if you don't want to create the video file
 
     # Sequential
     # for video_path, json_path in video_json_pairs.items():

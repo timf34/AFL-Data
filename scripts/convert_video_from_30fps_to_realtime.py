@@ -15,10 +15,10 @@ import os
 import time
 from copy import deepcopy
 from datetime import datetime, timedelta
-from typing import List
+from typing import List, Tuple
 
-total_seconds_elapsed = 0  # Global variable to keep track of the number of seconds elapsed since the first frame to maintain 30FPS
-target_second = 1  # The next second we want to reach, incremented by 1 each time we create 30 frames for a given second
+# total_seconds_elapsed = 0  # Global variable to keep track of the number of seconds elapsed since the first frame to maintain 30FPS
+# target_second = 1  # The next second we want to reach, incremented by 1 each time we create 30 frames for a given second
 
 
 def parse_timestamp(ts_string):
@@ -51,22 +51,28 @@ def create_video_writer(video_path, fps):
     return cv2.VideoWriter(output_filename, fourcc, fps, (width, height)), video, output_filename
 
 
-def find_last_frames_index_this_second(durations: List[float], current_index: int) -> int:
+def find_last_frames_index_this_second(
+        durations: List[float],
+        current_index: int,
+        total_seconds_elapsed: int,
+        target_second: int
+) -> Tuple[int, int, int]:
     """
     Find the index of the last frame in the current second.
 
     Returns this index.
     """
-    global total_seconds_elapsed, target_second
     for j in range(current_index, len(durations)):
         total_seconds_elapsed += durations[j]
         if total_seconds_elapsed > target_second:
             target_second += 1
-            return j
-
+            # print(j, total_seconds_elapsed, target_second)
+            return j, total_seconds_elapsed, target_second
+    return len(durations) - 1, total_seconds_elapsed, target_second
 
 def process_frames(video, frames_data, durations, fps, out=None):
-    global total_seconds_elapsed, target_second
+    total_seconds_elapsed = 0
+    target_second = 1
 
     updated_frame_timestamp_json = {}
     current_frame_number = 1
@@ -80,7 +86,12 @@ def process_frames(video, frames_data, durations, fps, out=None):
         # Iterate again through durations, and count the sum, until its over 1
         if last_frame_this_second_index_found == False:
             num_repeated_frames_this_second = 0
-            index_of_last_frame_this_second = find_last_frames_index_this_second(durations, i)
+            index_of_last_frame_this_second, total_seconds_elapsed, target_second  = find_last_frames_index_this_second(
+                durations,
+                i,
+                total_seconds_elapsed,
+                target_second
+            )
             last_frame_this_second_index_found = True
 
         if out:
@@ -117,7 +128,7 @@ def process_frames(video, frames_data, durations, fps, out=None):
 
         current_timestamp += timedelta(seconds=duration)
 
-    total_seconds_elapsed = 0 # Reset the global variable for the next video
+    total_seconds_elapsed = 0  # Reset the global variable for the next video
     target_second = 1  # Reset the target second for the next video
 
     return updated_frame_timestamp_json, current_frame_number - 1
@@ -199,7 +210,6 @@ def main():
     # Use multiprocessing to process videos concurrently
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
         pool.map(process_video_wrapper, args_list)
-
 
     cv2.destroyAllWindows()
 

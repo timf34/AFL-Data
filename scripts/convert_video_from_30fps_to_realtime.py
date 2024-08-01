@@ -66,6 +66,8 @@ def find_last_frames_index_this_second(durations: List[float], current_index: in
 
 
 def process_frames(video, frames_data, durations, fps, out=None):
+    global total_seconds_elapsed, target_second
+
     updated_frame_timestamp_json = {}
     current_frame_number = 1
     current_timestamp = frames_data[0][0]
@@ -113,9 +115,10 @@ def process_frames(video, frames_data, durations, fps, out=None):
                 cv2.putText(frame_with_text, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
                 out.write(frame_with_text)
 
-
-
         current_timestamp += timedelta(seconds=duration)
+
+    total_seconds_elapsed = 0 # Reset the global variable for the next video
+    target_second = 1  # Reset the target second for the next video
 
     return updated_frame_timestamp_json, current_frame_number - 1
 
@@ -175,15 +178,15 @@ def main():
         r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-2_time_02_41_43_date_08_06_2024_1_merged.json',
         r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-3_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
         r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-3_time_02_42_31_date_08_06_2024_1_merged.json',
-        # r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-5_time_10_39_03_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
-        # r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-5_time_02_42_52_date_08_06_2024_1_merged.json',
+        r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-5_time_10_39_03_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
+        r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-5_time_02_42_52_date_08_06_2024_1_merged.json',
         r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-6_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
         r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-6_time_02_39_00_date_08_06_2024_1_merged.json',
         r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-7_time_10_39_15_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
         r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
     }
 
-    create_video = True  # Set this to False if you don't want to create the video file
+    create_video = False  # Set this to False if you don't want to create the video file
 
     # Sequential
     # for video_path, json_path in video_json_pairs.items():

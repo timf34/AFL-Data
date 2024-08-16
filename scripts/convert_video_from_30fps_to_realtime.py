@@ -20,6 +20,8 @@ from typing import List, Tuple
 # total_seconds_elapsed = 0  # Global variable to keep track of the number of seconds elapsed since the first frame to maintain 30FPS
 # target_second = 1  # The next second we want to reach, incremented by 1 each time we create 30 frames for a given second
 
+created_json_files = []
+
 
 def parse_timestamp(ts_string):
     return datetime.strptime(ts_string, "%Y-%m-%d %H:%M:%S,%f")
@@ -47,7 +49,7 @@ def create_video_writer(video_path, fps):
     height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     video_name = os.path.splitext(os.path.basename(video_path))[0]
-    output_filename = f"realtime_{video_name}.mp4"
+    output_filename = f"xrealtime_{video_name}.mp4"
     return cv2.VideoWriter(output_filename, fourcc, fps, (width, height)), video, output_filename
 
 
@@ -69,6 +71,7 @@ def find_last_frames_index_this_second(
             # print(j, total_seconds_elapsed, target_second)
             return j, total_seconds_elapsed, target_second
     return len(durations) - 1, total_seconds_elapsed, target_second
+
 
 def process_frames(video, frames_data, durations, fps, out=None):
     total_seconds_elapsed = 0
@@ -136,6 +139,50 @@ def save_json_data(json_data, output_filename):
         json.dump(json_data, f, indent=4)
 
 
+# TODO: I still need to test this function.
+def validate_json_data(json_data_file_paths: List[str]):
+    for json_file_path in json_data_file_paths:
+        with open(json_file_path, 'r') as f:
+            json_data = json.load(f)
+
+            # Ensure the first entry exists
+            first_entry_timestamp = json_data.get("1", [None])[0]
+            if not first_entry_timestamp:
+                print(f"File {json_file_path} is invalid: missing first entry.")
+                continue
+
+            # Extract the decimal part of the first entry's timestamp
+            first_entry_decimal = float(first_entry_timestamp.split(",")[1])
+
+            # Validate every 30th entry
+            valid = True
+            for i in range(30, len(json_data) + 1, 30):
+                entry_timestamp = json_data.get(str(i), [None])[0]
+                if not entry_timestamp:
+                    print(f"File {json_file_path} is invalid: missing entry {i}.")
+                    valid = False
+                    break
+
+                entry_decimal = float(entry_timestamp.split(",")[1])
+                if entry_decimal >= first_entry_decimal:
+                    print(f"File {json_file_path} is invalid: entry {i} decimal part is not less than first entry.")
+                    valid = False
+                    break
+
+            # Handle the 31st entry case
+            if valid and "31" in json_data:
+                entry_timestamp_31 = json_data.get("31", [None])[0]
+                if entry_timestamp_31:
+                    second_part_1 = int(first_entry_timestamp.split(",")[0].split(":")[-1])
+                    second_part_31 = int(entry_timestamp_31.split(",")[0].split(":")[-1])
+                    if second_part_31 > second_part_1:
+                        print(f"File {json_file_path} is invalid: 31st entry's actual second digit is greater than the 1st entry.")
+                        valid = False
+
+            if valid:
+                print(f"File {json_file_path} is valid.")
+
+
 def process_video(video_path, json_path, create_video=True):
     start_time = time.time()
 
@@ -163,6 +210,7 @@ def process_video(video_path, json_path, create_video=True):
     video.release()
 
     save_json_data(updated_frame_timestamp_json, output_json_filename)
+    created_json_files.append(output_json_filename)
 
     end_time = time.time()
     processing_time = end_time - start_time
@@ -177,7 +225,7 @@ def process_video(video_path, json_path, create_video=True):
 def process_video_wrapper(args):
     return process_video(*args)
 
-# TODO: note the last run with marvel5 didn't write the frames correctly... not sure if I ran with deepcopy
+
 def main():
     video_json_pairs = {
         r'C:\Users\timf3\PycharmProjects\BallNet\output_marvel-fov-1_time_10_39_10_date_08_06_2024__model_23_05_2024__1608_24_with_bin_out_non_pitch_pixels.avi':
@@ -194,7 +242,7 @@ def main():
         r'C:\Users\timf3\PycharmProjects\AFLGameSimulation\data\marvel-fov-7_time_02_44_08_date_08_06_2024_1_merged.json',
     }
 
-    create_video = True  # Set this to False if you don't want to create the video file
+    create_video = False  # Set this to False if you don't want to create the video file
 
     # Sequential
     # for video_path, json_path in video_json_pairs.items():
@@ -207,6 +255,9 @@ def main():
     # Use multiprocessing to process videos concurrently
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
         pool.map(process_video_wrapper, args_list)
+
+    # TODO: I still need to test this
+    validate_json_data(created_json_files)
 
     cv2.destroyAllWindows()
 

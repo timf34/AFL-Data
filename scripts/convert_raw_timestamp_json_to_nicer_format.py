@@ -13,11 +13,15 @@ To this:
 
 Just copy paste in the raw json above into a temp.json file, then run
 """
+import os
 import json
+import glob
 
 
 def process_json_file(input_file, output_file):
     results = {}
+
+    # Read the input JSON file line by line
     with open(input_file, 'r') as file:
         for line in file:
             data = json.loads(line)
@@ -27,14 +31,41 @@ def process_json_file(input_file, output_file):
             # Subtract 1 to make frame number zero-indexed
             results[str(frame_number - 1)] = data['timestamp']
 
+    # Write the output to the output JSON file
     with open(output_file, 'w') as file:
         json.dump(results, file, indent=4)
 
-# Define the paths to the input and output files
-input_path = './23_06_2024/unclean_video_timestamp_data/marvel-fov-1_time_02_36_49_date_23_06_2024_1.json'
-output_path = 'output.json'
+    print(f"Processed {input_file} -> {output_file}")
 
-# Call the function with the hardcoded paths
-process_json_file(input_path, output_path)
 
-print("JSON processing complete. Output saved to:", output_path)
+def process_directory(input_dir, output_dir):
+    # Ensure the output directory exists
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # Get all JSON files in the input directory
+    json_files = glob.glob(os.path.join(input_dir, '*.json'))
+
+    for json_file in json_files:
+        # Generate the output file path
+        output_file_name = os.path.basename(json_file)  # Keep the same filename
+        output_file = os.path.join(output_dir, output_file_name)
+
+        # Check if the output file already exists
+        if os.path.exists(output_file):
+            print(f"Skipping {json_file} (already processed)")
+            continue
+
+        # Process the file if it hasn't been processed
+        process_json_file(json_file, output_file)
+
+
+# Define the input and output directories
+input_directory = './23_06_2024/unclean_video_timestamp_data/'
+output_directory = './23_06_2024/processed_video_timestamp_data/'
+
+# Process all JSON files in the input directory
+process_directory(input_directory, output_directory)
+
+print("Batch JSON processing complete.")
+

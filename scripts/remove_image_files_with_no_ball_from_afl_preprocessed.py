@@ -62,5 +62,5 @@ print(f"Number of images to remove: {len(images_to_remove)}")
 
 # 4. Remove the identified images from the directory
 for image_path in images_to_remove:
-    os.remove(image_path)
+    # os.remove(image_path)  # Note: only uncomment this line if you are sure you want to delete the files
     print(f"Removed {image_path}")

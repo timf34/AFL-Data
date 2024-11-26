@@ -53,7 +53,8 @@ def remove_frames_without_ball(video_name: str, image_folder_path: str, annotati
     for file in extracted_image_files:
         file_name = os.path.basename(file)
         if file_name not in file_names:
-            os.remove(file)
+            # os.remove(file)
+            print(f"Removing {file}")
 
 
 def main():

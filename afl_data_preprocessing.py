@@ -10,57 +10,37 @@ from typing import List
 
 from utils import ensure_directory_exists, find_files_with_ending, png_files_exist, create_directory, mp4_files_exist
 
-CLIP_LENGTH_SECONDS: int = 60
+CLIP_LENGTH_SECONDS: int = 180
 USE_JPG: bool = False  # We get blocky images by default... there might be a better way to do this, I'll just need to look into it another time
 
 VIDEOS_TO_BE_CLIPPED: List[str] = [
-    # "marvel\\marvel-fov-3\\26_08_2023\\marvel3_time_09_09_04_date_27_08_2023_clipped.mp4"
-    # "marvel\\marvel-fov-4\\26_08_23\\marvel4_time_09_09_03_date_27_08_2023_.avi"
-    # "marvel\\marvel-fov-8\\18_08_2023\\marvel8_time_10_24_04_date_19_08_2023_.avi",
-    # "marvel\\marvel-fov-1\\18_08_2023\\marvel1_time_10_24_03_date_19_08_2023_.avi",
-    # "marvel\\marvel-fov-2\\18_08_2023\\marvel2_time_10_24_03_date_19_08_2023_.avi",
-    # "marvel\\marvel-fov-3\\18_08_2023\\marvel3_time_10_24_03_date_19_08_2023_.avi"
-    # "marvel\\marvel-fov-2\\13_04_2024\\marvel2_time_07_34_03_date_13_04_2024_.mkv",
-    # "marvel\\marvel-fov-1\\13_04_2024\\marvel1_time_07_34_03_date_13_04_2024_.mkv",
-    # "marvel\\marvel-fov-5\\11_05_2024\\marvel-fov-5_time_04_00_05_date_12_05_2024_.avi"
     # "marvel\\marvel-fov-6\\19_05_2024\\marvel-fov-6_time_04_21_07_date_19_05_2024_.avi"
     # "marvel\\marvel-fov-7\\19_05_2024\\marvel-fov-7_time_04_42_10_date_19_05_2024_.avi"
     # "marvel\\marvel-fov-6\\21_04_2024\\marvel6_time_09_30_11_date_21_04_2024_.avi"
     # "marvel\\marvel-fov-5\\27_08_2023\\marvel5_time_09_09_04_date_27_08_2023_.avi"
     # "marvel\\marvel-fov-9\\23_06_2024\\marvel-fov-9_time_04_00_03_date_23_06_2024_.avi",
-    "marvel\\marvel-fov-10\\23_06_2024\\marvel-fov-10_time_04_00_04_date_23_06_2024_.avi"
+    # "marvel\\marvel-fov-10\\23_06_2024\\marvel-fov-10_time_04_00_04_date_23_06_2024_.avi",
+    # "marvel\\marvel-fov-7\\23_06_2024\\marvel-fov-7_time_04_00_04_date_23_06_2024_.avi",
+    # "marvel\\marvel-fov-6\\23_06_2024\\marvel-fov-6_time_04_00_04_date_23_06_2024_.avi",
+    # "marvel\\marvel-fov-5\\23_06_2024\\marvel-fov-5_time_04_00_05_date_23_06_2024_.avi",
+    # "marvel\\marvel-fov-3\\23_06_2024\\marvel-fov-3_time_04_00_04_date_23_06_2024_.avi",
+    "marvel\\marvel-fov-2\\23_06_2024\\marvel-fov-2_time_04_00_03_date_23_06_2024_.avi",
+    "marvel\\marvel-fov-1\\23_06_2024\\marvel-fov-1_time_04_00_04_date_23_06_2024_.avi",
 ]
 
 VIDEOS_FOR_FRAME_EXTRACTION: List[str] = [
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\13_04_2024\marvel2_time_07_34_03_date_13_04_2024_\4.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\13_04_2024\marvel2_time_07_34_03_date_13_04_2024_\5.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\13_04_2024\marvel2_time_07_34_03_date_13_04_2024_\6.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\13_04_2024\marvel2_time_07_34_03_date_13_04_2024_\7.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\13_04_2024\marvel2_time_07_34_03_date_13_04_2024_\8.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\13_04_2024\marvel1_time_07_34_03_date_13_04_2024_\4.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\13_04_2024\marvel1_time_07_34_03_date_13_04_2024_\5.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\13_04_2024\marvel1_time_07_34_03_date_13_04_2024_\6.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\13_04_2024\marvel1_time_07_34_03_date_13_04_2024_\7.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-1\13_04_2024\marvel1_time_07_34_03_date_13_04_2024_\8.mp4"
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\0.mp4",
-    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\1.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\2.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\3.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\5.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\27_08_2023\marvel5_time_09_09_04_date_27_08_2023_\7.mp4",
     # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-2\18_08_2023\marvel2_time_10_24_03_date_19_08_2023_\3.mp4"
-    r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-9\23_06_2024\marvel-fov-9_time_04_00_03_date_23_06_2024_\0.mp4",
-    r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-10\23_06_2024\marvel-fov-10_time_04_00_04_date_23_06_2024_\0.mp4"
+    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-9\23_06_2024\marvel-fov-9_time_04_00_03_date_23_06_2024_\0.mp4",
+    # r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-10\23_06_2024\marvel-fov-10_time_04_00_04_date_23_06_2024_\0.mp4"
+    r"C:\Users\timf3\PycharmProjects\AFL-Data\marvel\marvel-fov-5\11_05_2024\marvel-fov-5_time_04_00_05_date_12_05_2024_\6.mp4"
 ]
 
 
 DIRECTORIES_FOR_FRAME_EXTRACTION: [str] = [
-    # r'marvel\marvel-fov-3\26_08_2023\marvel3_time_09_09_04_date_27_08_2023_clipped',
-    # r'marvel\marvel-fov-3\26_08_2023\marvel3_time_09_09_04_date_27_08_2023_',
-    # r'marvel\marvel-fov-4\26_08_23\marvel4_time_09_09_03_date_27_08_2023_'
-    # r"marvel\marvel-fov-6\18_08_2023\marvel6_time_10_24_03_date_19_08_2023_",
-    # r"marvel\marvel-fov-1\18_08_2023\marvel1_time_10_24_03_date_19_08_2023_",
-    # r"marvel\marvel-fov-3\18_08_2023\marvel3_time_10_24_03_date_19_08_2023_",
     # r"marvel\marvel-fov-8\18_08_2023\marvel8_time_10_24_04_date_19_08_2023_"
     r"marvel\marvel-fov-5\11_05_2024\marvel-fov-5_time_04_00_05_date_12_05_2024_"
 ]
@@ -182,6 +162,7 @@ def main():
 
     # Then we extract the frames from these 1 minute clips
     # extract_frames_from_all_videos(DIRECTORIES_FOR_FRAME_EXTRACTION, file_ending='.mp4')
+    print("Check the FPS of the video before extracting frames! It could be 30 FPS or 4 FPS.")
     extract_frames_from_video_paths(VIDEOS_FOR_FRAME_EXTRACTION)
 
     # extract_frames_from_video(

@@ -1,5 +1,5 @@
 import os
-from typing import List, Dict
+from typing import List, Dict, Tuple
 from collections import defaultdict
 from glob import glob
 
@@ -13,6 +13,7 @@ class AFLDataAnalysis:
         self.afl_preprocessed_data: str = root_dir
         self.ball_count: Dict[str, int] = {}
         self.splits = ['train', 'val', 'test']
+        self.split_image_counts = defaultdict(int)
 
     def count_labelled_frames(self) -> None:
         """
@@ -76,12 +77,36 @@ class AFLDataAnalysis:
                         marvel_num = folder.lower().split("marvel_")[1].split("_")[0]
                     marvel_counts[f"marvel_{marvel_num}"] += 1
 
+            # Store the image count for this split
+            self.split_image_counts[split] = image_count
+
             # Print results for this split
             print(f"\n{split.upper()} Split:")
             print(f"Total images: {image_count}")
             print("Marvel distribution:")
             for marvel_id, count in sorted(marvel_counts.items()):
                 print(f"  {marvel_id}: {count} folders")
+
+    def calculate_split_ratios(self) -> None:
+        """
+        Calculates and prints the ratio of images in train:val:test splits as percentages.
+        """
+        total_images = sum(self.split_image_counts.values())
+
+        if total_images == 0:
+            print("\nWarning: No images found in any split")
+            return
+
+        print("\nDataset Split Ratios:")
+        print("-" * 50)
+        for split in self.splits:
+            percentage = (self.split_image_counts[split] / total_images) * 100
+            print(f"{split}: {percentage:.1f}%")
+
+        print(f"\nSplit ratio (train:val:test) = "
+              f"{self.split_image_counts['train']:.1f}:"
+              f"{self.split_image_counts['val']:.1f}:"
+              f"{self.split_image_counts['test']:.1f}")
 
     def print_dataset_summary(self) -> None:
         """
@@ -122,6 +147,7 @@ def main():
     bohs_data_analysis = AFLDataAnalysis(ROOT_DIR)
     bohs_data_analysis.count_labelled_frames()
     bohs_data_analysis.analyze_dataset_distribution()
+    bohs_data_analysis.calculate_split_ratios()
     bohs_data_analysis.print_dataset_summary()
 
 

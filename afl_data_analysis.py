@@ -93,7 +93,7 @@ class AFLDataAnalysis:
         all_marvel_counts = defaultdict(int)
 
         for split in self.splits:
-            split_path = os.path.join(self.afl_preprocessed_data, split, "unpacked_png")
+            split_path = os.path.join(self.afl_preprocessed_data, "afl-preprocessed", split, "unpacked_png")
             if not os.path.exists(split_path):
                 continue
 
